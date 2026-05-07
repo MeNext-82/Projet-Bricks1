@@ -1,0 +1,173 @@
+\doxysection{Référence du fichier game\+\_\+debris.\+h}
+\hypertarget{game__debris_8h}{}\label{game__debris_8h}\index{game\_debris.h@{game\_debris.h}}
+
+
+Ce module gère les débris qui apparaissent à l\textquotesingle{}écran lorsqu\textquotesingle{}une brique est détruite. Les débris sont de petits rectangles qui se déplacent dans des directions aléatoires à partir de la position de la brique détruite, et disparaissent après un certain nombre de frames.  
+
+
+{\ttfamily \+\#include "{}alloc.\+h"{}}\newline
+{\ttfamily \+\#include "{}game\+\_\+geometry.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structdebris}{debris}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un débris à afficher à l\textquotesingle{}écran. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{game__debris_8h_a675a2dd45719a21b6bcf55489460f8b2}{DEBRIS\+\_\+\+MAX\+\_\+\+FRAME}}~60
+\begin{DoxyCompactList}\small\item\em Nombre de frames pendant lesquelles les débris restent à l\textquotesingle{}écran avant de disparaître. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{game__debris_8h_a03f3ee53b01ca045658f8a497ed7353a}{init\+\_\+debris}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise le système de gestion des débris. Cette fonction doit est appelée par l\textquotesingle{}interface. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__debris_8h_a8f4925ee142dc8c6023e33093e190eff}{add\+\_\+debris}} (\doxymbox{\hyperlink{structrectangle}{rectangle}} \texorpdfstring{$\ast$}{*}rect)
+\begin{DoxyCompactList}\small\item\em Ajoute des débris à partir d\textquotesingle{}un rectangle donné correspondant à la position et la taille de la brique détruite. Les débris sont générés à partir du rectangle, avec des vitesses aléatoires. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__debris_8h_a3f451a802b94ffa2cd6e53d72782310a}{update\+\_\+debris}} (void)
+\begin{DoxyCompactList}\small\item\em Met à jour l\textquotesingle{}état des débris. Cette fonction est appelée à chaque frame par l\textquotesingle{}interface. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__debris_8h_adadb094bf4d1178552187247fda25611}{free\+\_\+debris}} (void)
+\begin{DoxyCompactList}\small\item\em Libère la mémoire occupée par les débris. Cette fonction est appelée par l\textquotesingle{}interface lorsque le jeu est réinitialisé ou lorsqu\textquotesingle{}on quitte le jeu. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__debris_8h_a5cb9da69d7fc0c023cf04f0a3d3c20a5}{reset\+\_\+debris}} (void)
+\begin{DoxyCompactList}\small\item\em Réinitialise le système de gestion des débris en supprimant tous les débris actuellement à l\textquotesingle{}écran. Cette fonction est appelée par l\textquotesingle{}interface lorsque le jeu est réinitialisé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structdebris}{debris}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__debris_8h_a5dee24aaa5a86230c1744f429ed7d40a}{debris\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Tableau des débris à afficher à l\textquotesingle{}écran. debris\+\_\+list est un tableau dynamique de pointeurs, qui contient tous les débris actuellement à afficher à l\textquotesingle{}écran. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{game__debris_8h_aa5935d3c68426aa04917522c293ba885}{size\+\_\+debris}}
+\begin{DoxyCompactList}\small\item\em Taille du tableau \doxylink{game__debris_8h_a5dee24aaa5a86230c1744f429ed7d40a}{debris\+\_\+list}. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{game__debris_8h_a3bd2e8e2c317981e98d94889e583c6da}{nb\+\_\+debris}}
+\begin{DoxyCompactList}\small\item\em Nombre de débris dans le tableau \doxylink{game__debris_8h_a5dee24aaa5a86230c1744f429ed7d40a}{debris\+\_\+list}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Ce module gère les débris qui apparaissent à l\textquotesingle{}écran lorsqu\textquotesingle{}une brique est détruite. Les débris sont de petits rectangles qui se déplacent dans des directions aléatoires à partir de la position de la brique détruite, et disparaissent après un certain nombre de frames. 
+
+\begin{DoxyRemark}{Remarques}
+Les fonctions de ce module sont déjà écrites, vous n\textquotesingle{}avez pas à les implémenter vous même. Vous devez cependant appeler \doxylink{game__debris_8h_a8f4925ee142dc8c6023e33093e190eff}{add\+\_\+debris()} dans la fonction \doxylink{game__bricks_8h_aff980d4420910e1eb6b530350f10185d}{game\+\_\+remove\+\_\+brick()} du module game\+\_\+bricks.\+c pour ajouter des débris à chaque fois qu\textquotesingle{}une brique est détruite. 
+\end{DoxyRemark}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{game__debris_8h_source}{game\+\_\+debris.\+h}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{game__debris_8h_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{game__debris_8h_a675a2dd45719a21b6bcf55489460f8b2}\index{game\_debris.h@{game\_debris.h}!DEBRIS\_MAX\_FRAME@{DEBRIS\_MAX\_FRAME}}
+\index{DEBRIS\_MAX\_FRAME@{DEBRIS\_MAX\_FRAME}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{DEBRIS\_MAX\_FRAME}{DEBRIS\_MAX\_FRAME}}
+{\footnotesize\ttfamily \label{game__debris_8h_a675a2dd45719a21b6bcf55489460f8b2} 
+\+\#define DEBRIS\+\_\+\+MAX\+\_\+\+FRAME~60}
+
+
+
+Nombre de frames pendant lesquelles les débris restent à l\textquotesingle{}écran avant de disparaître. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__debris_8h_source_l00037}{37}} du fichier \doxymbox{\hyperlink{game__debris_8h_source}{game\+\_\+debris.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{game__debris_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{game__debris_8h_a03f3ee53b01ca045658f8a497ed7353a}\index{game\_debris.h@{game\_debris.h}!init\_debris@{init\_debris}}
+\index{init\_debris@{init\_debris}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{init\_debris()}{init\_debris()}}
+{\footnotesize\ttfamily \label{game__debris_8h_a03f3ee53b01ca045658f8a497ed7353a} 
+void init\+\_\+debris (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initialise le système de gestion des débris. Cette fonction doit est appelée par l\textquotesingle{}interface. 
+
+\Hypertarget{game__debris_8h_a8f4925ee142dc8c6023e33093e190eff}\index{game\_debris.h@{game\_debris.h}!add\_debris@{add\_debris}}
+\index{add\_debris@{add\_debris}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{add\_debris()}{add\_debris()}}
+{\footnotesize\ttfamily \label{game__debris_8h_a8f4925ee142dc8c6023e33093e190eff} 
+void add\+\_\+debris (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structrectangle}{rectangle}} \texorpdfstring{$\ast$}{*}}]{rect}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute des débris à partir d\textquotesingle{}un rectangle donné correspondant à la position et la taille de la brique détruite. Les débris sont générés à partir du rectangle, avec des vitesses aléatoires. 
+
+\begin{DoxyRemark}{Remarques}
+C\textquotesingle{}est la seule fonction de ce module que vous devez appeler dans votre code, à chaque fois qu\textquotesingle{}une brique est détruite (dans la fonction \doxylink{game__bricks_8h_aff980d4420910e1eb6b530350f10185d}{game\+\_\+remove\+\_\+brick()} du module game\+\_\+bricks.\+c). 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Paramètres}
+{\em rect} & Le rectangle correspondant à la position et la taille de la brique détruite. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__debris_8h_a3f451a802b94ffa2cd6e53d72782310a}\index{game\_debris.h@{game\_debris.h}!update\_debris@{update\_debris}}
+\index{update\_debris@{update\_debris}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{update\_debris()}{update\_debris()}}
+{\footnotesize\ttfamily \label{game__debris_8h_a3f451a802b94ffa2cd6e53d72782310a} 
+void update\+\_\+debris (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Met à jour l\textquotesingle{}état des débris. Cette fonction est appelée à chaque frame par l\textquotesingle{}interface. 
+
+\Hypertarget{game__debris_8h_adadb094bf4d1178552187247fda25611}\index{game\_debris.h@{game\_debris.h}!free\_debris@{free\_debris}}
+\index{free\_debris@{free\_debris}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{free\_debris()}{free\_debris()}}
+{\footnotesize\ttfamily \label{game__debris_8h_adadb094bf4d1178552187247fda25611} 
+void free\+\_\+debris (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Libère la mémoire occupée par les débris. Cette fonction est appelée par l\textquotesingle{}interface lorsque le jeu est réinitialisé ou lorsqu\textquotesingle{}on quitte le jeu. 
+
+\Hypertarget{game__debris_8h_a5cb9da69d7fc0c023cf04f0a3d3c20a5}\index{game\_debris.h@{game\_debris.h}!reset\_debris@{reset\_debris}}
+\index{reset\_debris@{reset\_debris}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{reset\_debris()}{reset\_debris()}}
+{\footnotesize\ttfamily \label{game__debris_8h_a5cb9da69d7fc0c023cf04f0a3d3c20a5} 
+void reset\+\_\+debris (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Réinitialise le système de gestion des débris en supprimant tous les débris actuellement à l\textquotesingle{}écran. Cette fonction est appelée par l\textquotesingle{}interface lorsque le jeu est réinitialisé. 
+
+
+
+\label{doc-var-members}
+\Hypertarget{game__debris_8h_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{game__debris_8h_a5dee24aaa5a86230c1744f429ed7d40a}\index{game\_debris.h@{game\_debris.h}!debris\_list@{debris\_list}}
+\index{debris\_list@{debris\_list}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{debris\_list}{debris\_list}}
+{\footnotesize\ttfamily \label{game__debris_8h_a5dee24aaa5a86230c1744f429ed7d40a} 
+\doxymbox{\hyperlink{structdebris}{debris}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} debris\+\_\+list\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tableau des débris à afficher à l\textquotesingle{}écran. debris\+\_\+list est un tableau dynamique de pointeurs, qui contient tous les débris actuellement à afficher à l\textquotesingle{}écran. 
+
+\Hypertarget{game__debris_8h_aa5935d3c68426aa04917522c293ba885}\index{game\_debris.h@{game\_debris.h}!size\_debris@{size\_debris}}
+\index{size\_debris@{size\_debris}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{size\_debris}{size\_debris}}
+{\footnotesize\ttfamily \label{game__debris_8h_aa5935d3c68426aa04917522c293ba885} 
+int size\+\_\+debris\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Taille du tableau \doxylink{game__debris_8h_a5dee24aaa5a86230c1744f429ed7d40a}{debris\+\_\+list}. 
+
+\Hypertarget{game__debris_8h_a3bd2e8e2c317981e98d94889e583c6da}\index{game\_debris.h@{game\_debris.h}!nb\_debris@{nb\_debris}}
+\index{nb\_debris@{nb\_debris}!game\_debris.h@{game\_debris.h}}
+\doxysubsubsection{\texorpdfstring{nb\_debris}{nb\_debris}}
+{\footnotesize\ttfamily \label{game__debris_8h_a3bd2e8e2c317981e98d94889e583c6da} 
+int nb\+\_\+debris\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Nombre de débris dans le tableau \doxylink{game__debris_8h_a5dee24aaa5a86230c1744f429ed7d40a}{debris\+\_\+list}. 
+

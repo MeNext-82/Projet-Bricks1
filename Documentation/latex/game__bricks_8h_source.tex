@@ -1,0 +1,85 @@
+\doxysection{game\+\_\+bricks.\+h}
+\hypertarget{game__bricks_8h_source}{}\label{game__bricks_8h_source}\doxymbox{\hyperlink{game__bricks_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_BRICKS\_H\_}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ GAME\_BRICKS\_H\_}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{game_8h}{game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00015}00015\ \textcolor{comment}{/*\ \ \_\_\_\_\ \ \_\_\_\_\ \ \_\_\_\ \_\_\_\_\ \_\ \ \_\_\_\_\_\_\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00016}00016\ \textcolor{comment}{/*\ |\ \_\_\ )|\ \ \_\ \(\backslash\)|\_\ \_/\ \_\_\_|\ |/\ /\ \_\_\_|\ \ */}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00017}00017\ \textcolor{comment}{/*\ |\ \ \_\ \(\backslash\)|\ |\_)\ ||\ |\ |\ \ \ |\ '\ /\(\backslash\)\_\_\_\ \(\backslash\)\ \ */}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00018}00018\ \textcolor{comment}{/*\ |\ |\_)\ |\ \ \_\ <\ |\ |\ |\_\_\_|\ .\ \(\backslash\)\ \_\_\_)\ |\ */}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00019}00019\ \textcolor{comment}{/*\ |\_\_\_\_/|\_|\ \(\backslash\)\_\(\backslash\)\_\_\_\(\backslash\)\_\_\_\_|\_|\(\backslash\)\_\(\backslash\)\_\_\_\_/\ \ */}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00021}00021\ \textcolor{comment}{/******************************/}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00022}00022\ \textcolor{comment}{/*+\ Création\ et\ fin\ d'un\ jeu\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00023}00023\ \textcolor{comment}{/******************************/}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00038}\doxymbox{\hyperlink{game__bricks_8h_a4a7c417c3927e8f165c942bde07889d6}{00038}}\ \doxymbox{\hyperlink{structgame}{game}}\ *\doxymbox{\hyperlink{game__bricks_8h_a4a7c417c3927e8f165c942bde07889d6}{create\_random\_brick\_game}}(}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_columns,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_rows,\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{int}\ topspace,\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rangée\ de\ briques.\ Aucune\ brique\ ne\ sera\ générée\ dans\ cet}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ espace.}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{int}\ bottomspace,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rangée\ de\ briques.\ Aucune\ brique\ ne\ sera\ générée\ dans}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cet\ espace.}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{short}\ player\_one\_mode,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{short}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ player\_two\_mode,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00054}00054\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_colors,\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_health\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00056}00056\ );}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00067}\doxymbox{\hyperlink{game__bricks_8h_a27c59f0003ace9f92d011c68eeff1ed6}{00067}}\ \doxymbox{\hyperlink{structgame}{game}}\ *\doxymbox{\hyperlink{game__bricks_8h_a27c59f0003ace9f92d011c68eeff1ed6}{create\_newgame\_file}}(}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordtype}{char}\ **input,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{int}\ size,\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{short}\ player\_one\_mode,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{short}\ player\_two\_mode\ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00078}00078\ );}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00091}\doxymbox{\hyperlink{game__bricks_8h_a12da384fa50c1c9dcec268c2029831b4}{00091}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__bricks_8h_a12da384fa50c1c9dcec268c2029831b4}{game\_brick\_end}}(}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00092}00092\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00093}00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ *win\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00096}00096\ );}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00109}\doxymbox{\hyperlink{game__bricks_8h_ad6de245fee54f8f03b210068ece26c69}{00109}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__bricks_8h_ad6de245fee54f8f03b210068ece26c69}{game\_brickia}}(\doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ i\ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00112}00112\ );}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00114}00114\ \textcolor{comment}{/*************************/}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00115}00115\ \textcolor{comment}{/*+\ Gestion\ des\ briques\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00116}00116\ \textcolor{comment}{/*************************/}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00128}\doxymbox{\hyperlink{game__bricks_8h_a2581ad381c97d12f3554cb634c46149b}{00128}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__bricks_8h_a2581ad381c97d12f3554cb634c46149b}{game\_add\_brick}}(}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00129}00129\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00130}00130\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00131}00131\ \ \ \ \ \textcolor{keywordtype}{int}\ y,\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00132}00132\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\_color}}\ color,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00133}00133\ \ \ \ \ \textcolor{keywordtype}{int}\ health\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00134}00134\ );}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00166}\doxymbox{\hyperlink{game__bricks_8h_aff980d4420910e1eb6b530350f10185d}{00166}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__bricks_8h_aff980d4420910e1eb6b530350f10185d}{game\_remove\_brick}}(}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00167}00167\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00168}00168\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00169}00169\ \ \ \ \ \textcolor{keywordtype}{short}\ last\_hit\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ joueur\ 1,\ 1\ pour\ le\ joueur\ 2,\ -\/1\ si\ la\ balle\ n'a\ pas}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ encore\ touché\ de\ raquette).}}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00172}00172\ );}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00189}\doxymbox{\hyperlink{game__bricks_8h_af67522cdfe1d3114221a57c66dbd9806}{00189}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__bricks_8h_af67522cdfe1d3114221a57c66dbd9806}{ball\_hits\_brick}}(\doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00191}00191\ );}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00197}\doxymbox{\hyperlink{game__bricks_8h_a3dd8771d4c746a6585bbcb15b02c8ef1}{00197}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__bricks_8h_a3dd8771d4c746a6585bbcb15b02c8ef1}{game\_gravity}}(\doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bot\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00202}00202\ );}
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{game__bricks_8h_source_l00204}00204\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_BRICKS\_H\_}}
+
+\end{DoxyCode}

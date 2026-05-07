@@ -1,0 +1,244 @@
+\doxysection{Référence du fichier game\+\_\+scores.\+h}
+\hypertarget{game__scores_8h}{}\label{game__scores_8h}\index{game\_scores.h@{game\_scores.h}}
+
+
+Gestion des meilleurs scores en mode classique. Contient une fonction pour charger, enregistrer et trier les meilleurs scores du fichier de scores.  
+
+
+{\ttfamily \+\#include "{}alloc.\+h"{}}\newline
+{\ttfamily \+\#include "{}game.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structscore__table}{score\+\_\+table}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un tableau de scores. Elle contient les noms des joueurs, leurs scores, la taille du tableau et l\textquotesingle{}indice du score du joueur actuel (s\textquotesingle{}il est présent). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9}{score\+\_\+type}} \{ \newline
+\doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a816a2b0c392372c1c3ebf16606865094}{SC\+\_\+\+SCORE}}
+, \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a1d608d7f28de2495630ee74352ec57a4}{SC\+\_\+\+GOALS}}
+, \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9aed543ae7341a37e77e815d1828ba8cf1}{SC\+\_\+\+BONUS}}
+, \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9aadaa54fbd86ad7313b769689f495fcd0}{SC\+\_\+\+HEALTH}}
+, \newline
+\doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a2dd84f63788e04c05691f38148dfee6a}{SC\+\_\+\+BRICKS}}
+, \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a57ff65558cbed4e7b627b65e631469c8}{SC\+\_\+\+PLAYERS}}
+, \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ae812bf288076fa01c7ec794b7a92deb4}{SC\+\_\+\+TIME}}
+, \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a}{SC\+\_\+\+SIZE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Paramètres affichés dans le tableau de scores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structscore__table}{score\+\_\+table}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__scores_8h_a86c97aaf2498e429f1ffffac834dd563}{load\+\_\+score\+\_\+table}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}input, int size, int \texorpdfstring{$\ast$}{*}player\+\_\+score)
+\begin{DoxyCompactList}\small\item\em Appelée par l\textquotesingle{}interface pour charger un tableau de scores depuis un tableau de chaînes de caractères extrait d\textquotesingle{}un fichier de scores. Si un {\ttfamily player\+\_\+score} est fourni, elle l\textquotesingle{}ajoute comme une entrée pour le joueur actuel sous le nom "{}\+Player"{}. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__scores_8h_ad607ced2195ee6c4c16b8d1ff6928ff2}{save\+\_\+score\+\_\+table}} (\doxymbox{\hyperlink{structscore__table}{score\+\_\+table}} \texorpdfstring{$\ast$}{*}table, const char \texorpdfstring{$\ast$}{*}playername, int \texorpdfstring{$\ast$}{*}size)
+\begin{DoxyCompactList}\small\item\em Appelée par l\textquotesingle{}interface pour sauvegarder un tableau de scores. La fonction retourne un tableau de chaînes de caractères. Chaque chaîne correspond à une ligne qui sera écrite dans le fichier de scores (cette partie est faite par l\textquotesingle{}interface). La fonction remplit également la taille du tableau de chaînes de caractères retourné dans le paramètre size. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__scores_8h_a648cb18d0431dcd4bc910e6a23e70a20}{delete\+\_\+score\+\_\+table}} (\doxymbox{\hyperlink{structscore__table}{score\+\_\+table}} \texorpdfstring{$\ast$}{*}table)
+\begin{DoxyCompactList}\small\item\em Appelée par l\textquotesingle{}interface pour supprimer un tableau de scores et libérer la mémoire allouée. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__scores_8h_af65c575cb1d616017e09e5023e353e02}{sort\+\_\+score\+\_\+table}} (\doxymbox{\hyperlink{structscore__table}{score\+\_\+table}} \texorpdfstring{$\ast$}{*}table, \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9}{score\+\_\+type}} type)
+\begin{DoxyCompactList}\small\item\em Appelée par l\textquotesingle{}interface pour trier un tableau de scores dans l\textquotesingle{}ordre décroissant selon un type de score spécifié. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{game__scores_8h_a003577ee1f5c79119425e11aef9b9f0a}{get\+\_\+pong\+\_\+winner\+\_\+score}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, short p, int \texorpdfstring{$\ast$}{*}score\+\_\+array)
+\begin{DoxyCompactList}\small\item\em Appelée par l\textquotesingle{}interface pour récupérer les scores du joueur gagnant à la fin d\textquotesingle{}une partie de Pong. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{game__scores_8h_a175e733092c3e1cca81e79488080ed5b}{get\+\_\+brick\+\_\+winner\+\_\+score}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, int \texorpdfstring{$\ast$}{*}score\+\_\+array)
+\begin{DoxyCompactList}\small\item\em Appelée par l\textquotesingle{}interface pour récupérer les scores du joueur gagnant à la fin d\textquotesingle{}une partie de Briques. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gestion des meilleurs scores en mode classique. Contient une fonction pour charger, enregistrer et trier les meilleurs scores du fichier de scores. 
+
+Vous devez respecter le format spécifié pour le fichier de scores afin de garantir un bon chargement et sauvegarde des scores (voir la documentation du projet pour plus de détails). 
+
+Définition dans le fichier \doxymbox{\hyperlink{game__scores_8h_source}{game\+\_\+scores.\+h}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{game__scores_8h_doc-enum-members}
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9}\index{game\_scores.h@{game\_scores.h}!score\_type@{score\_type}}
+\index{score\_type@{score\_type}!game\_scores.h@{game\_scores.h}}
+\doxysubsubsection{\texorpdfstring{score\_type}{score\_type}}
+{\footnotesize\ttfamily \label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9} 
+enum \doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9}{score\+\_\+type}}}
+
+
+
+Paramètres affichés dans le tableau de scores. 
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SC\_SCORE@{SC\_SCORE}!game\_scores.h@{game\_scores.h}}
+\index{game\_scores.h@{game\_scores.h}!SC\_SCORE@{SC\_SCORE}}
+}\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a816a2b0c392372c1c3ebf16606865094}\label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a816a2b0c392372c1c3ebf16606865094} 
+SC\+\_\+\+SCORE&Score global fu joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SC\_GOALS@{SC\_GOALS}!game\_scores.h@{game\_scores.h}}
+\index{game\_scores.h@{game\_scores.h}!SC\_GOALS@{SC\_GOALS}}
+}\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a1d608d7f28de2495630ee74352ec57a4}\label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a1d608d7f28de2495630ee74352ec57a4} 
+SC\+\_\+\+GOALS&Nombre de buts marqués par le joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SC\_BONUS@{SC\_BONUS}!game\_scores.h@{game\_scores.h}}
+\index{game\_scores.h@{game\_scores.h}!SC\_BONUS@{SC\_BONUS}}
+}\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9aed543ae7341a37e77e815d1828ba8cf1}\label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9aed543ae7341a37e77e815d1828ba8cf1} 
+SC\+\_\+\+BONUS&Nombre de bonus collectés par le joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SC\_HEALTH@{SC\_HEALTH}!game\_scores.h@{game\_scores.h}}
+\index{game\_scores.h@{game\_scores.h}!SC\_HEALTH@{SC\_HEALTH}}
+}\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9aadaa54fbd86ad7313b769689f495fcd0}\label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9aadaa54fbd86ad7313b769689f495fcd0} 
+SC\+\_\+\+HEALTH&Santé restante du joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SC\_BRICKS@{SC\_BRICKS}!game\_scores.h@{game\_scores.h}}
+\index{game\_scores.h@{game\_scores.h}!SC\_BRICKS@{SC\_BRICKS}}
+}\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a2dd84f63788e04c05691f38148dfee6a}\label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a2dd84f63788e04c05691f38148dfee6a} 
+SC\+\_\+\+BRICKS&Nombre de briques détruites par le joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SC\_PLAYERS@{SC\_PLAYERS}!game\_scores.h@{game\_scores.h}}
+\index{game\_scores.h@{game\_scores.h}!SC\_PLAYERS@{SC\_PLAYERS}}
+}\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a57ff65558cbed4e7b627b65e631469c8}\label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9a57ff65558cbed4e7b627b65e631469c8} 
+SC\+\_\+\+PLAYERS&Nombre de joueurs dans la partie (1 ou 2). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SC\_TIME@{SC\_TIME}!game\_scores.h@{game\_scores.h}}
+\index{game\_scores.h@{game\_scores.h}!SC\_TIME@{SC\_TIME}}
+}\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ae812bf288076fa01c7ec794b7a92deb4}\label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ae812bf288076fa01c7ec794b7a92deb4} 
+SC\+\_\+\+TIME&Temps écoulé depuis le début de la partie (en secondes). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SC\_SIZE@{SC\_SIZE}!game\_scores.h@{game\_scores.h}}
+\index{game\_scores.h@{game\_scores.h}!SC\_SIZE@{SC\_SIZE}}
+}\Hypertarget{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a}\label{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a} 
+SC\+\_\+\+SIZE&Nombre total de paramètres (ne pas utiliser comme un paramètre). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__scores_8h_source_l00033}{33}} du fichier \doxymbox{\hyperlink{game__scores_8h_source}{game\+\_\+scores.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{game__scores_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{game__scores_8h_a86c97aaf2498e429f1ffffac834dd563}\index{game\_scores.h@{game\_scores.h}!load\_score\_table@{load\_score\_table}}
+\index{load\_score\_table@{load\_score\_table}!game\_scores.h@{game\_scores.h}}
+\doxysubsubsection{\texorpdfstring{load\_score\_table()}{load\_score\_table()}}
+{\footnotesize\ttfamily \label{game__scores_8h_a86c97aaf2498e429f1ffffac834dd563} 
+\doxymbox{\hyperlink{structscore__table}{score\+\_\+table}} \texorpdfstring{$\ast$}{*} load\+\_\+score\+\_\+table (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{input}{, }\item[{int}]{size}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{player\+\_\+score}{}\end{DoxyParamCaption})}
+
+
+
+Appelée par l\textquotesingle{}interface pour charger un tableau de scores depuis un tableau de chaînes de caractères extrait d\textquotesingle{}un fichier de scores. Si un {\ttfamily player\+\_\+score} est fourni, elle l\textquotesingle{}ajoute comme une entrée pour le joueur actuel sous le nom "{}\+Player"{}. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le tableau de scores créé ou NULL en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em input} & Tableau de chaines de caractères contenant les lignes lues depuis le fichier de scores.  \\
+\hline
+{\em size} & Taille du tableau de chaines de caractères (0 si le fichier de scores n\textquotesingle{}existe pas ou est vide).  \\
+\hline
+{\em player\+\_\+score} & Pointeur vers le tableau de scores du joueur actuel (NULL quand utilisé pour charger les meilleurs scores depuis le menu). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__scores_8h_ad607ced2195ee6c4c16b8d1ff6928ff2}\index{game\_scores.h@{game\_scores.h}!save\_score\_table@{save\_score\_table}}
+\index{save\_score\_table@{save\_score\_table}!game\_scores.h@{game\_scores.h}}
+\doxysubsubsection{\texorpdfstring{save\_score\_table()}{save\_score\_table()}}
+{\footnotesize\ttfamily \label{game__scores_8h_ad607ced2195ee6c4c16b8d1ff6928ff2} 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} save\+\_\+score\+\_\+table (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structscore__table}{score\+\_\+table}} \texorpdfstring{$\ast$}{*}}]{table}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{playername}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Appelée par l\textquotesingle{}interface pour sauvegarder un tableau de scores. La fonction retourne un tableau de chaînes de caractères. Chaque chaîne correspond à une ligne qui sera écrite dans le fichier de scores (cette partie est faite par l\textquotesingle{}interface). La fonction remplit également la taille du tableau de chaînes de caractères retourné dans le paramètre size. 
+
+\begin{DoxyReturn}{Renvoie}
+Le tableau de chaînes de caractères à écrire dans le fichier de scores ou NULL en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em table} & Pointeur vers le tableau de scores à sauvegarder.  \\
+\hline
+{\em playername} & Nom choisi pour le joueur actuel (peut être NULL, quand aucun score de joueur actuel n\textquotesingle{}est chargé dans le tableau).  \\
+\hline
+{\em size} & Pointeur vers un entier dans lequel écrire la taille du tableau de chaînes de caractères retourné. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__scores_8h_a648cb18d0431dcd4bc910e6a23e70a20}\index{game\_scores.h@{game\_scores.h}!delete\_score\_table@{delete\_score\_table}}
+\index{delete\_score\_table@{delete\_score\_table}!game\_scores.h@{game\_scores.h}}
+\doxysubsubsection{\texorpdfstring{delete\_score\_table()}{delete\_score\_table()}}
+{\footnotesize\ttfamily \label{game__scores_8h_a648cb18d0431dcd4bc910e6a23e70a20} 
+void delete\+\_\+score\+\_\+table (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structscore__table}{score\+\_\+table}} \texorpdfstring{$\ast$}{*}}]{table}{}\end{DoxyParamCaption})}
+
+
+
+Appelée par l\textquotesingle{}interface pour supprimer un tableau de scores et libérer la mémoire allouée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em table} & Pointeur vers le tableau de scores à supprimer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__scores_8h_af65c575cb1d616017e09e5023e353e02}\index{game\_scores.h@{game\_scores.h}!sort\_score\_table@{sort\_score\_table}}
+\index{sort\_score\_table@{sort\_score\_table}!game\_scores.h@{game\_scores.h}}
+\doxysubsubsection{\texorpdfstring{sort\_score\_table()}{sort\_score\_table()}}
+{\footnotesize\ttfamily \label{game__scores_8h_af65c575cb1d616017e09e5023e353e02} 
+void sort\+\_\+score\+\_\+table (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structscore__table}{score\+\_\+table}} \texorpdfstring{$\ast$}{*}}]{table}{, }\item[{\doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9}{score\+\_\+type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Appelée par l\textquotesingle{}interface pour trier un tableau de scores dans l\textquotesingle{}ordre décroissant selon un type de score spécifié. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em table} & Pointeur vers le tableau de scores à trier.  \\
+\hline
+{\em type} & Type de score par lequel trier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__scores_8h_a003577ee1f5c79119425e11aef9b9f0a}\index{game\_scores.h@{game\_scores.h}!get\_pong\_winner\_score@{get\_pong\_winner\_score}}
+\index{get\_pong\_winner\_score@{get\_pong\_winner\_score}!game\_scores.h@{game\_scores.h}}
+\doxysubsubsection{\texorpdfstring{get\_pong\_winner\_score()}{get\_pong\_winner\_score()}}
+{\footnotesize\ttfamily \label{game__scores_8h_a003577ee1f5c79119425e11aef9b9f0a} 
+bool get\+\_\+pong\+\_\+winner\+\_\+score (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{short}]{p}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{score\+\_\+array}{}\end{DoxyParamCaption})}
+
+
+
+Appelée par l\textquotesingle{}interface pour récupérer les scores du joueur gagnant à la fin d\textquotesingle{}une partie de Pong. 
+
+Le tableau score\+\_\+array pris en paramètre est supposé être de taille \doxylink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a}{SC\+\_\+\+SIZE}. On doit y écrire les scores du joueur gagnant:\+
+\begin{DoxyItemize}
+\item Si le paramètre {\ttfamily p} est égal à 0 ou 1, la fonction récupère les scores du joueur correspondant (0 pour le joueur 1, 1 pour le joueur 2) et les écrit dans score\+\_\+array. Si ce joueur n\textquotesingle{}est pas présent dans la partie, la fonction retourne false.
+\item Sinon (typiquement si p est égal à -\/1), la fonction retourne false. 
+\end{DoxyItemize}
+\begin{DoxyParams}{Paramètres}
+{\em g} & Pointeur vers la structure de jeu.  \\
+\hline
+{\em p} & Numéro du joueur gagnant (0 ou 1). Sinon, la fonction retourne false. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__scores_8h_a175e733092c3e1cca81e79488080ed5b}\index{game\_scores.h@{game\_scores.h}!get\_brick\_winner\_score@{get\_brick\_winner\_score}}
+\index{get\_brick\_winner\_score@{get\_brick\_winner\_score}!game\_scores.h@{game\_scores.h}}
+\doxysubsubsection{\texorpdfstring{get\_brick\_winner\_score()}{get\_brick\_winner\_score()}}
+{\footnotesize\ttfamily \label{game__scores_8h_a175e733092c3e1cca81e79488080ed5b} 
+bool get\+\_\+brick\+\_\+winner\+\_\+score (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{score\+\_\+array}{}\end{DoxyParamCaption})}
+
+
+
+Appelée par l\textquotesingle{}interface pour récupérer les scores du joueur gagnant à la fin d\textquotesingle{}une partie de Briques. 
+
+Le tableau score\+\_\+array pris en paramètre est supposé être de taille \doxylink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a}{SC\+\_\+\+SIZE}. On doit y écrire les sommes des scores des joueur présents (sauf pour le temps qui est commun aux deux joueurs). 
+\begin{DoxyParams}{Paramètres}
+{\em g} & Pointeur vers la structure de jeu.  \\
+\hline
+{\em score\+\_\+array} & Pointeur vers un tableau d\textquotesingle{}entiers de taille \doxylink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a}{SC\+\_\+\+SIZE} dans lequel écrire les scores. \\
+\hline
+\end{DoxyParams}

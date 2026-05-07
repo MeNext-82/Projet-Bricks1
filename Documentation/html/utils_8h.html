@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ICBG: Référence du fichier utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ICBG
+   </div>
+   <div id="projectbrief">ICBG : The InitC Bricks Game</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('utils_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier utils.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SDL2/SDL_timer.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+</div>
+<p><a href="utils_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:affe776513b24d84b39af8ab0930fef7f" id="r_affe776513b24d84b39af8ab0930fef7f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#affe776513b24d84b39af8ab0930fef7f">max</a>(a,  b)</td></tr>
+<tr class="memdesc:affe776513b24d84b39af8ab0930fef7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro pour calculer le maximum de deux valeurs.  <br /></td></tr>
+<tr class="memitem:ac6afabdc09a49a433ee19d8a9486056d" id="r_ac6afabdc09a49a433ee19d8a9486056d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac6afabdc09a49a433ee19d8a9486056d">min</a>(a,  b)</td></tr>
+<tr class="memdesc:ac6afabdc09a49a433ee19d8a9486056d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro pour calculer le minimum de deux valeurs.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ae8857dcf75600277c0cbc79a687090ab" id="r_ae8857dcf75600277c0cbc79a687090ab"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ae8857dcf75600277c0cbc79a687090ab">random_double</a> (double <a class="el" href="#ac6afabdc09a49a433ee19d8a9486056d">min</a>, double <a class="el" href="#affe776513b24d84b39af8ab0930fef7f">max</a>)</td></tr>
+<tr class="memdesc:ae8857dcf75600277c0cbc79a687090ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génère un nombre aléatoire de type double entre <code class="param">min</code> et <code class="param">max</code>.  <br /></td></tr>
+<tr class="memitem:a0d0eb5d5437c1590a8deae6822c74f43" id="r_a0d0eb5d5437c1590a8deae6822c74f43"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0d0eb5d5437c1590a8deae6822c74f43">init_time_counter</a> (void)</td></tr>
+<tr class="memdesc:a0d0eb5d5437c1590a8deae6822c74f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation du compteur de temps.  <br /></td></tr>
+<tr class="memitem:a5ccf774bc755f17fab7af5d7620c1f25" id="r_a5ccf774bc755f17fab7af5d7620c1f25"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ccf774bc755f17fab7af5d7620c1f25">init_time_counter_start</a> (long start)</td></tr>
+<tr class="memdesc:a5ccf774bc755f17fab7af5d7620c1f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation du compteur de temps à une valeur spécifique.  <br /></td></tr>
+<tr class="memitem:a11fa979c12e17c772edf91a6e16f6224" id="r_a11fa979c12e17c772edf91a6e16f6224"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a11fa979c12e17c772edf91a6e16f6224">pause_time_counter</a> (void)</td></tr>
+<tr class="memdesc:a11fa979c12e17c772edf91a6e16f6224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met le compteur de temps en pause.  <br /></td></tr>
+<tr class="memitem:aa146908ed3c7de1c145e89c3d10edefb" id="r_aa146908ed3c7de1c145e89c3d10edefb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa146908ed3c7de1c145e89c3d10edefb">resume_time_counter</a> (void)</td></tr>
+<tr class="memdesc:aa146908ed3c7de1c145e89c3d10edefb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reprend le compteur de temps après une pause.  <br /></td></tr>
+<tr class="memitem:af834953585ace39ffae1f30d5a55709f" id="r_af834953585ace39ffae1f30d5a55709f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af834953585ace39ffae1f30d5a55709f">get_time_counter</a> (void)</td></tr>
+<tr class="memdesc:af834953585ace39ffae1f30d5a55709f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère la valeur du compteur de temps en millisecondes.  <br /></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="affe776513b24d84b39af8ab0930fef7f" name="affe776513b24d84b39af8ab0930fef7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe776513b24d84b39af8ab0930fef7f">&#9670;&#160;</a></span>max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define max</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">((a) &gt; (b) ? (a) : (b))</div>
+</div><!-- fragment -->
+<p>Macro pour calculer le maximum de deux valeurs. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="utils_8h_source.html#l00012">12</a> du fichier <a class="el" href="utils_8h_source.html">utils.h</a>.</p>
+
+</div>
+</div>
+<a id="ac6afabdc09a49a433ee19d8a9486056d" name="ac6afabdc09a49a433ee19d8a9486056d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6afabdc09a49a433ee19d8a9486056d">&#9670;&#160;</a></span>min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define min</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">((a) &lt; (b) ? (a) : (b))</div>
+</div><!-- fragment -->
+<p>Macro pour calculer le minimum de deux valeurs. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="utils_8h_source.html#l00017">17</a> du fichier <a class="el" href="utils_8h_source.html">utils.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ae8857dcf75600277c0cbc79a687090ab" name="ae8857dcf75600277c0cbc79a687090ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8857dcf75600277c0cbc79a687090ab">&#9670;&#160;</a></span>random_double()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double random_double </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Génère un nombre aléatoire de type double entre <code class="param">min</code> et <code class="param">max</code>. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nombre aléatoire de type double entre <code class="param">min</code> et <code class="param">max</code>. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#ac6afabdc09a49a433ee19d8a9486056d" title="Macro pour calculer le minimum de deux valeurs.">min</a></td><td>La valeur minimale du double aléatoire.  </td></tr>
+    <tr><td class="paramname"><a class="el" href="#affe776513b24d84b39af8ab0930fef7f" title="Macro pour calculer le maximum de deux valeurs.">max</a></td><td>La valeur maximale du double aléatoire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0d0eb5d5437c1590a8deae6822c74f43" name="a0d0eb5d5437c1590a8deae6822c74f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d0eb5d5437c1590a8deae6822c74f43">&#9670;&#160;</a></span>init_time_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_time_counter </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisation du compteur de temps. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>Cette fonction est appelée par l'interface. Vous ne devez pas l'appeler vous même. </dd></dl>
+
+</div>
+</div>
+<a id="a5ccf774bc755f17fab7af5d7620c1f25" name="a5ccf774bc755f17fab7af5d7620c1f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccf774bc755f17fab7af5d7620c1f25">&#9670;&#160;</a></span>init_time_counter_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_time_counter_start </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>start</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisation du compteur de temps à une valeur spécifique. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>Cette fonction est appelée par l'interface. Vous ne devez pas l'appeler vous même. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>Le temps en millisecondes auquel le compteur doit démarrer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11fa979c12e17c772edf91a6e16f6224" name="a11fa979c12e17c772edf91a6e16f6224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fa979c12e17c772edf91a6e16f6224">&#9670;&#160;</a></span>pause_time_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pause_time_counter </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Met le compteur de temps en pause. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>Cette fonction est appelée par l'interface. Vous ne devez pas l'appeler vous même. </dd></dl>
+
+</div>
+</div>
+<a id="aa146908ed3c7de1c145e89c3d10edefb" name="aa146908ed3c7de1c145e89c3d10edefb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa146908ed3c7de1c145e89c3d10edefb">&#9670;&#160;</a></span>resume_time_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resume_time_counter </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reprend le compteur de temps après une pause. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>Cette fonction est appelée par l'interface. Vous ne devez pas l'appeler vous même. </dd></dl>
+
+</div>
+</div>
+<a id="af834953585ace39ffae1f30d5a55709f" name="af834953585ace39ffae1f30d5a55709f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af834953585ace39ffae1f30d5a55709f">&#9670;&#160;</a></span>get_time_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_time_counter </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère la valeur du compteur de temps en millisecondes. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur du compteur de temps en millisecondes.</dd></dl>
+<dl class="section remark"><dt>Remarques</dt><dd>Cette fonction est appelée par l'interface. Vous ne devez pas l'appeler vous même. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="utils_8h.html">utils.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

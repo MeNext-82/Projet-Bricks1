@@ -1,0 +1,284 @@
+\doxysection{Référence de la structure game}
+\hypertarget{structgame}{}\label{structgame}\index{game@{game}}
+
+
+Structure représentant l\textquotesingle{}état du jeu, y compris le plateau de jeu, les briques, les balles, les raquettes.  
+
+
+
+
+{\ttfamily \+\#include $<$game.\+h$>$}
+
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{structgame_a7bc938ce4d6cb64d8722d9bf131f792a}{nb\+\_\+columns}}
+\begin{DoxyCompactList}\small\item\em Nombre de colonnes du plateau de jeu. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structgame_aa03a5a0985436046f38dc4d1e8122001}{nb\+\_\+rows}}
+\begin{DoxyCompactList}\small\item\em Nombre de lignes du plateau de jeu. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{game_8h_a5d069ca8708a30d3ae09a065989ec1f7}{game\+\_\+mode}} \doxymbox{\hyperlink{structgame_a9b91a7ea8120e37549f98786df0ad9d4}{mode}}
+\begin{DoxyCompactList}\small\item\em Mode de jeu (Pong ou Briques). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structpaddle}{paddle}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structgame_a2747705ccd15b3102fe4b2b506ede0eb}{paddles}} \+[2]\+
+\item 
+short \doxymbox{\hyperlink{structgame_a2903948f554158be16d7f246e6ecd818}{player\+\_\+modes}} \+[2]\+
+\item 
+\doxymbox{\hyperlink{structball}{ball}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structgame_af34afe751ed37d7bbc07038318691212}{ball\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Tableau des balles présentes sur le plateau de jeu. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structgame_aa24096b5a56533bfaaeb3e9d5608a9c1}{size\+\_\+balls}}
+\begin{DoxyCompactList}\small\item\em Taille du tableau des balles. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structgame_a854c2e6d5fe7e26f15be668c2c155c69}{nb\+\_\+balls}}
+\item 
+bool \doxymbox{\hyperlink{structgame_a29949dede6a33894418eeb7955eb797f}{bonuses}}
+\begin{DoxyCompactList}\small\item\em Indique si les bonus sont activés ou non dans le jeu. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structbonus}{bonus}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structgame_a1b56b59b90e9abedaba8ecd1a133031f}{bonus\+\_\+list}}
+\item 
+int \doxymbox{\hyperlink{structgame_a8c3cb325e76df6ecdc2c6340d10ccccd}{size\+\_\+bonus}}
+\begin{DoxyCompactList}\small\item\em Taille du tableau des bonus. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structgame_a51acd57beb11e34231fd82d49c4708e5}{nb\+\_\+bonus}}
+\item 
+\doxymbox{\hyperlink{structbrick}{brick}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structgame_aa58da797b20faecaef46aeb82f9fe8a7}{brick\+\_\+list}}
+\item 
+int \doxymbox{\hyperlink{structgame_a0e092559bd466fb29e28ee39a285cc4e}{size\+\_\+bricks}}
+\begin{DoxyCompactList}\small\item\em Taille du tableau brick\+\_\+list. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structgame_a6d7d85fa0d96570962bc4f69f9c5fe1d}{nb\+\_\+bricks}}
+\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structgame_aa2ce0e10c66abea89c94f2f0a22b59ad}{board}}
+\item 
+int \doxymbox{\hyperlink{structgame_a4dc09490ef77aa4779ef2d8d28801661}{topspace}}
+\item 
+int \doxymbox{\hyperlink{structgame_a4a2503adbcb1d0df5fbf54df346ad052}{bottomspace}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Structure représentant l\textquotesingle{}état du jeu, y compris le plateau de jeu, les briques, les balles, les raquettes. 
+
+\begin{DoxyRemark}{Remarques}
+Le plateau est composé de nb\+\_\+columns x nb\+\_\+rows cellules. Chaque cellule est de taille \doxylink{game_8h_ae1dbb0e959fde337fa4e436b61bb2bac}{CELL\+\_\+\+WIDTH} x \doxylink{game_8h_a8519cbc2997bb2eb21cf5571b37b38bd}{CELL\+\_\+\+HEIGHT} et peut contenir une brique (seulement en mode Briques) ou être vide. Le plateau de jeu entier est donc de taille (\doxylink{game_8h_ae1dbb0e959fde337fa4e436b61bb2bac}{CELL\+\_\+\+WIDTH} \texorpdfstring{$\ast$}{*} nb\+\_\+columns) x (\doxylink{game_8h_a8519cbc2997bb2eb21cf5571b37b38bd}{CELL\+\_\+\+HEIGHT} \texorpdfstring{$\ast$}{*} nb\+\_\+rows). 
+\end{DoxyRemark}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00194}{194}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structgame_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structgame_a7bc938ce4d6cb64d8722d9bf131f792a}\index{game@{game}!nb\_columns@{nb\_columns}}
+\index{nb\_columns@{nb\_columns}!game@{game}}
+\doxysubsubsection{\texorpdfstring{nb\_columns}{nb\_columns}}
+{\footnotesize\ttfamily \label{structgame_a7bc938ce4d6cb64d8722d9bf131f792a} 
+int nb\+\_\+columns}
+
+
+
+Nombre de colonnes du plateau de jeu. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00196}{196}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_aa03a5a0985436046f38dc4d1e8122001}\index{game@{game}!nb\_rows@{nb\_rows}}
+\index{nb\_rows@{nb\_rows}!game@{game}}
+\doxysubsubsection{\texorpdfstring{nb\_rows}{nb\_rows}}
+{\footnotesize\ttfamily \label{structgame_aa03a5a0985436046f38dc4d1e8122001} 
+int nb\+\_\+rows}
+
+
+
+Nombre de lignes du plateau de jeu. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00197}{197}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a9b91a7ea8120e37549f98786df0ad9d4}\index{game@{game}!mode@{mode}}
+\index{mode@{mode}!game@{game}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \label{structgame_a9b91a7ea8120e37549f98786df0ad9d4} 
+\doxymbox{\hyperlink{game_8h_a5d069ca8708a30d3ae09a065989ec1f7}{game\+\_\+mode}} mode}
+
+
+
+Mode de jeu (Pong ou Briques). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00198}{198}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a2747705ccd15b3102fe4b2b506ede0eb}\index{game@{game}!paddles@{paddles}}
+\index{paddles@{paddles}!game@{game}}
+\doxysubsubsection{\texorpdfstring{paddles}{paddles}}
+{\footnotesize\ttfamily \label{structgame_a2747705ccd15b3102fe4b2b506ede0eb} 
+\doxymbox{\hyperlink{structpaddle}{paddle}}\texorpdfstring{$\ast$}{*} paddles\+[2]\+}
+
+Tableau contenant les deux raquettes du jeu (NULL si une raquette n\textquotesingle{}est pas utilisée dans le mode de jeu). 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00202}{202}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a2903948f554158be16d7f246e6ecd818}\index{game@{game}!player\_modes@{player\_modes}}
+\index{player\_modes@{player\_modes}!game@{game}}
+\doxysubsubsection{\texorpdfstring{player\_modes}{player\_modes}}
+{\footnotesize\ttfamily \label{structgame_a2903948f554158be16d7f246e6ecd818} 
+short player\+\_\+modes\+[2]\+}
+
+Tableau contenant les modes de jeu des deux joueurs (0:\+ pas de joueur, 1:\+ joueur contrôlé par l\textquotesingle{}IA, 2:\+ joueur contrôlé par un humain). 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00204}{204}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_af34afe751ed37d7bbc07038318691212}\index{game@{game}!ball\_list@{ball\_list}}
+\index{ball\_list@{ball\_list}!game@{game}}
+\doxysubsubsection{\texorpdfstring{ball\_list}{ball\_list}}
+{\footnotesize\ttfamily \label{structgame_af34afe751ed37d7bbc07038318691212} 
+\doxymbox{\hyperlink{structball}{ball}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} ball\+\_\+list}
+
+
+
+Tableau des balles présentes sur le plateau de jeu. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00209}{209}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_aa24096b5a56533bfaaeb3e9d5608a9c1}\index{game@{game}!size\_balls@{size\_balls}}
+\index{size\_balls@{size\_balls}!game@{game}}
+\doxysubsubsection{\texorpdfstring{size\_balls}{size\_balls}}
+{\footnotesize\ttfamily \label{structgame_aa24096b5a56533bfaaeb3e9d5608a9c1} 
+int size\+\_\+balls}
+
+
+
+Taille du tableau des balles. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00210}{210}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a854c2e6d5fe7e26f15be668c2c155c69}\index{game@{game}!nb\_balls@{nb\_balls}}
+\index{nb\_balls@{nb\_balls}!game@{game}}
+\doxysubsubsection{\texorpdfstring{nb\_balls}{nb\_balls}}
+{\footnotesize\ttfamily \label{structgame_a854c2e6d5fe7e26f15be668c2c155c69} 
+int nb\+\_\+balls}
+
+Nombre de balles actuellement présentes sur le plateau de jeu (elles sont stockées dans les nb\+\_\+balls premières cases de tableau ball\+\_\+list). 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00211}{211}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a29949dede6a33894418eeb7955eb797f}\index{game@{game}!bonuses@{bonuses}}
+\index{bonuses@{bonuses}!game@{game}}
+\doxysubsubsection{\texorpdfstring{bonuses}{bonuses}}
+{\footnotesize\ttfamily \label{structgame_a29949dede6a33894418eeb7955eb797f} 
+bool bonuses}
+
+
+
+Indique si les bonus sont activés ou non dans le jeu. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00216}{216}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a1b56b59b90e9abedaba8ecd1a133031f}\index{game@{game}!bonus\_list@{bonus\_list}}
+\index{bonus\_list@{bonus\_list}!game@{game}}
+\doxysubsubsection{\texorpdfstring{bonus\_list}{bonus\_list}}
+{\footnotesize\ttfamily \label{structgame_a1b56b59b90e9abedaba8ecd1a133031f} 
+\doxymbox{\hyperlink{structbonus}{bonus}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} bonus\+\_\+list}
+
+Tableau des bonus qui apparaissent sur le plateau de jeu. 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00217}{217}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a8c3cb325e76df6ecdc2c6340d10ccccd}\index{game@{game}!size\_bonus@{size\_bonus}}
+\index{size\_bonus@{size\_bonus}!game@{game}}
+\doxysubsubsection{\texorpdfstring{size\_bonus}{size\_bonus}}
+{\footnotesize\ttfamily \label{structgame_a8c3cb325e76df6ecdc2c6340d10ccccd} 
+int size\+\_\+bonus}
+
+
+
+Taille du tableau des bonus. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00219}{219}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a51acd57beb11e34231fd82d49c4708e5}\index{game@{game}!nb\_bonus@{nb\_bonus}}
+\index{nb\_bonus@{nb\_bonus}!game@{game}}
+\doxysubsubsection{\texorpdfstring{nb\_bonus}{nb\_bonus}}
+{\footnotesize\ttfamily \label{structgame_a51acd57beb11e34231fd82d49c4708e5} 
+int nb\+\_\+bonus}
+
+Nombre de bonus actuellement présents sur le plateau de jeu (ils sont stockés dans les nb\+\_\+bonus premières cases de tableau bonus\+\_\+list). 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00220}{220}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_aa58da797b20faecaef46aeb82f9fe8a7}\index{game@{game}!brick\_list@{brick\_list}}
+\index{brick\_list@{brick\_list}!game@{game}}
+\doxysubsubsection{\texorpdfstring{brick\_list}{brick\_list}}
+{\footnotesize\ttfamily \label{structgame_aa58da797b20faecaef46aeb82f9fe8a7} 
+\doxymbox{\hyperlink{structbrick}{brick}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} brick\+\_\+list}
+
+Tableau contenant toutes les briques présentes sur le plateau de jeu. 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00225}{225}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a0e092559bd466fb29e28ee39a285cc4e}\index{game@{game}!size\_bricks@{size\_bricks}}
+\index{size\_bricks@{size\_bricks}!game@{game}}
+\doxysubsubsection{\texorpdfstring{size\_bricks}{size\_bricks}}
+{\footnotesize\ttfamily \label{structgame_a0e092559bd466fb29e28ee39a285cc4e} 
+int size\+\_\+bricks}
+
+
+
+Taille du tableau brick\+\_\+list. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00227}{227}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a6d7d85fa0d96570962bc4f69f9c5fe1d}\index{game@{game}!nb\_bricks@{nb\_bricks}}
+\index{nb\_bricks@{nb\_bricks}!game@{game}}
+\doxysubsubsection{\texorpdfstring{nb\_bricks}{nb\_bricks}}
+{\footnotesize\ttfamily \label{structgame_a6d7d85fa0d96570962bc4f69f9c5fe1d} 
+int nb\+\_\+bricks}
+
+Nombre de briques restantes sur le plateau (elles sont stockées dans les nb\+\_\+bricks premières cases de tableau brick\+\_\+list). 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00228}{228}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_aa2ce0e10c66abea89c94f2f0a22b59ad}\index{game@{game}!board@{board}}
+\index{board@{board}!game@{game}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \label{structgame_aa2ce0e10c66abea89c94f2f0a22b59ad} 
+int\texorpdfstring{$\ast$}{*} board}
+
+Tableau de taille nb\+\_\+columns x nb\+\_\+rows. La cellule (i, j) du plateau de jeu correspond à la case board\+[i + j \texorpdfstring{$\ast$}{*} nb\+\_\+columns]\+, qui contient -\/1 si la cellule est vide, ou l\textquotesingle{}indice de la brique présente dans cette cellule (cette brique est stockée dans le tableau brick\+\_\+list), 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00231}{231}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a4dc09490ef77aa4779ef2d8d28801661}\index{game@{game}!topspace@{topspace}}
+\index{topspace@{topspace}!game@{game}}
+\doxysubsubsection{\texorpdfstring{topspace}{topspace}}
+{\footnotesize\ttfamily \label{structgame_a4dc09490ef77aa4779ef2d8d28801661} 
+int topspace}
+
+Espace entre le haut du plateau de jeu et la première rangée de briques (utilisé pour les bonus de gravité). 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00236}{236}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{structgame_a4a2503adbcb1d0df5fbf54df346ad052}\index{game@{game}!bottomspace@{bottomspace}}
+\index{bottomspace@{bottomspace}!game@{game}}
+\doxysubsubsection{\texorpdfstring{bottomspace}{bottomspace}}
+{\footnotesize\ttfamily \label{structgame_a4a2503adbcb1d0df5fbf54df346ad052} 
+int bottomspace}
+
+Espace entre le bas du plateau de jeu et la dernière rangée de briques (utilisé pour les bonus de gravité). 
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00238}{238}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{game_8h}{game.\+h}}\end{DoxyCompactItemize}

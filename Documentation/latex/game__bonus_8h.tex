@@ -1,0 +1,94 @@
+\doxysection{Référence du fichier game\+\_\+bonus.\+h}
+\hypertarget{game__bonus_8h}{}\label{game__bonus_8h}\index{game\_bonus.h@{game\_bonus.h}}
+
+
+Fonctions utilisées pour gérer les bonus dans les jeux de Pong et de Briques.  
+
+
+{\ttfamily \+\#include "{}game.\+h"{}}\newline
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{game__bonus_8h_ac7db31dd4df9776274055f6f00dea389}{game\+\_\+add\+\_\+bonus}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, double x, double y, bool down)
+\begin{DoxyCompactList}\small\item\em Ajoute un bonus au jeu, en le créant à la position (x, y). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__bonus_8h_a9dc235704689956b65e98765ca942a70}{game\+\_\+remove\+\_\+bonus}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, int i)
+\begin{DoxyCompactList}\small\item\em Supprime le bonus d\textquotesingle{}indice i du jeu. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{game__bonus_8h_aecc9233ddb5c9feab24c3341090c8eba}{game\+\_\+capture\+\_\+bonus}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{structpaddle}{paddle}} \texorpdfstring{$\ast$}{*}p)
+\begin{DoxyCompactList}\small\item\em Teste si une raquette touche un bonus présent sur le plateau de jeu et change l\textquotesingle{}état du jeu en conséquence (activation du bonus, suppression du bonus, etc.). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fonctions utilisées pour gérer les bonus dans les jeux de Pong et de Briques. 
+
+
+
+Définition dans le fichier \doxymbox{\hyperlink{game__bonus_8h_source}{game\+\_\+bonus.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{game__bonus_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{game__bonus_8h_ac7db31dd4df9776274055f6f00dea389}\index{game\_bonus.h@{game\_bonus.h}!game\_add\_bonus@{game\_add\_bonus}}
+\index{game\_add\_bonus@{game\_add\_bonus}!game\_bonus.h@{game\_bonus.h}}
+\doxysubsubsection{\texorpdfstring{game\_add\_bonus()}{game\_add\_bonus()}}
+{\footnotesize\ttfamily \label{game__bonus_8h_ac7db31dd4df9776274055f6f00dea389} 
+void game\+\_\+add\+\_\+bonus (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{bool}]{down}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute un bonus au jeu, en le créant à la position (x, y). 
+
+\begin{DoxyRemark}{Remarques}
+La fonction doit allouer un nouveau bonus et l\textquotesingle{}ajouter au tableau \doxylink{structgame_a1b56b59b90e9abedaba8ecd1a133031f}{bonus\+\_\+list} du jeu. Si le tableau \doxylink{structgame_a1b56b59b90e9abedaba8ecd1a133031f}{bonus\+\_\+list} est plein (c\textquotesingle{}est à dire si \doxylink{structgame_a51acd57beb11e34231fd82d49c4708e5}{nb\+\_\+bonus} est égal à size\+\_\+bonus), la fonction doit doubler la taille du tableau \doxylink{structgame_a1b56b59b90e9abedaba8ecd1a133031f}{bonus\+\_\+list} pour y faire de la place avant d\textquotesingle{}ajouter le nouveau bonus. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em x} & La position horizontale du bonus sur le plateau de jeu.  \\
+\hline
+{\em y} & La position verticale du bonus sur le plateau de jeu.  \\
+\hline
+{\em down} & Indique si le bonus doit descendre (true) ou monter (false) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bonus_8h_a9dc235704689956b65e98765ca942a70}\index{game\_bonus.h@{game\_bonus.h}!game\_remove\_bonus@{game\_remove\_bonus}}
+\index{game\_remove\_bonus@{game\_remove\_bonus}!game\_bonus.h@{game\_bonus.h}}
+\doxysubsubsection{\texorpdfstring{game\_remove\_bonus()}{game\_remove\_bonus()}}
+{\footnotesize\ttfamily \label{game__bonus_8h_a9dc235704689956b65e98765ca942a70} 
+void game\+\_\+remove\+\_\+bonus (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Supprime le bonus d\textquotesingle{}indice i du jeu. 
+
+La fonction doit libérer la mémoire occupée par le bonus, le retirer du tableau \doxylink{structgame_a1b56b59b90e9abedaba8ecd1a133031f}{bonus\+\_\+list}. Pour combler le trou, on réorganisera le tableau \doxylink{structgame_a1b56b59b90e9abedaba8ecd1a133031f}{bonus\+\_\+list} de manière en remplaçant le bonus supprimé par le dernier bonus du tableau (celui d\textquotesingle{}indice \doxylink{structgame_a51acd57beb11e34231fd82d49c4708e5}{nb\+\_\+bonus} -\/ 1). Enfin, la fonction doit décrémenter le nombre de bonus \doxylink{structgame_a51acd57beb11e34231fd82d49c4708e5}{nb\+\_\+bonus} (on a retiré un bonus du jeu). 
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em i} & L\textquotesingle{}indice du bonus à supprimer dans le tableau \doxylink{structgame_a1b56b59b90e9abedaba8ecd1a133031f}{bonus\+\_\+list}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bonus_8h_aecc9233ddb5c9feab24c3341090c8eba}\index{game\_bonus.h@{game\_bonus.h}!game\_capture\_bonus@{game\_capture\_bonus}}
+\index{game\_capture\_bonus@{game\_capture\_bonus}!game\_bonus.h@{game\_bonus.h}}
+\doxysubsubsection{\texorpdfstring{game\_capture\_bonus()}{game\_capture\_bonus()}}
+{\footnotesize\ttfamily \label{game__bonus_8h_aecc9233ddb5c9feab24c3341090c8eba} 
+bool game\+\_\+capture\+\_\+bonus (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{structpaddle}{paddle}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Teste si une raquette touche un bonus présent sur le plateau de jeu et change l\textquotesingle{}état du jeu en conséquence (activation du bonus, suppression du bonus, etc.). 
+
+Si une raquette touche un bonus, le bonus est activé et supprimé du plateau de jeu. L\textquotesingle{}effet du bonus dépend de son type (voir la structure \doxylink{structbonus}{bonus} dans \doxylink{game__geometry_8h}{game\+\_\+geometry.\+h}).
+
+\begin{DoxyReturn}{Renvoie}
+true si la raquette touche un bonus, false sinon. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em p} & La raquette qui pourrait toucher un bonus. \\
+\hline
+\end{DoxyParams}

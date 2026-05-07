@@ -1,0 +1,48 @@
+\doxysection{game\+\_\+debris.\+h}
+\hypertarget{game__debris_8h_source}{}\label{game__debris_8h_source}\doxymbox{\hyperlink{game__debris_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ DEBRIS\_H}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ DEBRIS\_H}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{alloc_8h}{alloc.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{game__geometry_8h}{game\_geometry.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00023}00023\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00026}00026\ \textcolor{comment}{/*\ \ \_\_\_\_\ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00027}00027\ \textcolor{comment}{/*\ |\ \ \_\ \(\backslash\)\ \ \_\_\_|\ |\_\_\ \ \_\ \_\_(\_)\_\_\_\ \ */}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00028}00028\ \textcolor{comment}{/*\ |\ |\ |\ |/\ \_\ \(\backslash\)\ '\_\ \(\backslash\)|\ '\_\_|\ /\ \_\_|\ */}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00029}00029\ \textcolor{comment}{/*\ |\ |\_|\ |\ \ \_\_/\ |\_)\ |\ |\ \ |\ \(\backslash\)\_\_\ \(\backslash\)\ */}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00030}00030\ \textcolor{comment}{/*\ |\_\_\_\_/\ \(\backslash\)\_\_\_|\_.\_\_/|\_|\ \ |\_|\_\_\_/\ */}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00037}\doxymbox{\hyperlink{game__debris_8h_a675a2dd45719a21b6bcf55489460f8b2}{00037}}\ \textcolor{preprocessor}{\#define\ DEBRIS\_MAX\_FRAME\ 60}}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00042}\doxymbox{\hyperlink{structdebris}{00042}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00043}\doxymbox{\hyperlink{structdebris_ae3bb4eb9686730f8da93dd09fa10c246}{00043}}\ \ \ \ \ \doxymbox{\hyperlink{structrectangle}{rectangle}}\ \doxymbox{\hyperlink{structdebris_ae3bb4eb9686730f8da93dd09fa10c246}{rect}};\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00044}\doxymbox{\hyperlink{structdebris_a229d11aff11a7482259d1296b9b70b8a}{00044}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structdebris_a229d11aff11a7482259d1296b9b70b8a}{dx}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00045}\doxymbox{\hyperlink{structdebris_a9deb6f886b19d50e714d890c3c268efc}{00045}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structdebris_a9deb6f886b19d50e714d890c3c268efc}{dy}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00046}\doxymbox{\hyperlink{structdebris_ad30f972f2e6e3e5ecab0dee38ae6cdb8}{00046}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structdebris_ad30f972f2e6e3e5ecab0dee38ae6cdb8}{frame}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00048}00048\ \}\ \doxymbox{\hyperlink{structdebris}{debris}};}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00055}00055\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{structdebris}{debris}}\ **\doxymbox{\hyperlink{game__debris_8h_a5dee24aaa5a86230c1744f429ed7d40a}{debris\_list}};}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00061}00061\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{game__debris_8h_aa5935d3c68426aa04917522c293ba885}{size\_debris}};}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00067}00067\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{game__debris_8h_a3bd2e8e2c317981e98d94889e583c6da}{nb\_debris}};}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00074}\doxymbox{\hyperlink{game__debris_8h_a03f3ee53b01ca045658f8a497ed7353a}{00074}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__debris_8h_a03f3ee53b01ca045658f8a497ed7353a}{init\_debris}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00087}\doxymbox{\hyperlink{game__debris_8h_a8f4925ee142dc8c6023e33093e190eff}{00087}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__debris_8h_a8f4925ee142dc8c6023e33093e190eff}{add\_debris}}(\doxymbox{\hyperlink{structrectangle}{rectangle}}\ *rect\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00089}00089\ );}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00096}\doxymbox{\hyperlink{game__debris_8h_a3f451a802b94ffa2cd6e53d72782310a}{00096}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__debris_8h_a3f451a802b94ffa2cd6e53d72782310a}{update\_debris}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00103}\doxymbox{\hyperlink{game__debris_8h_adadb094bf4d1178552187247fda25611}{00103}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__debris_8h_adadb094bf4d1178552187247fda25611}{free\_debris}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00111}\doxymbox{\hyperlink{game__debris_8h_a5cb9da69d7fc0c023cf04f0a3d3c20a5}{00111}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__debris_8h_a5cb9da69d7fc0c023cf04f0a3d3c20a5}{reset\_debris}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{game__debris_8h_source_l00113}00113\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DEBRIS\_H}}
+
+\end{DoxyCode}

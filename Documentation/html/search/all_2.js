@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['calloc_0',['CALLOC',['../alloc_8h.html#a5038968dee3708c3e33a35f818c16452',1,'alloc.h']]],
+  ['cell_5fheight_1',['CELL_HEIGHT',['../game_8h.html#a8519cbc2997bb2eb21cf5571b37b38bd',1,'game.h']]],
+  ['cell_5fwidth_2',['CELL_WIDTH',['../game_8h.html#ae1dbb0e959fde337fa4e436b61bb2bac',1,'game.h']]],
+  ['check_5fnull_3',['CHECK_NULL',['../alloc_8h.html#aa44a749b8ec174a5780a521e07b9b86b',1,'alloc.h']]],
+  ['check_5fnull_4',['check_null',['../alloc_8h.html#a4310f3e2cf0b85c13534389cc7479f33',1,'alloc.h']]],
+  ['color_5',['color',['../structbrick.html#aecb0dff5dcf4dc859dac9d774241f354',1,'brick']]],
+  ['colsize_6',['COLSIZE',['../game__geometry_8h.html#a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e',1,'game_geometry.h']]],
+  ['create_5fball_7',['create_ball',['../game__geometry_8h.html#a0ae6198669bad5044cbdf4c7980ced9d',1,'game_geometry.h']]],
+  ['create_5fbrick_8',['create_brick',['../game__geometry_8h.html#a6b587564ebd53a06f29b7d13b41854a9',1,'game_geometry.h']]],
+  ['create_5fnewgame_5ffile_9',['create_newgame_file',['../game__bricks_8h.html#a27c59f0003ace9f92d011c68eeff1ed6',1,'game_bricks.h']]],
+  ['create_5fpaddle_10',['create_paddle',['../game__geometry_8h.html#a762cc1de211dec4140b51ac3f5a2332f',1,'game_geometry.h']]],
+  ['create_5fpong_5fgame_11',['create_pong_game',['../game__pong_8h.html#af89f1cd51c81756201dbfa1fd6424621',1,'game_pong.h']]],
+  ['create_5frandom_5fbonus_12',['create_random_bonus',['../game__geometry_8h.html#a451d52ccdc17f5ce39e67b4b8e1abf40',1,'game_geometry.h']]],
+  ['create_5frandom_5fbrick_5fgame_13',['create_random_brick_game',['../game__bricks_8h.html#a4a7c417c3927e8f165c942bde07889d6',1,'game_bricks.h']]],
+  ['critical_14',['CRITICAL',['../error_8h.html#abb066e119222d55f4d8213bb87ba9f38',1,'CRITICAL:&#160;error.h'],['../error_8h.html#a4ac568348fbda3f2ce37f4cfc14c9598acda21a4a072f2261f6d4ab596599f8b0',1,'CRITICAL:&#160;error.h']]],
+  ['critical_5fl_15',['CRITICAL_L',['../error_8h.html#a4b2413368a69341ef9ae7c1c8559416ea2bef850fd849ff5558602498cf54e3c4',1,'error.h']]]
+];

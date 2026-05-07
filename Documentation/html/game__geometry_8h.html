@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ICBG: Référence du fichier game_geometry.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ICBG
+   </div>
+   <div id="projectbrief">ICBG : The InitC Bricks Game</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('game__geometry_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier game_geometry.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Contient les fonctions et les macros pour les calculs de géométrie du jeu, notamment les collisions entre la balle et les briques, les murs et les raquettes.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+</div>
+<p><a href="game__geometry_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:rectangle" id="r_rectangle"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structrectangle.html">rectangle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure représentant un rectangle sur le plateau de jeu. Utilisé dans tous les types qui représentent un objet du jeu (balles, briques, débris, bonus, ...).  <a href="structrectangle.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:paddle" id="r_paddle"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structpaddle.html">paddle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure représentant une raquette dans le jeu.  <a href="structpaddle.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:ball" id="r_ball"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structball.html">ball</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure représentant une balle dans le jeu.  <a href="structball.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:brick" id="r_brick"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structbrick.html">brick</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure représentant une brique dans le jeu.  <a href="structbrick.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:bonus" id="r_bonus"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structbonus.html">bonus</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a2f9013a31a070d69d1b53ee9525e6c1b" id="r_a2f9013a31a070d69d1b53ee9525e6c1b"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a2f9013a31a070d69d1b53ee9525e6c1b">speed_mode</a> { <a class="el" href="#a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f">SPEED_NORMAL</a>
+, <a class="el" href="#a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469">SPEED_SLOW</a>
+, <a class="el" href="#a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59">SPEED_FAST</a>
+ }</td></tr>
+<tr class="memdesc:a2f9013a31a070d69d1b53ee9525e6c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catégories de vitesse d'une raquette.  <a href="#a2f9013a31a070d69d1b53ee9525e6c1b">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a575adb0267e99d33195ccb846d2be391" id="r_a575adb0267e99d33195ccb846d2be391"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a575adb0267e99d33195ccb846d2be391">paddle_size</a> { <a class="el" href="#a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b">PADDLE_NORMAL</a>
+, <a class="el" href="#a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b">PADDLE_SMALL</a>
+, <a class="el" href="#a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279">PADDLE_LARGE</a>
+ }</td></tr>
+<tr class="memdesc:a575adb0267e99d33195ccb846d2be391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catégories de taille d'une raquette.  <a href="#a575adb0267e99d33195ccb846d2be391">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a4aacd7f6a06e4071d328a3b2c9986701" id="r_a4aacd7f6a06e4071d328a3b2c9986701"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a4aacd7f6a06e4071d328a3b2c9986701">power</a> { <a class="el" href="#a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50">POW_RED</a>
+, <a class="el" href="#a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c">POW_GREEN</a>
+, <a class="el" href="#a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c">POW_NONE</a>
+ }</td></tr>
+<tr class="memitem:a1c49a0130453066c52f6c10399a4aa0f" id="r_a1c49a0130453066c52f6c10399a4aa0f"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a1c49a0130453066c52f6c10399a4aa0f">brick_color</a> { <br />
+&#160;&#160;<a class="el" href="#a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79">BLUE</a>
+, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0fa0c9ed06b5de60ddd26bb2808e5f4b5dd">LIGHTGREEN</a>
+, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d">PURPLE</a>
+, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0faf80f9a890089d211842d59625e561f88">RED</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1c49a0130453066c52f6c10399a4aa0face9ee4c1a6b777940c7f3a766a9a88d4">ORANGE</a>
+, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0fa272b71e84bc2640b193e9fe3c72cb3de">LIGHTBLUE</a>
+, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0fae735a848bf82163a19236ead1c3ef2d2">YELLOW</a>
+, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0faf79adcdefe686bdc500ad2733af34c36">DARKGREEN</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1c49a0130453066c52f6c10399a4aa0fa3fb6c4ad00f4ad98553e01229d1803ac">GRAY</a>
+, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570">BROWN</a>
+, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e">COLSIZE</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a1c49a0130453066c52f6c10399a4aa0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Couleurs possibles pour les briques.  <a href="#a1c49a0130453066c52f6c10399a4aa0f">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a8f9fcedca9f2f9318215294c30504cae" id="r_a8f9fcedca9f2f9318215294c30504cae"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a8f9fcedca9f2f9318215294c30504cae">bonus_type</a> { <br />
+&#160;&#160;<a class="el" href="#a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010">BNS_SHRINK</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6">BNS_GROW</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498">BNS_SPEEDUP</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f">BNS_SLOWDOWN</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240">BNS_SCORE50</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3">BNS_SCORE100</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5">BNS_SCORE250</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b">BNS_SCORE500</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0">BNS_HEALTH</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa">BNS_NEWBALL</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837">BNS_COLORBALL</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1">BNS_STRONGBALL</a>
+, <br />
+&#160;&#160;<a class="el" href="#a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6">BNS_GRAVITY</a>
+, <a class="el" href="#a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da">BNS_SIZE</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ac8a4937f3bc10a476e4a7c22c6c574f8" id="r_ac8a4937f3bc10a476e4a7c22c6c574f8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac8a4937f3bc10a476e4a7c22c6c574f8">rectangles_overlap</a> (<a class="el" href="structrectangle.html">rectangle</a> *r1, <a class="el" href="structrectangle.html">rectangle</a> *r2)</td></tr>
+<tr class="memdesc:ac8a4937f3bc10a476e4a7c22c6c574f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui vérifie si deux rectangles se chevauchent.  <br /></td></tr>
+<tr class="memitem:a762cc1de211dec4140b51ac3f5a2332f" id="r_a762cc1de211dec4140b51ac3f5a2332f"><td class="memItemLeft"><a class="el" href="structpaddle.html">paddle</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a762cc1de211dec4140b51ac3f5a2332f">create_paddle</a> (bool bottom, int nb_rows, int nb_columns)</td></tr>
+<tr class="memdesc:a762cc1de211dec4140b51ac3f5a2332f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'une raquette avec les paramètres spécifiés.  <br /></td></tr>
+<tr class="memitem:a0ae6198669bad5044cbdf4c7980ced9d" id="r_a0ae6198669bad5044cbdf4c7980ced9d"><td class="memItemLeft"><a class="el" href="structball.html">ball</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0ae6198669bad5044cbdf4c7980ced9d">create_ball</a> (double x, double y, bool top)</td></tr>
+<tr class="memdesc:a0ae6198669bad5044cbdf4c7980ced9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'une balle avec les paramètres spécifiés.  <br /></td></tr>
+<tr class="memitem:a306e58724ce16d3d4993e4195b71938c" id="r_a306e58724ce16d3d4993e4195b71938c"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a306e58724ce16d3d4993e4195b71938c">ball_speednorm</a> (<a class="el" href="structball.html">ball</a> *b)</td></tr>
+<tr class="memdesc:a306e58724ce16d3d4993e4195b71938c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui calcule la norme (longueur) du vecteur vitesse d'une balle.  <br /></td></tr>
+<tr class="memitem:a6b587564ebd53a06f29b7d13b41854a9" id="r_a6b587564ebd53a06f29b7d13b41854a9"><td class="memItemLeft"><a class="el" href="structbrick.html">brick</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6b587564ebd53a06f29b7d13b41854a9">create_brick</a> (double x, double y, <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0f">brick_color</a> color, int max_health, int origin)</td></tr>
+<tr class="memdesc:a6b587564ebd53a06f29b7d13b41854a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'une brique avec les paramètres spécifiés.  <br /></td></tr>
+<tr class="memitem:a451d52ccdc17f5ce39e67b4b8e1abf40" id="r_a451d52ccdc17f5ce39e67b4b8e1abf40"><td class="memItemLeft"><a class="el" href="structbonus.html">bonus</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a451d52ccdc17f5ce39e67b4b8e1abf40">create_random_bonus</a> (double x, double y, bool down, bool bricks)</td></tr>
+<tr class="memdesc:a451d52ccdc17f5ce39e67b4b8e1abf40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'un bonus aléatoire avec les paramètres spécifiés.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Contient les fonctions et les macros pour les calculs de géométrie du jeu, notamment les collisions entre la balle et les briques, les murs et les raquettes. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>.</p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a2f9013a31a070d69d1b53ee9525e6c1b" name="a2f9013a31a070d69d1b53ee9525e6c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9013a31a070d69d1b53ee9525e6c1b">&#9670;&#160;</a></span>speed_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a2f9013a31a070d69d1b53ee9525e6c1b">speed_mode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Catégories de vitesse d'une raquette. </p>
+<p>La vitesse réelle de la raquette (stockée dans le champ <a class="el" href="structpaddle.html#aebb2c694aa0ece3f9bb10e4f0261cadc" title="speed_x">speed_x</a>) est la suivante :</p><ul>
+<li>La vitesse correspondant à <a class="el" href="#a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f" title="Raquette normale.">SPEED_NORMAL</a> correspond à la constante <a class="el" href="game_8h.html#adab38e65f74e634284c78af856cd9aa2" title="Vitesse de base de déplacement d&#39;une raquette en valeur absolue.">PADDLE_BASE_SPEED</a> définie dans <a class="el" href="game_8h.html" title="Définition de la structure de données représentant l&#39;état du jeu et des fonctions pour manipuler cett...">game.h</a>.</li>
+<li>La vitesse correspondant à <a class="el" href="#a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469" title="Raquette lente.">SPEED_SLOW</a> correspond à la moitié de <a class="el" href="game_8h.html#adab38e65f74e634284c78af856cd9aa2" title="Vitesse de base de déplacement d&#39;une raquette en valeur absolue.">PADDLE_BASE_SPEED</a>.</li>
+<li>La vitesse correspondant à <a class="el" href="#a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59" title="Raquette rapide.">SPEED_FAST</a> correspond au double de <a class="el" href="game_8h.html#adab38e65f74e634284c78af856cd9aa2" title="Vitesse de base de déplacement d&#39;une raquette en valeur absolue.">PADDLE_BASE_SPEED</a>.</li>
+</ul>
+<dl class="section remark"><dt>Remarques</dt><dd>Les vitesses SPEED_SLOW et SPEED_FAST sont utilisées pour les bonus de ralentissement et de vitesse. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f" name="a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f"></a>SPEED_NORMAL&#160;</td><td class="fielddoc"><p>Raquette normale. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469" name="a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469"></a>SPEED_SLOW&#160;</td><td class="fielddoc"><p>Raquette lente. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59" name="a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59"></a>SPEED_FAST&#160;</td><td class="fielddoc"><p>Raquette rapide. </p>
+</td></tr>
+</table>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__geometry_8h_source.html#l00082">82</a> du fichier <a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>.</p>
+
+</div>
+</div>
+<a id="a575adb0267e99d33195ccb846d2be391" name="a575adb0267e99d33195ccb846d2be391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575adb0267e99d33195ccb846d2be391">&#9670;&#160;</a></span>paddle_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a575adb0267e99d33195ccb846d2be391">paddle_size</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Catégories de taille d'une raquette. </p>
+<p>La taille réelle de la raquette (stockée dans le paddle.champ w) est la suivante :</p><ul>
+<li>La taille correspondant à <a class="el" href="#a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b" title="Raquette normale.">PADDLE_NORMAL</a> correspond à la constante <a class="el" href="game_8h.html#a5247f956703cbf9b1bae869c955e4e01" title="Largeur d&#39;une raquette. À utiliser pour la création des raquettes.">PADDLE_WIDTH</a> définie dans <a class="el" href="game_8h.html" title="Définition de la structure de données représentant l&#39;état du jeu et des fonctions pour manipuler cett...">game.h</a>.</li>
+<li>La taille correspondant à <a class="el" href="#a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b" title="Raquette petite.">PADDLE_SMALL</a> correspond à <a class="el" href="game_8h.html#a7a68691bc9445e0c1d86d5fb15ad7176" title="Largeur d&#39;une petite raquette. À utiliser pour la gestion des bonus qui réduisent la taille de la raq...">PADDLE_SMALL_WIDTH</a>.</li>
+<li>La taille correspondant à <a class="el" href="#a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279" title="Raquette grande.">PADDLE_LARGE</a> correspond au <a class="el" href="game_8h.html#aea714ad5522fb6abc2ebb15d46320166" title="Largeur d&#39;une grande raquette. À utiliser pour la gestion des bonus qui agrandissent la taille de la ...">PADDLE_LARGE_WIDTH</a>. </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b" name="a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b"></a>PADDLE_NORMAL&#160;</td><td class="fielddoc"><p>Raquette normale. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b" name="a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b"></a>PADDLE_SMALL&#160;</td><td class="fielddoc"><p>Raquette petite. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279" name="a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279"></a>PADDLE_LARGE&#160;</td><td class="fielddoc"><p>Raquette grande. </p>
+</td></tr>
+</table>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__geometry_8h_source.html#l00100">100</a> du fichier <a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>.</p>
+
+</div>
+</div>
+<a id="a4aacd7f6a06e4071d328a3b2c9986701" name="a4aacd7f6a06e4071d328a3b2c9986701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aacd7f6a06e4071d328a3b2c9986701">&#9670;&#160;</a></span>power</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a4aacd7f6a06e4071d328a3b2c9986701">power</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50" name="a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50"></a>POW_RED&#160;</td><td class="fielddoc"><p>Change la couleur de la balle. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c" name="a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c"></a>POW_GREEN&#160;</td><td class="fielddoc"><p>Change la couleur de la balle. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c" name="a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c"></a>POW_NONE&#160;</td><td class="fielddoc"><p>Aucun bonus. </p>
+</td></tr>
+</table>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__geometry_8h_source.html#l00148">148</a> du fichier <a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>.</p>
+
+</div>
+</div>
+<a id="a1c49a0130453066c52f6c10399a4aa0f" name="a1c49a0130453066c52f6c10399a4aa0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c49a0130453066c52f6c10399a4aa0f">&#9670;&#160;</a></span>brick_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a1c49a0130453066c52f6c10399a4aa0f">brick_color</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Couleurs possibles pour les briques. </p>
+<dl class="section attention"><dt>Attention</dt><dd>COLSIZE n'est pas une couleur, mais une constante indiquant le nombre de couleurs disponibles. Ne pas l'utiliser pour créer des briques. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79" name="a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79"></a>BLUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0fa0c9ed06b5de60ddd26bb2808e5f4b5dd" name="a1c49a0130453066c52f6c10399a4aa0fa0c9ed06b5de60ddd26bb2808e5f4b5dd"></a>LIGHTGREEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d" name="a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d"></a>PURPLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0faf80f9a890089d211842d59625e561f88" name="a1c49a0130453066c52f6c10399a4aa0faf80f9a890089d211842d59625e561f88"></a>RED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0face9ee4c1a6b777940c7f3a766a9a88d4" name="a1c49a0130453066c52f6c10399a4aa0face9ee4c1a6b777940c7f3a766a9a88d4"></a>ORANGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0fa272b71e84bc2640b193e9fe3c72cb3de" name="a1c49a0130453066c52f6c10399a4aa0fa272b71e84bc2640b193e9fe3c72cb3de"></a>LIGHTBLUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0fae735a848bf82163a19236ead1c3ef2d2" name="a1c49a0130453066c52f6c10399a4aa0fae735a848bf82163a19236ead1c3ef2d2"></a>YELLOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0faf79adcdefe686bdc500ad2733af34c36" name="a1c49a0130453066c52f6c10399a4aa0faf79adcdefe686bdc500ad2733af34c36"></a>DARKGREEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0fa3fb6c4ad00f4ad98553e01229d1803ac" name="a1c49a0130453066c52f6c10399a4aa0fa3fb6c4ad00f4ad98553e01229d1803ac"></a>GRAY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570" name="a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570"></a>BROWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e" name="a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e"></a>COLSIZE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__geometry_8h_source.html#l00206">206</a> du fichier <a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>.</p>
+
+</div>
+</div>
+<a id="a8f9fcedca9f2f9318215294c30504cae" name="a8f9fcedca9f2f9318215294c30504cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9fcedca9f2f9318215294c30504cae">&#9670;&#160;</a></span>bonus_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a8f9fcedca9f2f9318215294c30504cae">bonus_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010" name="a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010"></a>BNS_SHRINK&#160;</td><td class="fielddoc"><p>Réduit la taille de la raquette. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6" name="a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6"></a>BNS_GROW&#160;</td><td class="fielddoc"><p>Agrandit la taille de la raquette. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498" name="a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498"></a>BNS_SPEEDUP&#160;</td><td class="fielddoc"><p>Augmente la vitesse de la raquette. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f" name="a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f"></a>BNS_SLOWDOWN&#160;</td><td class="fielddoc"><p>Diminue la vitesse de la raquette. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240" name="a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240"></a>BNS_SCORE50&#160;</td><td class="fielddoc"><p>Donne des points au joueur. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3" name="a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3"></a>BNS_SCORE100&#160;</td><td class="fielddoc"><p>Donne des points au joueur. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5" name="a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5"></a>BNS_SCORE250&#160;</td><td class="fielddoc"><p>Donne des points au joueur. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b" name="a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b"></a>BNS_SCORE500&#160;</td><td class="fielddoc"><p>Donne des points au joueur. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0" name="a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0"></a>BNS_HEALTH&#160;</td><td class="fielddoc"><p>Donne une vie supplémentaire au joueur. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa" name="a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa"></a>BNS_NEWBALL&#160;</td><td class="fielddoc"><p>Ajoute une balle supplémentaire. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837" name="a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837"></a>BNS_COLORBALL&#160;</td><td class="fielddoc"><p>Ajoute une balle verte (quand celle balles détruit une brique, elle détruit également toutes les briques adjacentes de la même couleur). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1" name="a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1"></a>BNS_STRONGBALL&#160;</td><td class="fielddoc"><p>Ajoute une balle rouge (détruit n'importe quelle brique en un seul coup). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6" name="a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6"></a>BNS_GRAVITY&#160;</td><td class="fielddoc"><p>Les briques tombent dans la direction du joueur qui a touché la balle en dernier. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da" name="a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da"></a>BNS_SIZE&#160;</td><td class="fielddoc"><p>Nombre de bonus possibles (ne pas utiliser pour créer des bonus). </p>
+</td></tr>
+</table>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__geometry_8h_source.html#l00261">261</a> du fichier <a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ac8a4937f3bc10a476e4a7c22c6c574f8" name="ac8a4937f3bc10a476e4a7c22c6c574f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8a4937f3bc10a476e4a7c22c6c574f8">&#9670;&#160;</a></span>rectangles_overlap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rectangles_overlap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrectangle.html">rectangle</a> *</td>          <td class="paramname"><span class="paramname"><em>r1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrectangle.html">rectangle</a> *</td>          <td class="paramname"><span class="paramname"><em>r2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui vérifie si deux rectangles se chevauchent. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si les rectangles se chevauchent, false sinon. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r1</td><td>Premier rectangle.  </td></tr>
+    <tr><td class="paramname">r2</td><td>Deuxième rectangle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a762cc1de211dec4140b51ac3f5a2332f" name="a762cc1de211dec4140b51ac3f5a2332f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762cc1de211dec4140b51ac3f5a2332f">&#9670;&#160;</a></span>create_paddle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpaddle.html">paddle</a> * create_paddle </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nb_rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nb_columns</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'une raquette avec les paramètres spécifiés. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers la raquette créée. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bottom</td><td>Indique si la raquette est en bas (true) ou en haut (false) du plateau de jeu.  </td></tr>
+    <tr><td class="paramname">nb_rows</td><td>Nombre de rangées de briques sur le plateau (la hauteur du plateau est <a class="el" href="game_8h.html#a8519cbc2997bb2eb21cf5571b37b38bd" title="Hauteur d&#39;une cellule sur le plateau. À utiliser pour la initialiser la hauteur d&#39;une nouvelle brique...">CELL_HEIGHT</a> * nb_rows).  </td></tr>
+    <tr><td class="paramname">nb_columns</td><td>Nombre de colonnes de briques sur le plateau (la largeur du plateau est <a class="el" href="game_8h.html#ae1dbb0e959fde337fa4e436b61bb2bac" title="Largeur d&#39;une cellule sur le plateau. À utiliser pour initialiser la largeur d&#39;une nouvelle brique.">CELL_WIDTH</a> * nb_columns). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ae6198669bad5044cbdf4c7980ced9d" name="a0ae6198669bad5044cbdf4c7980ced9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae6198669bad5044cbdf4c7980ced9d">&#9670;&#160;</a></span>create_ball()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structball.html">ball</a> * create_ball </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>top</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'une balle avec les paramètres spécifiés. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers la balle créée. </dd></dl>
+
+</div>
+</div>
+<a id="a306e58724ce16d3d4993e4195b71938c" name="a306e58724ce16d3d4993e4195b71938c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306e58724ce16d3d4993e4195b71938c">&#9670;&#160;</a></span>ball_speednorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ball_speednorm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structball.html">ball</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui calcule la norme (longueur) du vecteur vitesse d'une balle. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>La norme du vecteur vitesse de la balle. </dd></dl>
+
+</div>
+</div>
+<a id="a6b587564ebd53a06f29b7d13b41854a9" name="a6b587564ebd53a06f29b7d13b41854a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b587564ebd53a06f29b7d13b41854a9">&#9670;&#160;</a></span>create_brick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbrick.html">brick</a> * create_brick </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a1c49a0130453066c52f6c10399a4aa0f">brick_color</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max_health</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'une brique avec les paramètres spécifiés. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers la brique créée. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordonnée horizontale du coin supérieur gauche de la brique.  </td></tr>
+    <tr><td class="paramname">y</td><td>Coordonnée verticale du coin supérieur gauche de la brique.  </td></tr>
+    <tr><td class="paramname">color</td><td>Couleur de la brique.  </td></tr>
+    <tr><td class="paramname">max_health</td><td>Nombre de coups nécessaires pour casser la brique.  </td></tr>
+    <tr><td class="paramname">origin</td><td>Position d'origine de la brique sur le plateau de jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a451d52ccdc17f5ce39e67b4b8e1abf40" name="a451d52ccdc17f5ce39e67b4b8e1abf40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a451d52ccdc17f5ce39e67b4b8e1abf40">&#9670;&#160;</a></span>create_random_bonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbonus.html">bonus</a> * create_random_bonus </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>down</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bricks</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'un bonus aléatoire avec les paramètres spécifiés. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>En mode pong, les bonus spécifiques au mode briques (BNS_COLORBALL, BNS_STRONGBALL et BNS_GRAVITY) ne doivent pas être générés.</dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers le bonus créé. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordonnée horizontale du coin supérieur gauche du bonus.  </td></tr>
+    <tr><td class="paramname">y</td><td>Coordonnée verticale du coin supérieur gauche du bonus.  </td></tr>
+    <tr><td class="paramname">down</td><td>Indique si le bonus tombe vers le bas (true) ou vers le haut (false).  </td></tr>
+    <tr><td class="paramname">bricks</td><td>Indique si le jeu est en mode briques (true) ou pong (false). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="game__geometry_8h.html">game_geometry.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

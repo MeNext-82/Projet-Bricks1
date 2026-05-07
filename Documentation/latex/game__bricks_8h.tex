@@ -1,0 +1,249 @@
+\doxysection{Référence du fichier game\+\_\+bricks.\+h}
+\hypertarget{game__bricks_8h}{}\label{game__bricks_8h}\index{game\_bricks.h@{game\_bricks.h}}
+
+
+Fonctions utilisées pour gérer un jeu de Briques, c\textquotesingle{}est à dire un jeu avec des briques, des bonus et des raquettes.  
+
+
+{\ttfamily \+\#include "{}game.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__bricks_8h_a4a7c417c3927e8f165c942bde07889d6}{create\+\_\+random\+\_\+brick\+\_\+game}} (int nb\+\_\+columns, int nb\+\_\+rows, int topspace, int bottomspace, short player\+\_\+one\+\_\+mode, short player\+\_\+two\+\_\+mode, int nb\+\_\+colors, int max\+\_\+health)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}un nouveau jeu de Briques avec les paramètres spécifiés. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__bricks_8h_a27c59f0003ace9f92d011c68eeff1ed6}{create\+\_\+newgame\+\_\+file}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}input, int size, short player\+\_\+one\+\_\+mode, short player\+\_\+two\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}un nouveau jeu à partir d\textquotesingle{}un fichier de configuration. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{game__bricks_8h_a12da384fa50c1c9dcec268c2029831b4}{game\+\_\+brick\+\_\+end}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, bool \texorpdfstring{$\ast$}{*}win)
+\begin{DoxyCompactList}\small\item\em Teste si le jeu de Briques est terminé. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{game__bricks_8h_ad6de245fee54f8f03b210068ece26c69}{game\+\_\+brickia}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, short i)
+\begin{DoxyCompactList}\small\item\em Implémentation de l\textquotesingle{}IA en mode Briques. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__bricks_8h_a2581ad381c97d12f3554cb634c46149b}{game\+\_\+add\+\_\+brick}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, int x, int y, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\+\_\+color}} color, int health)
+\begin{DoxyCompactList}\small\item\em Ajoute une brique au jeu avec les caractéristiques spécifiées. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__bricks_8h_aff980d4420910e1eb6b530350f10185d}{game\+\_\+remove\+\_\+brick}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, int i, short last\+\_\+hit)
+\begin{DoxyCompactList}\small\item\em Retire la brique d\textquotesingle{}indice i du jeu, en mettant à jour l\textquotesingle{}état du jeu en conséquence (score du joueur, génération d\textquotesingle{}un bonus, etc.). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{game__bricks_8h_af67522cdfe1d3114221a57c66dbd9806}{ball\+\_\+hits\+\_\+brick}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, int i)
+\begin{DoxyCompactList}\small\item\em Teste si une balle touche l\textquotesingle{}une des briques présentes sur le plateau de jeu et change l\textquotesingle{}état du jeu en conséquence (inversion de la vitesse de la balle, diminution de la santé de la brique, etc.). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game__bricks_8h_a3dd8771d4c746a6585bbcb15b02c8ef1}{game\+\_\+gravity}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, bool bot)
+\begin{DoxyCompactList}\small\item\em Applique la gravité aux briques du jeu, en les faisant tomber vers le bas ou vers le haut du plateau de jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fonctions utilisées pour gérer un jeu de Briques, c\textquotesingle{}est à dire un jeu avec des briques, des bonus et des raquettes. 
+
+
+
+Définition dans le fichier \doxymbox{\hyperlink{game__bricks_8h_source}{game\+\_\+bricks.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{game__bricks_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{game__bricks_8h_a4a7c417c3927e8f165c942bde07889d6}\index{game\_bricks.h@{game\_bricks.h}!create\_random\_brick\_game@{create\_random\_brick\_game}}
+\index{create\_random\_brick\_game@{create\_random\_brick\_game}!game\_bricks.h@{game\_bricks.h}}
+\doxysubsubsection{\texorpdfstring{create\_random\_brick\_game()}{create\_random\_brick\_game()}}
+{\footnotesize\ttfamily \label{game__bricks_8h_a4a7c417c3927e8f165c942bde07889d6} 
+\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*} create\+\_\+random\+\_\+brick\+\_\+game (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+columns}{, }\item[{int}]{nb\+\_\+rows}{, }\item[{int}]{topspace}{, }\item[{int}]{bottomspace}{, }\item[{short}]{player\+\_\+one\+\_\+mode}{, }\item[{short}]{player\+\_\+two\+\_\+mode}{, }\item[{int}]{nb\+\_\+colors}{, }\item[{int}]{max\+\_\+health}{}\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}un nouveau jeu de Briques avec les paramètres spécifiés. 
+
+\begin{DoxyRemark}{Remarques}
+On utilisera la fonction game\+\_\+add\+\_\+brick pour ajouter les briques au jeu.
+\end{DoxyRemark}
+La génération est aléatoire.
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le jeu créé. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em nb\+\_\+columns} & Nombre de colonnes du plateau de jeu.  \\
+\hline
+{\em nb\+\_\+rows} & Nombre de lignes du plateau de jeu.  \\
+\hline
+{\em topspace} & Espace entre le haut du plateau de jeu et la première  \\
+\hline
+{\em bottomspace} & Espace entre le bas du plateau de jeu et la dernière  \\
+\hline
+{\em player\+\_\+one\+\_\+mode} & Mode de jeu du premier joueur (0:\+ pas de premier joueur, 1:\+ premier joueur contrôlé par l\textquotesingle{}IA, 2:\+ premier joueur contrôlé par un humain).  \\
+\hline
+{\em player\+\_\+two\+\_\+mode} & Mode de jeu du deuxième joueur (0:\+ pas de deuxième joueur, 1:\+ deuxième joueur contrôlé par l\textquotesingle{}IA, 2:\+ deuxième joueur contrôlé par un humain).  \\
+\hline
+{\em nb\+\_\+colors} & Nombre de couleurs différentes pour les briques.  \\
+\hline
+{\em max\+\_\+health} & Santé maximale des briques. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bricks_8h_a27c59f0003ace9f92d011c68eeff1ed6}\index{game\_bricks.h@{game\_bricks.h}!create\_newgame\_file@{create\_newgame\_file}}
+\index{create\_newgame\_file@{create\_newgame\_file}!game\_bricks.h@{game\_bricks.h}}
+\doxysubsubsection{\texorpdfstring{create\_newgame\_file()}{create\_newgame\_file()}}
+{\footnotesize\ttfamily \label{game__bricks_8h_a27c59f0003ace9f92d011c68eeff1ed6} 
+\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*} create\+\_\+newgame\+\_\+file (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{input}{, }\item[{int}]{size}{, }\item[{short}]{player\+\_\+one\+\_\+mode}{, }\item[{short}]{player\+\_\+two\+\_\+mode}{}\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}un nouveau jeu à partir d\textquotesingle{}un fichier de configuration. 
+
+\begin{DoxyRemark}{Remarques}
+On utilisera la fonction \doxylink{game__bricks_8h_a2581ad381c97d12f3554cb634c46149b}{game\+\_\+add\+\_\+brick()} pour ajouter les briques au jeu.
+\end{DoxyRemark}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le jeu créé. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em input} & Tableau des lignes extrait du fichier de configuration du jeu, contenant les dimensions du plateau et la disposition des briques.  \\
+\hline
+{\em size} & Taille du tableau input (nombre de lignes).  \\
+\hline
+{\em player\+\_\+one\+\_\+mode} & Mode de jeu du premier joueur (0:\+ pas de premier joueur, 1:\+ premier joueur contrôlé par l\textquotesingle{}IA, 2:\+ premier joueur contrôlé par un humain).  \\
+\hline
+{\em player\+\_\+two\+\_\+mode} & Mode de jeu du deuxième joueur (0:\+ pas de deuxième joueur, 1:\+ deuxième joueur contrôlé par l\textquotesingle{}IA, 2:\+ deuxième joueur contrôlé par un humain). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bricks_8h_a12da384fa50c1c9dcec268c2029831b4}\index{game\_bricks.h@{game\_bricks.h}!game\_brick\_end@{game\_brick\_end}}
+\index{game\_brick\_end@{game\_brick\_end}!game\_bricks.h@{game\_bricks.h}}
+\doxysubsubsection{\texorpdfstring{game\_brick\_end()}{game\_brick\_end()}}
+{\footnotesize\ttfamily \label{game__bricks_8h_a12da384fa50c1c9dcec268c2029831b4} 
+bool game\+\_\+brick\+\_\+end (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{win}{}\end{DoxyParamCaption})}
+
+
+
+Teste si le jeu de Briques est terminé. 
+
+Un jeu de briques prend fin si toutes les briques sont détruites (victoire) ou si tous les joueurs ont perdu (défaite).
+
+\begin{DoxyRemark}{Remarques}
+La fonction doit stocker dans {\ttfamily win} la valeur true si le joueur a gagné, ou false s\textquotesingle{}il a perdu.
+\end{DoxyRemark}
+\begin{DoxyReturn}{Renvoie}
+true si le jeu est terminé, false sinon. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em win} & Pointeur vers une variable dans laquelle la fonction doit stocker true si le joueur a gagné, ou false s\textquotesingle{}il a perdu, si le jeu est terminé. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bricks_8h_ad6de245fee54f8f03b210068ece26c69}\index{game\_bricks.h@{game\_bricks.h}!game\_brickia@{game\_brickia}}
+\index{game\_brickia@{game\_brickia}!game\_bricks.h@{game\_bricks.h}}
+\doxysubsubsection{\texorpdfstring{game\_brickia()}{game\_brickia()}}
+{\footnotesize\ttfamily \label{game__bricks_8h_ad6de245fee54f8f03b210068ece26c69} 
+bool game\+\_\+brickia (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{short}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Implémentation de l\textquotesingle{}IA en mode Briques. 
+
+La fonction choisit une direction de déplacement pour la raquette du joueur i contrôlé par l\textquotesingle{}IA, et modifie le paramètre \doxylink{structpaddle_aebb2c694aa0ece3f9bb10e4f0261cadc}{speed\+\_\+x} de la raquette en conséquence. L\textquotesingle{}IA suit simplement la balle avec la raquette. Si la balle est à gauche de la raquette, elle se déplace vers la gauche, si elle est à droite, elle se déplace vers la droite, sinon elle suit la vitesse horizontale de la balle. 
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em i} & Joueur contrôlé par l\textquotesingle{}IA (0 pour le joueur 1, 1 pour le joueur 2). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bricks_8h_a2581ad381c97d12f3554cb634c46149b}\index{game\_bricks.h@{game\_bricks.h}!game\_add\_brick@{game\_add\_brick}}
+\index{game\_add\_brick@{game\_add\_brick}!game\_bricks.h@{game\_bricks.h}}
+\doxysubsubsection{\texorpdfstring{game\_add\_brick()}{game\_add\_brick()}}
+{\footnotesize\ttfamily \label{game__bricks_8h_a2581ad381c97d12f3554cb634c46149b} 
+void game\+\_\+add\+\_\+brick (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\+\_\+color}}}]{color}{, }\item[{int}]{health}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute une brique au jeu avec les caractéristiques spécifiées. 
+
+\begin{DoxyRemark}{Remarques}
+La fonction doit allouer une nouvelle brique et l\textquotesingle{}ajouter au tableau \doxylink{structgame_aa58da797b20faecaef46aeb82f9fe8a7}{brick\+\_\+list} du jeu. Si le tableau \doxylink{structgame_aa58da797b20faecaef46aeb82f9fe8a7}{brick\+\_\+list} est plein (c\textquotesingle{}est à dire si \doxylink{structgame_a6d7d85fa0d96570962bc4f69f9c5fe1d}{nb\+\_\+bricks} est égal à \doxylink{structgame_a0e092559bd466fb29e28ee39a285cc4e}{size\+\_\+bricks}), la fonction doit doubler la taille du tableau \doxylink{structgame_aa58da797b20faecaef46aeb82f9fe8a7}{brick\+\_\+list} pour y faire de la place avant d\textquotesingle{}ajouter la nouvelle brique. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em x} & La colonne de la brique à ajouter (entre 0 et nb\+\_\+columns -\/ 1).  \\
+\hline
+{\em y} & La ligne de la brique à ajouter (entre 0 et nb\+\_\+rows -\/ 1).  \\
+\hline
+{\em color} & La couleur de la brique.  \\
+\hline
+{\em health} & La santé de la brique. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bricks_8h_aff980d4420910e1eb6b530350f10185d}\index{game\_bricks.h@{game\_bricks.h}!game\_remove\_brick@{game\_remove\_brick}}
+\index{game\_remove\_brick@{game\_remove\_brick}!game\_bricks.h@{game\_bricks.h}}
+\doxysubsubsection{\texorpdfstring{game\_remove\_brick()}{game\_remove\_brick()}}
+{\footnotesize\ttfamily \label{game__bricks_8h_aff980d4420910e1eb6b530350f10185d} 
+void game\+\_\+remove\+\_\+brick (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{i}{, }\item[{short}]{last\+\_\+hit}{}\end{DoxyParamCaption})}
+
+
+
+Retire la brique d\textquotesingle{}indice i du jeu, en mettant à jour l\textquotesingle{}état du jeu en conséquence (score du joueur, génération d\textquotesingle{}un bonus, etc.). 
+
+La fonction doit libérer la mémoire occupée par la brique, la retirer du tableau \doxylink{structgame_aa58da797b20faecaef46aeb82f9fe8a7}{brick\+\_\+list}. Pour combler le trou, on réorganisera le tableau \doxylink{structgame_aa58da797b20faecaef46aeb82f9fe8a7}{brick\+\_\+list} de manière en remplaçant la brique supprimée par la dernière brique du tableau (celle d\textquotesingle{}indice \doxylink{structgame_a6d7d85fa0d96570962bc4f69f9c5fe1d}{nb\+\_\+bricks} -\/ 1). Enfin, la fonction doit décrémenter le nombre de briques \doxylink{structgame_a6d7d85fa0d96570962bc4f69f9c5fe1d}{nb\+\_\+bricks} (on a retiré une brique du jeu).
+
+Lorsque une brique est supprimée, on doit effectuer les opérations suivantes :\+
+\begin{DoxyItemize}
+\item Ajouter des débris pour la brique détruite (en utilisant la fonction \doxylink{game__debris_8h_a8f4925ee142dc8c6023e33093e190eff}{add\+\_\+debris()}, voir \doxylink{game__debris_8h}{game\+\_\+debris.\+h}).
+\item Mettre à jour le score du joueur qui a détruit la brique (il gagne 500 points) et son nombre de briques détruites.
+\item Générer un bonus avec une probabilité de 50\% (en utilisant la fonction \doxylink{game__bonus_8h_ac7db31dd4df9776274055f6f00dea389}{game\+\_\+add\+\_\+bonus()}, voir \doxylink{game__bonus_8h}{game\+\_\+bonus.\+h}).
+\end{DoxyItemize}
+
+\begin{DoxyRemark}{Remarques}
+Le paramètre {\ttfamily last\+\_\+hit} indique le dernier joueur qui a touché la balle. Cela permet de savoir quel joueur a détruit la brique et doit donc être récompensé par des points et un bonus. {\ttfamily last\+\_\+hit} vaut 0 si c\textquotesingle{}est le joueur 1 qui a touché la balle, 1 si c\textquotesingle{}est le joueur 2, ou -\/1 si la balle n\textquotesingle{}a pas encore touché de raquette. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em i} & L\textquotesingle{}indice de la brique à retirer dans le tableau brick\+\_\+list.  \\
+\hline
+{\em last\+\_\+hit} & Le dernier joueur qui a touché la balle (0 pour le \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bricks_8h_af67522cdfe1d3114221a57c66dbd9806}\index{game\_bricks.h@{game\_bricks.h}!ball\_hits\_brick@{ball\_hits\_brick}}
+\index{ball\_hits\_brick@{ball\_hits\_brick}!game\_bricks.h@{game\_bricks.h}}
+\doxysubsubsection{\texorpdfstring{ball\_hits\_brick()}{ball\_hits\_brick()}}
+{\footnotesize\ttfamily \label{game__bricks_8h_af67522cdfe1d3114221a57c66dbd9806} 
+bool ball\+\_\+hits\+\_\+brick (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Teste si une balle touche l\textquotesingle{}une des briques présentes sur le plateau de jeu et change l\textquotesingle{}état du jeu en conséquence (inversion de la vitesse de la balle, diminution de la santé de la brique, etc.). 
+
+La fonction devra passer en revue toutes les briques présentes sur le plateau de jeu pour vérifier si la balle touche l\textquotesingle{}une d\textquotesingle{}entre elles.
+
+\begin{DoxyRemark}{Remarques}
+On utilisera la fonction game\+\_\+remove\+\_\+brick si la brique touchée est détruite (sa santé devient nulle ou négative).
+\end{DoxyRemark}
+\begin{DoxyReturn}{Renvoie}
+true si la balle touche une brique, false sinon. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em i} & L\textquotesingle{}indice de la balle dans le tableau. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__bricks_8h_a3dd8771d4c746a6585bbcb15b02c8ef1}\index{game\_bricks.h@{game\_bricks.h}!game\_gravity@{game\_gravity}}
+\index{game\_gravity@{game\_gravity}!game\_bricks.h@{game\_bricks.h}}
+\doxysubsubsection{\texorpdfstring{game\_gravity()}{game\_gravity()}}
+{\footnotesize\ttfamily \label{game__bricks_8h_a3dd8771d4c746a6585bbcb15b02c8ef1} 
+void game\+\_\+gravity (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{bool}]{bot}{}\end{DoxyParamCaption})}
+
+
+
+Applique la gravité aux briques du jeu, en les faisant tomber vers le bas ou vers le haut du plateau de jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em bot} & Si true, la gravité est appliquée vers le bas (les briques tombent vers le bas du plateau de jeu), sinon elle est appliquée vers le haut (les briques tombent vers le haut du plateau de jeu). \\
+\hline
+\end{DoxyParams}

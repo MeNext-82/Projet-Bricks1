@@ -1,0 +1,527 @@
+\doxysection{Référence du fichier game\+\_\+geometry.\+h}
+\hypertarget{game__geometry_8h}{}\label{game__geometry_8h}\index{game\_geometry.h@{game\_geometry.h}}
+
+
+Contient les fonctions et les macros pour les calculs de géométrie du jeu, notamment les collisions entre la balle et les briques, les murs et les raquettes.  
+
+
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structrectangle}{rectangle}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un rectangle sur le plateau de jeu. Utilisé dans tous les types qui représentent un objet du jeu (balles, briques, débris, bonus, ...). \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structpaddle}{paddle}}
+\begin{DoxyCompactList}\small\item\em Structure représentant une raquette dans le jeu. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structball}{ball}}
+\begin{DoxyCompactList}\small\item\em Structure représentant une balle dans le jeu. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structbrick}{brick}}
+\begin{DoxyCompactList}\small\item\em Structure représentant une brique dans le jeu. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structbonus}{bonus}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1b}{speed\+\_\+mode}} \{ \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f}{SPEED\+\_\+\+NORMAL}}
+, \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469}{SPEED\+\_\+\+SLOW}}
+, \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59}{SPEED\+\_\+\+FAST}}
+ \}
+\begin{DoxyCompactList}\small\item\em Catégories de vitesse d\textquotesingle{}une raquette. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391}{paddle\+\_\+size}} \{ \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b}{PADDLE\+\_\+\+NORMAL}}
+, \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b}{PADDLE\+\_\+\+SMALL}}
+, \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279}{PADDLE\+\_\+\+LARGE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Catégories de taille d\textquotesingle{}une raquette. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701}{power}} \{ \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50}{POW\+\_\+\+RED}}
+, \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c}{POW\+\_\+\+GREEN}}
+, \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c}{POW\+\_\+\+NONE}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\+\_\+color}} \{ \newline
+\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79}{BLUE}}
+, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa0c9ed06b5de60ddd26bb2808e5f4b5dd}{LIGHTGREEN}}
+, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d}{PURPLE}}
+, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf80f9a890089d211842d59625e561f88}{RED}}
+, \newline
+\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0face9ee4c1a6b777940c7f3a766a9a88d4}{ORANGE}}
+, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa272b71e84bc2640b193e9fe3c72cb3de}{LIGHTBLUE}}
+, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fae735a848bf82163a19236ead1c3ef2d2}{YELLOW}}
+, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf79adcdefe686bdc500ad2733af34c36}{DARKGREEN}}
+, \newline
+\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa3fb6c4ad00f4ad98553e01229d1803ac}{GRAY}}
+, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570}{BROWN}}
+, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e}{COLSIZE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Couleurs possibles pour les briques. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504cae}{bonus\+\_\+type}} \{ \newline
+\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010}{BNS\+\_\+\+SHRINK}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6}{BNS\+\_\+\+GROW}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498}{BNS\+\_\+\+SPEEDUP}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f}{BNS\+\_\+\+SLOWDOWN}}
+, \newline
+\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240}{BNS\+\_\+\+SCORE50}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3}{BNS\+\_\+\+SCORE100}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5}{BNS\+\_\+\+SCORE250}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b}{BNS\+\_\+\+SCORE500}}
+, \newline
+\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0}{BNS\+\_\+\+HEALTH}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa}{BNS\+\_\+\+NEWBALL}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837}{BNS\+\_\+\+COLORBALL}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1}{BNS\+\_\+\+STRONGBALL}}
+, \newline
+\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6}{BNS\+\_\+\+GRAVITY}}
+, \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da}{BNS\+\_\+\+SIZE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{game__geometry_8h_ac8a4937f3bc10a476e4a7c22c6c574f8}{rectangles\+\_\+overlap}} (\doxymbox{\hyperlink{structrectangle}{rectangle}} \texorpdfstring{$\ast$}{*}r1, \doxymbox{\hyperlink{structrectangle}{rectangle}} \texorpdfstring{$\ast$}{*}r2)
+\begin{DoxyCompactList}\small\item\em Fonction qui vérifie si deux rectangles se chevauchent. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structpaddle}{paddle}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__geometry_8h_a762cc1de211dec4140b51ac3f5a2332f}{create\+\_\+paddle}} (bool bottom, int nb\+\_\+rows, int nb\+\_\+columns)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}une raquette avec les paramètres spécifiés. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structball}{ball}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__geometry_8h_a0ae6198669bad5044cbdf4c7980ced9d}{create\+\_\+ball}} (double x, double y, bool top)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}une balle avec les paramètres spécifiés. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{game__geometry_8h_a306e58724ce16d3d4993e4195b71938c}{ball\+\_\+speednorm}} (\doxymbox{\hyperlink{structball}{ball}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Fonction qui calcule la norme (longueur) du vecteur vitesse d\textquotesingle{}une balle. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structbrick}{brick}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__geometry_8h_a6b587564ebd53a06f29b7d13b41854a9}{create\+\_\+brick}} (double x, double y, \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\+\_\+color}} color, int max\+\_\+health, int origin)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}une brique avec les paramètres spécifiés. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structbonus}{bonus}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{game__geometry_8h_a451d52ccdc17f5ce39e67b4b8e1abf40}{create\+\_\+random\+\_\+bonus}} (double x, double y, bool down, bool bricks)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}un bonus aléatoire avec les paramètres spécifiés. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contient les fonctions et les macros pour les calculs de géométrie du jeu, notamment les collisions entre la balle et les briques, les murs et les raquettes. 
+
+
+
+Définition dans le fichier \doxymbox{\hyperlink{game__geometry_8h_source}{game\+\_\+geometry.\+h}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{game__geometry_8h_doc-enum-members}
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1b}\index{game\_geometry.h@{game\_geometry.h}!speed\_mode@{speed\_mode}}
+\index{speed\_mode@{speed\_mode}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{speed\_mode}{speed\_mode}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1b} 
+enum \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1b}{speed\+\_\+mode}}}
+
+
+
+Catégories de vitesse d\textquotesingle{}une raquette. 
+
+La vitesse réelle de la raquette (stockée dans le champ \doxylink{structpaddle_aebb2c694aa0ece3f9bb10e4f0261cadc}{speed\+\_\+x}) est la suivante :\+
+\begin{DoxyItemize}
+\item La vitesse correspondant à \doxylink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f}{SPEED\+\_\+\+NORMAL} correspond à la constante \doxylink{game_8h_adab38e65f74e634284c78af856cd9aa2}{PADDLE\+\_\+\+BASE\+\_\+\+SPEED} définie dans \doxylink{game_8h}{game.\+h}.
+\item La vitesse correspondant à \doxylink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469}{SPEED\+\_\+\+SLOW} correspond à la moitié de \doxylink{game_8h_adab38e65f74e634284c78af856cd9aa2}{PADDLE\+\_\+\+BASE\+\_\+\+SPEED}.
+\item La vitesse correspondant à \doxylink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59}{SPEED\+\_\+\+FAST} correspond au double de \doxylink{game_8h_adab38e65f74e634284c78af856cd9aa2}{PADDLE\+\_\+\+BASE\+\_\+\+SPEED}.
+\end{DoxyItemize}
+
+\begin{DoxyRemark}{Remarques}
+Les vitesses SPEED\+\_\+\+SLOW et SPEED\+\_\+\+FAST sont utilisées pour les bonus de ralentissement et de vitesse. 
+\end{DoxyRemark}
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPEED\_NORMAL@{SPEED\_NORMAL}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!SPEED\_NORMAL@{SPEED\_NORMAL}}
+}\Hypertarget{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f}\label{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f} 
+SPEED\+\_\+\+NORMAL&Raquette normale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPEED\_SLOW@{SPEED\_SLOW}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!SPEED\_SLOW@{SPEED\_SLOW}}
+}\Hypertarget{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469}\label{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469} 
+SPEED\+\_\+\+SLOW&Raquette lente. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPEED\_FAST@{SPEED\_FAST}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!SPEED\_FAST@{SPEED\_FAST}}
+}\Hypertarget{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59}\label{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59} 
+SPEED\+\_\+\+FAST&Raquette rapide. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__geometry_8h_source_l00082}{82}} du fichier \doxymbox{\hyperlink{game__geometry_8h_source}{game\+\_\+geometry.\+h}}.
+
+\Hypertarget{game__geometry_8h_a575adb0267e99d33195ccb846d2be391}\index{game\_geometry.h@{game\_geometry.h}!paddle\_size@{paddle\_size}}
+\index{paddle\_size@{paddle\_size}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{paddle\_size}{paddle\_size}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a575adb0267e99d33195ccb846d2be391} 
+enum \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391}{paddle\+\_\+size}}}
+
+
+
+Catégories de taille d\textquotesingle{}une raquette. 
+
+La taille réelle de la raquette (stockée dans le paddle.\+champ w) est la suivante :\+
+\begin{DoxyItemize}
+\item La taille correspondant à \doxylink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b}{PADDLE\+\_\+\+NORMAL} correspond à la constante \doxylink{game_8h_a5247f956703cbf9b1bae869c955e4e01}{PADDLE\+\_\+\+WIDTH} définie dans \doxylink{game_8h}{game.\+h}.
+\item La taille correspondant à \doxylink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b}{PADDLE\+\_\+\+SMALL} correspond à \doxylink{game_8h_a7a68691bc9445e0c1d86d5fb15ad7176}{PADDLE\+\_\+\+SMALL\+\_\+\+WIDTH}.
+\item La taille correspondant à \doxylink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279}{PADDLE\+\_\+\+LARGE} correspond au \doxylink{game_8h_aea714ad5522fb6abc2ebb15d46320166}{PADDLE\+\_\+\+LARGE\+\_\+\+WIDTH}. 
+\end{DoxyItemize}\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PADDLE\_NORMAL@{PADDLE\_NORMAL}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!PADDLE\_NORMAL@{PADDLE\_NORMAL}}
+}\Hypertarget{game__geometry_8h_a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b}\label{game__geometry_8h_a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b} 
+PADDLE\+\_\+\+NORMAL&Raquette normale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PADDLE\_SMALL@{PADDLE\_SMALL}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!PADDLE\_SMALL@{PADDLE\_SMALL}}
+}\Hypertarget{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b}\label{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b} 
+PADDLE\+\_\+\+SMALL&Raquette petite. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PADDLE\_LARGE@{PADDLE\_LARGE}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!PADDLE\_LARGE@{PADDLE\_LARGE}}
+}\Hypertarget{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279}\label{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279} 
+PADDLE\+\_\+\+LARGE&Raquette grande. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__geometry_8h_source_l00100}{100}} du fichier \doxymbox{\hyperlink{game__geometry_8h_source}{game\+\_\+geometry.\+h}}.
+
+\Hypertarget{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701}\index{game\_geometry.h@{game\_geometry.h}!power@{power}}
+\index{power@{power}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{power}{power}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701} 
+enum \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701}{power}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POW\_RED@{POW\_RED}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!POW\_RED@{POW\_RED}}
+}\Hypertarget{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50}\label{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50} 
+POW\+\_\+\+RED&Change la couleur de la balle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POW\_GREEN@{POW\_GREEN}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!POW\_GREEN@{POW\_GREEN}}
+}\Hypertarget{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c}\label{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c} 
+POW\+\_\+\+GREEN&Change la couleur de la balle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POW\_NONE@{POW\_NONE}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!POW\_NONE@{POW\_NONE}}
+}\Hypertarget{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c}\label{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c} 
+POW\+\_\+\+NONE&Aucun bonus. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__geometry_8h_source_l00148}{148}} du fichier \doxymbox{\hyperlink{game__geometry_8h_source}{game\+\_\+geometry.\+h}}.
+
+\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}\index{game\_geometry.h@{game\_geometry.h}!brick\_color@{brick\_color}}
+\index{brick\_color@{brick\_color}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{brick\_color}{brick\_color}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f} 
+enum \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\+\_\+color}}}
+
+
+
+Couleurs possibles pour les briques. 
+
+\begin{DoxyAttention}{Attention}
+COLSIZE n\textquotesingle{}est pas une couleur, mais une constante indiquant le nombre de couleurs disponibles. Ne pas l\textquotesingle{}utiliser pour créer des briques. 
+\end{DoxyAttention}
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLUE@{BLUE}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BLUE@{BLUE}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79} 
+BLUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHTGREEN@{LIGHTGREEN}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!LIGHTGREEN@{LIGHTGREEN}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa0c9ed06b5de60ddd26bb2808e5f4b5dd}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa0c9ed06b5de60ddd26bb2808e5f4b5dd} 
+LIGHTGREEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PURPLE@{PURPLE}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!PURPLE@{PURPLE}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d} 
+PURPLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RED@{RED}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!RED@{RED}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf80f9a890089d211842d59625e561f88}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf80f9a890089d211842d59625e561f88} 
+RED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ORANGE@{ORANGE}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!ORANGE@{ORANGE}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0face9ee4c1a6b777940c7f3a766a9a88d4}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0face9ee4c1a6b777940c7f3a766a9a88d4} 
+ORANGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHTBLUE@{LIGHTBLUE}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!LIGHTBLUE@{LIGHTBLUE}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa272b71e84bc2640b193e9fe3c72cb3de}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa272b71e84bc2640b193e9fe3c72cb3de} 
+LIGHTBLUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{YELLOW@{YELLOW}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!YELLOW@{YELLOW}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fae735a848bf82163a19236ead1c3ef2d2}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fae735a848bf82163a19236ead1c3ef2d2} 
+YELLOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DARKGREEN@{DARKGREEN}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!DARKGREEN@{DARKGREEN}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf79adcdefe686bdc500ad2733af34c36}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf79adcdefe686bdc500ad2733af34c36} 
+DARKGREEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GRAY@{GRAY}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!GRAY@{GRAY}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa3fb6c4ad00f4ad98553e01229d1803ac}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa3fb6c4ad00f4ad98553e01229d1803ac} 
+GRAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BROWN@{BROWN}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BROWN@{BROWN}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570} 
+BROWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COLSIZE@{COLSIZE}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!COLSIZE@{COLSIZE}}
+}\Hypertarget{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e}\label{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e} 
+COLSIZE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__geometry_8h_source_l00206}{206}} du fichier \doxymbox{\hyperlink{game__geometry_8h_source}{game\+\_\+geometry.\+h}}.
+
+\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504cae}\index{game\_geometry.h@{game\_geometry.h}!bonus\_type@{bonus\_type}}
+\index{bonus\_type@{bonus\_type}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{bonus\_type}{bonus\_type}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504cae} 
+enum \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504cae}{bonus\+\_\+type}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_SHRINK@{BNS\_SHRINK}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_SHRINK@{BNS\_SHRINK}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010} 
+BNS\+\_\+\+SHRINK&Réduit la taille de la raquette. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_GROW@{BNS\_GROW}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_GROW@{BNS\_GROW}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6} 
+BNS\+\_\+\+GROW&Agrandit la taille de la raquette. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_SPEEDUP@{BNS\_SPEEDUP}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_SPEEDUP@{BNS\_SPEEDUP}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498} 
+BNS\+\_\+\+SPEEDUP&Augmente la vitesse de la raquette. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_SLOWDOWN@{BNS\_SLOWDOWN}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_SLOWDOWN@{BNS\_SLOWDOWN}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f} 
+BNS\+\_\+\+SLOWDOWN&Diminue la vitesse de la raquette. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_SCORE50@{BNS\_SCORE50}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_SCORE50@{BNS\_SCORE50}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240} 
+BNS\+\_\+\+SCORE50&Donne des points au joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_SCORE100@{BNS\_SCORE100}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_SCORE100@{BNS\_SCORE100}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3} 
+BNS\+\_\+\+SCORE100&Donne des points au joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_SCORE250@{BNS\_SCORE250}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_SCORE250@{BNS\_SCORE250}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5} 
+BNS\+\_\+\+SCORE250&Donne des points au joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_SCORE500@{BNS\_SCORE500}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_SCORE500@{BNS\_SCORE500}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b} 
+BNS\+\_\+\+SCORE500&Donne des points au joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_HEALTH@{BNS\_HEALTH}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_HEALTH@{BNS\_HEALTH}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0} 
+BNS\+\_\+\+HEALTH&Donne une vie supplémentaire au joueur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_NEWBALL@{BNS\_NEWBALL}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_NEWBALL@{BNS\_NEWBALL}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa} 
+BNS\+\_\+\+NEWBALL&Ajoute une balle supplémentaire. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_COLORBALL@{BNS\_COLORBALL}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_COLORBALL@{BNS\_COLORBALL}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837} 
+BNS\+\_\+\+COLORBALL&Ajoute une balle verte (quand celle balles détruit une brique, elle détruit également toutes les briques adjacentes de la même couleur). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_STRONGBALL@{BNS\_STRONGBALL}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_STRONGBALL@{BNS\_STRONGBALL}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1} 
+BNS\+\_\+\+STRONGBALL&Ajoute une balle rouge (détruit n\textquotesingle{}importe quelle brique en un seul coup). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_GRAVITY@{BNS\_GRAVITY}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_GRAVITY@{BNS\_GRAVITY}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6} 
+BNS\+\_\+\+GRAVITY&Les briques tombent dans la direction du joueur qui a touché la balle en dernier. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BNS\_SIZE@{BNS\_SIZE}!game\_geometry.h@{game\_geometry.h}}
+\index{game\_geometry.h@{game\_geometry.h}!BNS\_SIZE@{BNS\_SIZE}}
+}\Hypertarget{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da}\label{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da} 
+BNS\+\_\+\+SIZE&Nombre de bonus possibles (ne pas utiliser pour créer des bonus). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__geometry_8h_source_l00261}{261}} du fichier \doxymbox{\hyperlink{game__geometry_8h_source}{game\+\_\+geometry.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{game__geometry_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{game__geometry_8h_ac8a4937f3bc10a476e4a7c22c6c574f8}\index{game\_geometry.h@{game\_geometry.h}!rectangles\_overlap@{rectangles\_overlap}}
+\index{rectangles\_overlap@{rectangles\_overlap}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{rectangles\_overlap()}{rectangles\_overlap()}}
+{\footnotesize\ttfamily \label{game__geometry_8h_ac8a4937f3bc10a476e4a7c22c6c574f8} 
+bool rectangles\+\_\+overlap (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structrectangle}{rectangle}} \texorpdfstring{$\ast$}{*}}]{r1}{, }\item[{\doxymbox{\hyperlink{structrectangle}{rectangle}} \texorpdfstring{$\ast$}{*}}]{r2}{}\end{DoxyParamCaption})}
+
+
+
+Fonction qui vérifie si deux rectangles se chevauchent. 
+
+\begin{DoxyReturn}{Renvoie}
+true si les rectangles se chevauchent, false sinon. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em r1} & Premier rectangle.  \\
+\hline
+{\em r2} & Deuxième rectangle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__geometry_8h_a762cc1de211dec4140b51ac3f5a2332f}\index{game\_geometry.h@{game\_geometry.h}!create\_paddle@{create\_paddle}}
+\index{create\_paddle@{create\_paddle}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{create\_paddle()}{create\_paddle()}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a762cc1de211dec4140b51ac3f5a2332f} 
+\doxymbox{\hyperlink{structpaddle}{paddle}} \texorpdfstring{$\ast$}{*} create\+\_\+paddle (\begin{DoxyParamCaption}\item[{bool}]{bottom}{, }\item[{int}]{nb\+\_\+rows}{, }\item[{int}]{nb\+\_\+columns}{}\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}une raquette avec les paramètres spécifiés. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la raquette créée. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em bottom} & Indique si la raquette est en bas (true) ou en haut (false) du plateau de jeu.  \\
+\hline
+{\em nb\+\_\+rows} & Nombre de rangées de briques sur le plateau (la hauteur du plateau est \doxylink{game_8h_a8519cbc2997bb2eb21cf5571b37b38bd}{CELL\+\_\+\+HEIGHT} \texorpdfstring{$\ast$}{*} nb\+\_\+rows).  \\
+\hline
+{\em nb\+\_\+columns} & Nombre de colonnes de briques sur le plateau (la largeur du plateau est \doxylink{game_8h_ae1dbb0e959fde337fa4e436b61bb2bac}{CELL\+\_\+\+WIDTH} \texorpdfstring{$\ast$}{*} nb\+\_\+columns). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__geometry_8h_a0ae6198669bad5044cbdf4c7980ced9d}\index{game\_geometry.h@{game\_geometry.h}!create\_ball@{create\_ball}}
+\index{create\_ball@{create\_ball}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{create\_ball()}{create\_ball()}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a0ae6198669bad5044cbdf4c7980ced9d} 
+\doxymbox{\hyperlink{structball}{ball}} \texorpdfstring{$\ast$}{*} create\+\_\+ball (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{bool}]{top}{}\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}une balle avec les paramètres spécifiés. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la balle créée. 
+\end{DoxyReturn}
+\Hypertarget{game__geometry_8h_a306e58724ce16d3d4993e4195b71938c}\index{game\_geometry.h@{game\_geometry.h}!ball\_speednorm@{ball\_speednorm}}
+\index{ball\_speednorm@{ball\_speednorm}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{ball\_speednorm()}{ball\_speednorm()}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a306e58724ce16d3d4993e4195b71938c} 
+double ball\+\_\+speednorm (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structball}{ball}} \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Fonction qui calcule la norme (longueur) du vecteur vitesse d\textquotesingle{}une balle. 
+
+\begin{DoxyReturn}{Renvoie}
+La norme du vecteur vitesse de la balle. 
+\end{DoxyReturn}
+\Hypertarget{game__geometry_8h_a6b587564ebd53a06f29b7d13b41854a9}\index{game\_geometry.h@{game\_geometry.h}!create\_brick@{create\_brick}}
+\index{create\_brick@{create\_brick}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{create\_brick()}{create\_brick()}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a6b587564ebd53a06f29b7d13b41854a9} 
+\doxymbox{\hyperlink{structbrick}{brick}} \texorpdfstring{$\ast$}{*} create\+\_\+brick (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\+\_\+color}}}]{color}{, }\item[{int}]{max\+\_\+health}{, }\item[{int}]{origin}{}\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}une brique avec les paramètres spécifiés. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la brique créée. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Coordonnée horizontale du coin supérieur gauche de la brique.  \\
+\hline
+{\em y} & Coordonnée verticale du coin supérieur gauche de la brique.  \\
+\hline
+{\em color} & Couleur de la brique.  \\
+\hline
+{\em max\+\_\+health} & Nombre de coups nécessaires pour casser la brique.  \\
+\hline
+{\em origin} & Position d\textquotesingle{}origine de la brique sur le plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game__geometry_8h_a451d52ccdc17f5ce39e67b4b8e1abf40}\index{game\_geometry.h@{game\_geometry.h}!create\_random\_bonus@{create\_random\_bonus}}
+\index{create\_random\_bonus@{create\_random\_bonus}!game\_geometry.h@{game\_geometry.h}}
+\doxysubsubsection{\texorpdfstring{create\_random\_bonus()}{create\_random\_bonus()}}
+{\footnotesize\ttfamily \label{game__geometry_8h_a451d52ccdc17f5ce39e67b4b8e1abf40} 
+\doxymbox{\hyperlink{structbonus}{bonus}} \texorpdfstring{$\ast$}{*} create\+\_\+random\+\_\+bonus (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{bool}]{down}{, }\item[{bool}]{bricks}{}\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}un bonus aléatoire avec les paramètres spécifiés. 
+
+\begin{DoxyRemark}{Remarques}
+En mode pong, les bonus spécifiques au mode briques (BNS\+\_\+\+COLORBALL, BNS\+\_\+\+STRONGBALL et BNS\+\_\+\+GRAVITY) ne doivent pas être générés.
+\end{DoxyRemark}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le bonus créé. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Coordonnée horizontale du coin supérieur gauche du bonus.  \\
+\hline
+{\em y} & Coordonnée verticale du coin supérieur gauche du bonus.  \\
+\hline
+{\em down} & Indique si le bonus tombe vers le bas (true) ou vers le haut (false).  \\
+\hline
+{\em bricks} & Indique si le jeu est en mode briques (true) ou pong (false). \\
+\hline
+\end{DoxyParams}

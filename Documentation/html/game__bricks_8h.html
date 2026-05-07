@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ICBG: Référence du fichier game_bricks.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ICBG
+   </div>
+   <div id="projectbrief">ICBG : The InitC Bricks Game</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('game__bricks_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier game_bricks.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fonctions utilisées pour gérer un jeu de Briques, c'est à dire un jeu avec des briques, des bonus et des raquettes.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+</div>
+<p><a href="game__bricks_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a4a7c417c3927e8f165c942bde07889d6" id="r_a4a7c417c3927e8f165c942bde07889d6"><td class="memItemLeft"><a class="el" href="structgame.html">game</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4a7c417c3927e8f165c942bde07889d6">create_random_brick_game</a> (int nb_columns, int nb_rows, int topspace, int bottomspace, short player_one_mode, short player_two_mode, int nb_colors, int max_health)</td></tr>
+<tr class="memdesc:a4a7c417c3927e8f165c942bde07889d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'un nouveau jeu de Briques avec les paramètres spécifiés.  <br /></td></tr>
+<tr class="memitem:a27c59f0003ace9f92d011c68eeff1ed6" id="r_a27c59f0003ace9f92d011c68eeff1ed6"><td class="memItemLeft"><a class="el" href="structgame.html">game</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a27c59f0003ace9f92d011c68eeff1ed6">create_newgame_file</a> (char **input, int size, short player_one_mode, short player_two_mode)</td></tr>
+<tr class="memdesc:a27c59f0003ace9f92d011c68eeff1ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'un nouveau jeu à partir d'un fichier de configuration.  <br /></td></tr>
+<tr class="memitem:a12da384fa50c1c9dcec268c2029831b4" id="r_a12da384fa50c1c9dcec268c2029831b4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a12da384fa50c1c9dcec268c2029831b4">game_brick_end</a> (<a class="el" href="structgame.html">game</a> *g, bool *win)</td></tr>
+<tr class="memdesc:a12da384fa50c1c9dcec268c2029831b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si le jeu de Briques est terminé.  <br /></td></tr>
+<tr class="memitem:ad6de245fee54f8f03b210068ece26c69" id="r_ad6de245fee54f8f03b210068ece26c69"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad6de245fee54f8f03b210068ece26c69">game_brickia</a> (<a class="el" href="structgame.html">game</a> *g, short i)</td></tr>
+<tr class="memdesc:ad6de245fee54f8f03b210068ece26c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implémentation de l'IA en mode Briques.  <br /></td></tr>
+<tr class="memitem:a2581ad381c97d12f3554cb634c46149b" id="r_a2581ad381c97d12f3554cb634c46149b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2581ad381c97d12f3554cb634c46149b">game_add_brick</a> (<a class="el" href="structgame.html">game</a> *g, int x, int y, <a class="el" href="game__geometry_8h.html#a1c49a0130453066c52f6c10399a4aa0f">brick_color</a> color, int health)</td></tr>
+<tr class="memdesc:a2581ad381c97d12f3554cb634c46149b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une brique au jeu avec les caractéristiques spécifiées.  <br /></td></tr>
+<tr class="memitem:aff980d4420910e1eb6b530350f10185d" id="r_aff980d4420910e1eb6b530350f10185d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aff980d4420910e1eb6b530350f10185d">game_remove_brick</a> (<a class="el" href="structgame.html">game</a> *g, int i, short last_hit)</td></tr>
+<tr class="memdesc:aff980d4420910e1eb6b530350f10185d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retire la brique d'indice i du jeu, en mettant à jour l'état du jeu en conséquence (score du joueur, génération d'un bonus, etc.).  <br /></td></tr>
+<tr class="memitem:af67522cdfe1d3114221a57c66dbd9806" id="r_af67522cdfe1d3114221a57c66dbd9806"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af67522cdfe1d3114221a57c66dbd9806">ball_hits_brick</a> (<a class="el" href="structgame.html">game</a> *g, int i)</td></tr>
+<tr class="memdesc:af67522cdfe1d3114221a57c66dbd9806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si une balle touche l'une des briques présentes sur le plateau de jeu et change l'état du jeu en conséquence (inversion de la vitesse de la balle, diminution de la santé de la brique, etc.).  <br /></td></tr>
+<tr class="memitem:a3dd8771d4c746a6585bbcb15b02c8ef1" id="r_a3dd8771d4c746a6585bbcb15b02c8ef1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3dd8771d4c746a6585bbcb15b02c8ef1">game_gravity</a> (<a class="el" href="structgame.html">game</a> *g, bool bot)</td></tr>
+<tr class="memdesc:a3dd8771d4c746a6585bbcb15b02c8ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applique la gravité aux briques du jeu, en les faisant tomber vers le bas ou vers le haut du plateau de jeu.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fonctions utilisées pour gérer un jeu de Briques, c'est à dire un jeu avec des briques, des bonus et des raquettes. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="game__bricks_8h_source.html">game_bricks.h</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a4a7c417c3927e8f165c942bde07889d6" name="a4a7c417c3927e8f165c942bde07889d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7c417c3927e8f165c942bde07889d6">&#9670;&#160;</a></span>create_random_brick_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgame.html">game</a> * create_random_brick_game </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nb_columns</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nb_rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>topspace</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bottomspace</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>player_one_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>player_two_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nb_colors</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max_health</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'un nouveau jeu de Briques avec les paramètres spécifiés. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>On utilisera la fonction game_add_brick pour ajouter les briques au jeu.</dd></dl>
+<p>La génération est aléatoire.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers le jeu créé. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nb_columns</td><td>Nombre de colonnes du plateau de jeu.  </td></tr>
+    <tr><td class="paramname">nb_rows</td><td>Nombre de lignes du plateau de jeu.  </td></tr>
+    <tr><td class="paramname">topspace</td><td>Espace entre le haut du plateau de jeu et la première  </td></tr>
+    <tr><td class="paramname">bottomspace</td><td>Espace entre le bas du plateau de jeu et la dernière  </td></tr>
+    <tr><td class="paramname">player_one_mode</td><td>Mode de jeu du premier joueur (0: pas de premier joueur, 1: premier joueur contrôlé par l'IA, 2: premier joueur contrôlé par un humain).  </td></tr>
+    <tr><td class="paramname">player_two_mode</td><td>Mode de jeu du deuxième joueur (0: pas de deuxième joueur, 1: deuxième joueur contrôlé par l'IA, 2: deuxième joueur contrôlé par un humain).  </td></tr>
+    <tr><td class="paramname">nb_colors</td><td>Nombre de couleurs différentes pour les briques.  </td></tr>
+    <tr><td class="paramname">max_health</td><td>Santé maximale des briques. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27c59f0003ace9f92d011c68eeff1ed6" name="a27c59f0003ace9f92d011c68eeff1ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c59f0003ace9f92d011c68eeff1ed6">&#9670;&#160;</a></span>create_newgame_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgame.html">game</a> * create_newgame_file </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>player_one_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>player_two_mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'un nouveau jeu à partir d'un fichier de configuration. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>On utilisera la fonction <a class="el" href="#a2581ad381c97d12f3554cb634c46149b" title="Ajoute une brique au jeu avec les caractéristiques spécifiées.">game_add_brick()</a> pour ajouter les briques au jeu.</dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers le jeu créé. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Tableau des lignes extrait du fichier de configuration du jeu, contenant les dimensions du plateau et la disposition des briques.  </td></tr>
+    <tr><td class="paramname">size</td><td>Taille du tableau input (nombre de lignes).  </td></tr>
+    <tr><td class="paramname">player_one_mode</td><td>Mode de jeu du premier joueur (0: pas de premier joueur, 1: premier joueur contrôlé par l'IA, 2: premier joueur contrôlé par un humain).  </td></tr>
+    <tr><td class="paramname">player_two_mode</td><td>Mode de jeu du deuxième joueur (0: pas de deuxième joueur, 1: deuxième joueur contrôlé par l'IA, 2: deuxième joueur contrôlé par un humain). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a12da384fa50c1c9dcec268c2029831b4" name="a12da384fa50c1c9dcec268c2029831b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12da384fa50c1c9dcec268c2029831b4">&#9670;&#160;</a></span>game_brick_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool game_brick_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *</td>          <td class="paramname"><span class="paramname"><em>win</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Teste si le jeu de Briques est terminé. </p>
+<p>Un jeu de briques prend fin si toutes les briques sont détruites (victoire) ou si tous les joueurs ont perdu (défaite).</p>
+<dl class="section remark"><dt>Remarques</dt><dd>La fonction doit stocker dans <code class="param">win</code> la valeur true si le joueur a gagné, ou false s'il a perdu.</dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si le jeu est terminé, false sinon. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">win</td><td>Pointeur vers une variable dans laquelle la fonction doit stocker true si le joueur a gagné, ou false s'il a perdu, si le jeu est terminé. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad6de245fee54f8f03b210068ece26c69" name="ad6de245fee54f8f03b210068ece26c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6de245fee54f8f03b210068ece26c69">&#9670;&#160;</a></span>game_brickia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool game_brickia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implémentation de l'IA en mode Briques. </p>
+<p>La fonction choisit une direction de déplacement pour la raquette du joueur i contrôlé par l'IA, et modifie le paramètre <a class="el" href="structpaddle.html#aebb2c694aa0ece3f9bb10e4f0261cadc" title="speed_x">speed_x</a> de la raquette en conséquence. L'IA suit simplement la balle avec la raquette. Si la balle est à gauche de la raquette, elle se déplace vers la gauche, si elle est à droite, elle se déplace vers la droite, sinon elle suit la vitesse horizontale de la balle. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">i</td><td>Joueur contrôlé par l'IA (0 pour le joueur 1, 1 pour le joueur 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2581ad381c97d12f3554cb634c46149b" name="a2581ad381c97d12f3554cb634c46149b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2581ad381c97d12f3554cb634c46149b">&#9670;&#160;</a></span>game_add_brick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_add_brick </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="game__geometry_8h.html#a1c49a0130453066c52f6c10399a4aa0f">brick_color</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>health</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute une brique au jeu avec les caractéristiques spécifiées. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>La fonction doit allouer une nouvelle brique et l'ajouter au tableau <a class="el" href="structgame.html#aa58da797b20faecaef46aeb82f9fe8a7" title="brick_list">brick_list</a> du jeu. Si le tableau <a class="el" href="structgame.html#aa58da797b20faecaef46aeb82f9fe8a7" title="brick_list">brick_list</a> est plein (c'est à dire si <a class="el" href="structgame.html#a6d7d85fa0d96570962bc4f69f9c5fe1d" title="nb_bricks">nb_bricks</a> est égal à <a class="el" href="structgame.html#a0e092559bd466fb29e28ee39a285cc4e" title="size_bricks">size_bricks</a>), la fonction doit doubler la taille du tableau <a class="el" href="structgame.html#aa58da797b20faecaef46aeb82f9fe8a7" title="brick_list">brick_list</a> pour y faire de la place avant d'ajouter la nouvelle brique. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">x</td><td>La colonne de la brique à ajouter (entre 0 et nb_columns - 1).  </td></tr>
+    <tr><td class="paramname">y</td><td>La ligne de la brique à ajouter (entre 0 et nb_rows - 1).  </td></tr>
+    <tr><td class="paramname">color</td><td>La couleur de la brique.  </td></tr>
+    <tr><td class="paramname">health</td><td>La santé de la brique. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff980d4420910e1eb6b530350f10185d" name="aff980d4420910e1eb6b530350f10185d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff980d4420910e1eb6b530350f10185d">&#9670;&#160;</a></span>game_remove_brick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_remove_brick </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>last_hit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retire la brique d'indice i du jeu, en mettant à jour l'état du jeu en conséquence (score du joueur, génération d'un bonus, etc.). </p>
+<p>La fonction doit libérer la mémoire occupée par la brique, la retirer du tableau <a class="el" href="structgame.html#aa58da797b20faecaef46aeb82f9fe8a7" title="brick_list">brick_list</a>. Pour combler le trou, on réorganisera le tableau <a class="el" href="structgame.html#aa58da797b20faecaef46aeb82f9fe8a7" title="brick_list">brick_list</a> de manière en remplaçant la brique supprimée par la dernière brique du tableau (celle d'indice <a class="el" href="structgame.html#a6d7d85fa0d96570962bc4f69f9c5fe1d" title="nb_bricks">nb_bricks</a> - 1). Enfin, la fonction doit décrémenter le nombre de briques <a class="el" href="structgame.html#a6d7d85fa0d96570962bc4f69f9c5fe1d" title="nb_bricks">nb_bricks</a> (on a retiré une brique du jeu).</p>
+<p>Lorsque une brique est supprimée, on doit effectuer les opérations suivantes :</p><ul>
+<li>Ajouter des débris pour la brique détruite (en utilisant la fonction <a class="el" href="game__debris_8h.html#a8f4925ee142dc8c6023e33093e190eff" title="Ajoute des débris à partir d&#39;un rectangle donné correspondant à la position et la taille de la brique...">add_debris()</a>, voir <a class="el" href="game__debris_8h.html" title="Ce module gère les débris qui apparaissent à l&#39;écran lorsqu&#39;une brique est détruite....">game_debris.h</a>).</li>
+<li>Mettre à jour le score du joueur qui a détruit la brique (il gagne 500 points) et son nombre de briques détruites.</li>
+<li>Générer un bonus avec une probabilité de 50% (en utilisant la fonction <a class="el" href="game__bonus_8h.html#ac7db31dd4df9776274055f6f00dea389" title="Ajoute un bonus au jeu, en le créant à la position (x, y).">game_add_bonus()</a>, voir <a class="el" href="game__bonus_8h.html" title="Fonctions utilisées pour gérer les bonus dans les jeux de Pong et de Briques.">game_bonus.h</a>).</li>
+</ul>
+<dl class="section remark"><dt>Remarques</dt><dd>Le paramètre <code class="param">last_hit</code> indique le dernier joueur qui a touché la balle. Cela permet de savoir quel joueur a détruit la brique et doit donc être récompensé par des points et un bonus. <code class="param">last_hit</code> vaut 0 si c'est le joueur 1 qui a touché la balle, 1 si c'est le joueur 2, ou -1 si la balle n'a pas encore touché de raquette. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">i</td><td>L'indice de la brique à retirer dans le tableau brick_list.  </td></tr>
+    <tr><td class="paramname">last_hit</td><td>Le dernier joueur qui a touché la balle (0 pour le </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af67522cdfe1d3114221a57c66dbd9806" name="af67522cdfe1d3114221a57c66dbd9806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af67522cdfe1d3114221a57c66dbd9806">&#9670;&#160;</a></span>ball_hits_brick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ball_hits_brick </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Teste si une balle touche l'une des briques présentes sur le plateau de jeu et change l'état du jeu en conséquence (inversion de la vitesse de la balle, diminution de la santé de la brique, etc.). </p>
+<p>La fonction devra passer en revue toutes les briques présentes sur le plateau de jeu pour vérifier si la balle touche l'une d'entre elles.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>On utilisera la fonction game_remove_brick si la brique touchée est détruite (sa santé devient nulle ou négative).</dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la balle touche une brique, false sinon. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">i</td><td>L'indice de la balle dans le tableau. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3dd8771d4c746a6585bbcb15b02c8ef1" name="a3dd8771d4c746a6585bbcb15b02c8ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dd8771d4c746a6585bbcb15b02c8ef1">&#9670;&#160;</a></span>game_gravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_gravity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bot</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applique la gravité aux briques du jeu, en les faisant tomber vers le bas ou vers le haut du plateau de jeu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">bot</td><td>Si true, la gravité est appliquée vers le bas (les briques tombent vers le bas du plateau de jeu), sinon elle est appliquée vers le haut (les briques tombent vers le haut du plateau de jeu). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="game__bricks_8h.html">game_bricks.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

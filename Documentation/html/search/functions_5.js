@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['game_5fadd_5fball_5fcenter_0',['game_add_ball_center',['../game__pong_8h.html#a288b828dc83a52245181e0c49e93ea4f',1,'game_pong.h']]],
+  ['game_5fadd_5fball_5fplayer_1',['game_add_ball_player',['../game__pong_8h.html#ae4829a4a2a72d28078575278e7a6b800',1,'game_pong.h']]],
+  ['game_5fadd_5fbonus_2',['game_add_bonus',['../game__bonus_8h.html#ac7db31dd4df9776274055f6f00dea389',1,'game_bonus.h']]],
+  ['game_5fadd_5fbrick_3',['game_add_brick',['../game__bricks_8h.html#a2581ad381c97d12f3554cb634c46149b',1,'game_bricks.h']]],
+  ['game_5fapply_5fmoves_4',['game_apply_moves',['../game_8h.html#a36c802f03552d2ae6e5dada4cee9e827',1,'game.h']]],
+  ['game_5fbrick_5fend_5',['game_brick_end',['../game__bricks_8h.html#a12da384fa50c1c9dcec268c2029831b4',1,'game_bricks.h']]],
+  ['game_5fbrickia_6',['game_brickia',['../game__bricks_8h.html#ad6de245fee54f8f03b210068ece26c69',1,'game_bricks.h']]],
+  ['game_5fcapture_5fbonus_7',['game_capture_bonus',['../game__bonus_8h.html#aecc9233ddb5c9feab24c3341090c8eba',1,'game_bonus.h']]],
+  ['game_5fgravity_8',['game_gravity',['../game__bricks_8h.html#a3dd8771d4c746a6585bbcb15b02c8ef1',1,'game_bricks.h']]],
+  ['game_5fhandle_5fcollisions_9',['game_handle_collisions',['../game_8h.html#a7599e32dde5a9b80dec1c811937fad80',1,'game.h']]],
+  ['game_5fmove_5fplayer_10',['game_move_player',['../game_8h.html#ad5e31d834b4a38eac6f032edbfc0f783',1,'game.h']]],
+  ['game_5fplace_5fbonus_5fpong_11',['game_place_bonus_pong',['../game_8h.html#a455582e28378f9b71a1727a7c0e30801',1,'game.h']]],
+  ['game_5fpong_5fend_12',['game_pong_end',['../game__pong_8h.html#a1ed19a9bb8a02326dcaad7dbd64601f4',1,'game_pong.h']]],
+  ['game_5fpongia_13',['game_pongia',['../game__pong_8h.html#afd8fb5bc4527dd9ecf66829189b3a032',1,'game_pong.h']]],
+  ['game_5fremove_5fball_14',['game_remove_ball',['../game__pong_8h.html#a9ebeadbc27221208217e98f9f5c38beb',1,'game_pong.h']]],
+  ['game_5fremove_5fbonus_15',['game_remove_bonus',['../game__bonus_8h.html#a9dc235704689956b65e98765ca942a70',1,'game_bonus.h']]],
+  ['game_5fremove_5fbrick_16',['game_remove_brick',['../game__bricks_8h.html#aff980d4420910e1eb6b530350f10185d',1,'game_bricks.h']]],
+  ['get_5fbrick_5fwinner_5fscore_17',['get_brick_winner_score',['../game__scores_8h.html#a175e733092c3e1cca81e79488080ed5b',1,'game_scores.h']]],
+  ['get_5fpong_5fwinner_5fscore_18',['get_pong_winner_score',['../game__scores_8h.html#a003577ee1f5c79119425e11aef9b9f0a',1,'game_scores.h']]],
+  ['get_5ftime_5fcounter_19',['get_time_counter',['../utils_8h.html#af834953585ace39ffae1f30d5a55709f',1,'utils.h']]]
+];

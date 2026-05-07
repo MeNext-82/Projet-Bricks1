@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ICBG:  Fichier source de game_pong.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ICBG
+   </div>
+   <div id="projectbrief">ICBG : The InitC Bricks Game</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('game__pong_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">game_pong.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="game__pong_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GAME_PONG_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GAME_PONG_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*  ____   ___  _   _  ____    ____    _    __  __ _____  */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/* |  _ \ / _ \| \ | |/ ___|  / ___|  / \  |  \/  | ____| */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/* | |_) | | | |  \| | |  _  | |  _  / _ \ | |\/| |  _|   */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/* |  __/| |_| | |\  | |_| | | |_| |/ ___ \| |  | | |___  */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/* |_|    \___/|_| \_|\____|  \____/_/   \_\_|  |_|_____| */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="game_8h.html">game.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="game__bricks_8h.html">game_bricks.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="game__geometry_8h.html">game_geometry.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/******************************/</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*+ Création et fin d&#39;un jeu +*/</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/******************************/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="game__pong_8h.html#af89f1cd51c81756201dbfa1fd6424621">   37</a></span><a class="code hl_struct" href="structgame.html">game</a> *<a class="code hl_function" href="game__pong_8h.html#af89f1cd51c81756201dbfa1fd6424621">create_pong_game</a>(</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">int</span> nb_columns,        </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> nb_rows,           </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">short</span> player_one_mode, </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">short</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        player_two_mode, </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">short</span> nb_balls, </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">bool</span> bonuses    </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="game__pong_8h.html#a1ed19a9bb8a02326dcaad7dbd64601f4">   72</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="game__pong_8h.html#a1ed19a9bb8a02326dcaad7dbd64601f4">game_pong_end</a>(</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_struct" href="structgame.html">game</a> *g,      </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">short</span> *winner </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="game__pong_8h.html#afd8fb5bc4527dd9ecf66829189b3a032">   89</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="game__pong_8h.html#afd8fb5bc4527dd9ecf66829189b3a032">game_pongia</a>(<a class="code hl_struct" href="structgame.html">game</a> *g, </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                 <span class="keywordtype">short</span> i  </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">/************************/</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">/*+ Gestion des balles +*/</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">/************************/</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="game__pong_8h.html#ae4829a4a2a72d28078575278e7a6b800">  113</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="game__pong_8h.html#ae4829a4a2a72d28078575278e7a6b800">game_add_ball_player</a>(</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_struct" href="structgame.html">game</a> *g,      </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">short</span> player, </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                  <span class="comment">// dessus duquel la balle doit être créée.</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_enumeration" href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701">power</a> pow </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>              <span class="comment">// bonus).</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="game__pong_8h.html#a288b828dc83a52245181e0c49e93ea4f">  135</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="game__pong_8h.html#a288b828dc83a52245181e0c49e93ea4f">game_add_ball_center</a>(</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_struct" href="structgame.html">game</a> *g,  </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">double</span> f, </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_enumeration" href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701">power</a> pow </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="game__pong_8h.html#a9ebeadbc27221208217e98f9f5c38beb">  155</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="game__pong_8h.html#a9ebeadbc27221208217e98f9f5c38beb">game_remove_ball</a>(</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_struct" href="structgame.html">game</a> *g, </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">int</span> i    </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="game__pong_8h.html#a3f55ac4d3ce268f707213b7ae35f160c">  184</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="game__pong_8h.html#a3f55ac4d3ce268f707213b7ae35f160c">ball_hits_wall</a>(</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_struct" href="structgame.html">game</a> *g, </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordtype">int</span> i    </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="game__pong_8h.html#a241583bbe648a28a5c591a11d86573f8">  207</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="game__pong_8h.html#a241583bbe648a28a5c591a11d86573f8">ball_hits_paddle</a>(</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_struct" href="structgame.html">game</a> *g, </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">int</span> i,   </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <a class="code hl_struct" href="structpaddle.html">paddle</a> *<a class="code hl_struct" href="structpaddle.html">paddle</a> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="game__pong_8h.html#a25e987db7b32c923bc2b4f8fc4058e6d">  230</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="game__pong_8h.html#a25e987db7b32c923bc2b4f8fc4058e6d">ball_collide</a>(<a class="code hl_struct" href="structball.html">ball</a> *b1, </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                  <a class="code hl_struct" href="structball.html">ball</a> *b2  </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#endif </span><span class="comment">// GAME_PONG_H_</span></div>
+<div class="ttc" id="agame_8h_html"><div class="ttname"><a href="game_8h.html">game.h</a></div><div class="ttdoc">Définition de la structure de données représentant l&#39;état du jeu et des fonctions pour manipuler cett...</div></div>
+<div class="ttc" id="agame__bricks_8h_html"><div class="ttname"><a href="game__bricks_8h.html">game_bricks.h</a></div><div class="ttdoc">Fonctions utilisées pour gérer un jeu de Briques, c&#39;est à dire un jeu avec des briques,...</div></div>
+<div class="ttc" id="agame__geometry_8h_html"><div class="ttname"><a href="game__geometry_8h.html">game_geometry.h</a></div><div class="ttdoc">Contient les fonctions et les macros pour les calculs de géométrie du jeu, notamment les collisions e...</div></div>
+<div class="ttc" id="agame__geometry_8h_html_a4aacd7f6a06e4071d328a3b2c9986701"><div class="ttname"><a href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701">power</a></div><div class="ttdeci">power</div><div class="ttdef"><b>Definition</b> <a href="game__geometry_8h_source.html#l00148">game_geometry.h:148</a></div></div>
+<div class="ttc" id="agame__pong_8h_html_a1ed19a9bb8a02326dcaad7dbd64601f4"><div class="ttname"><a href="game__pong_8h.html#a1ed19a9bb8a02326dcaad7dbd64601f4">game_pong_end</a></div><div class="ttdeci">bool game_pong_end(game *g, short *winner)</div><div class="ttdoc">Teste si le jeu de Pong est terminé.</div></div>
+<div class="ttc" id="agame__pong_8h_html_a241583bbe648a28a5c591a11d86573f8"><div class="ttname"><a href="game__pong_8h.html#a241583bbe648a28a5c591a11d86573f8">ball_hits_paddle</a></div><div class="ttdeci">bool ball_hits_paddle(game *g, int i, paddle *paddle)</div><div class="ttdoc">Teste si une balle touche une raquette et change l&#39;état du jeu en conséquence (changement de la vites...</div></div>
+<div class="ttc" id="agame__pong_8h_html_a25e987db7b32c923bc2b4f8fc4058e6d"><div class="ttname"><a href="game__pong_8h.html#a25e987db7b32c923bc2b4f8fc4058e6d">ball_collide</a></div><div class="ttdeci">bool ball_collide(ball *b1, ball *b2)</div><div class="ttdoc">Teste si deux balles se touchent et change l&#39;état du jeu en conséquence (changement de la vitesse des...</div></div>
+<div class="ttc" id="agame__pong_8h_html_a288b828dc83a52245181e0c49e93ea4f"><div class="ttname"><a href="game__pong_8h.html#a288b828dc83a52245181e0c49e93ea4f">game_add_ball_center</a></div><div class="ttdeci">void game_add_ball_center(game *g, double f, power pow)</div><div class="ttdoc">Ajoute une nouvelle balle au jeu, en la créant au milieu (verticalement) du plateau....</div></div>
+<div class="ttc" id="agame__pong_8h_html_a3f55ac4d3ce268f707213b7ae35f160c"><div class="ttname"><a href="game__pong_8h.html#a3f55ac4d3ce268f707213b7ae35f160c">ball_hits_wall</a></div><div class="ttdeci">bool ball_hits_wall(game *g, int i)</div><div class="ttdoc">Teste si une balle touche un mur et change l&#39;état du jeu en conséquence (inversion de la vitesse de l...</div></div>
+<div class="ttc" id="agame__pong_8h_html_a9ebeadbc27221208217e98f9f5c38beb"><div class="ttname"><a href="game__pong_8h.html#a9ebeadbc27221208217e98f9f5c38beb">game_remove_ball</a></div><div class="ttdeci">void game_remove_ball(game *g, int i)</div><div class="ttdoc">Supprime la balle d&#39;indice i du jeu.</div></div>
+<div class="ttc" id="agame__pong_8h_html_ae4829a4a2a72d28078575278e7a6b800"><div class="ttname"><a href="game__pong_8h.html#ae4829a4a2a72d28078575278e7a6b800">game_add_ball_player</a></div><div class="ttdeci">bool game_add_ball_player(game *g, short player, power pow)</div><div class="ttdoc">Ajoute une nouvelle balle au jeu, en la créant au dessus de la raquette du joueur spécifié.</div></div>
+<div class="ttc" id="agame__pong_8h_html_af89f1cd51c81756201dbfa1fd6424621"><div class="ttname"><a href="game__pong_8h.html#af89f1cd51c81756201dbfa1fd6424621">create_pong_game</a></div><div class="ttdeci">game * create_pong_game(int nb_columns, int nb_rows, short player_one_mode, short player_two_mode, short nb_balls, bool bonuses)</div><div class="ttdoc">Fonction de création d&#39;un nouveau jeu de Pong avec les paramètres spécifiés.</div></div>
+<div class="ttc" id="agame__pong_8h_html_afd8fb5bc4527dd9ecf66829189b3a032"><div class="ttname"><a href="game__pong_8h.html#afd8fb5bc4527dd9ecf66829189b3a032">game_pongia</a></div><div class="ttdeci">bool game_pongia(game *g, short i)</div><div class="ttdoc">Implémentation de l&#39;IA en mode Pong.</div></div>
+<div class="ttc" id="astructball_html"><div class="ttname"><a href="structball.html">ball</a></div><div class="ttdoc">Structure représentant une balle dans le jeu.</div><div class="ttdef"><b>Definition</b> <a href="game__geometry_8h_source.html#l00159">game_geometry.h:159</a></div></div>
+<div class="ttc" id="astructgame_html"><div class="ttname"><a href="structgame.html">game</a></div><div class="ttdoc">Structure représentant l&#39;état du jeu, y compris le plateau de jeu, les briques, les balles,...</div><div class="ttdef"><b>Definition</b> <a href="game_8h_source.html#l00194">game.h:194</a></div></div>
+<div class="ttc" id="astructpaddle_html"><div class="ttname"><a href="structpaddle.html">paddle</a></div><div class="ttdoc">Structure représentant une raquette dans le jeu.</div><div class="ttdef"><b>Definition</b> <a href="game__geometry_8h_source.html#l00110">game_geometry.h:110</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="game__pong_8h.html">game_pong.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

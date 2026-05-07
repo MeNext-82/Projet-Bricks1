@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ICBG: Référence du fichier game_debris.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ICBG
+   </div>
+   <div id="projectbrief">ICBG : The InitC Bricks Game</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('game__debris_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier game_debris.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module gère les débris qui apparaissent à l'écran lorsqu'une brique est détruite. Les débris sont de petits rectangles qui se déplacent dans des directions aléatoires à partir de la position de la brique détruite, et disparaissent après un certain nombre de frames.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="alloc_8h_source.html">alloc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div>
+<p><a href="game__debris_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:debris" id="r_debris"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdebris.html">debris</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure représentant un débris à afficher à l'écran.  <a href="structdebris.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a675a2dd45719a21b6bcf55489460f8b2" id="r_a675a2dd45719a21b6bcf55489460f8b2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a675a2dd45719a21b6bcf55489460f8b2">DEBRIS_MAX_FRAME</a>&#160;&#160;&#160;60</td></tr>
+<tr class="memdesc:a675a2dd45719a21b6bcf55489460f8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de frames pendant lesquelles les débris restent à l'écran avant de disparaître.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a03f3ee53b01ca045658f8a497ed7353a" id="r_a03f3ee53b01ca045658f8a497ed7353a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a03f3ee53b01ca045658f8a497ed7353a">init_debris</a> (void)</td></tr>
+<tr class="memdesc:a03f3ee53b01ca045658f8a497ed7353a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le système de gestion des débris. Cette fonction doit est appelée par l'interface.  <br /></td></tr>
+<tr class="memitem:a8f4925ee142dc8c6023e33093e190eff" id="r_a8f4925ee142dc8c6023e33093e190eff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8f4925ee142dc8c6023e33093e190eff">add_debris</a> (<a class="el" href="structrectangle.html">rectangle</a> *rect)</td></tr>
+<tr class="memdesc:a8f4925ee142dc8c6023e33093e190eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute des débris à partir d'un rectangle donné correspondant à la position et la taille de la brique détruite. Les débris sont générés à partir du rectangle, avec des vitesses aléatoires.  <br /></td></tr>
+<tr class="memitem:a3f451a802b94ffa2cd6e53d72782310a" id="r_a3f451a802b94ffa2cd6e53d72782310a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3f451a802b94ffa2cd6e53d72782310a">update_debris</a> (void)</td></tr>
+<tr class="memdesc:a3f451a802b94ffa2cd6e53d72782310a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met à jour l'état des débris. Cette fonction est appelée à chaque frame par l'interface.  <br /></td></tr>
+<tr class="memitem:adadb094bf4d1178552187247fda25611" id="r_adadb094bf4d1178552187247fda25611"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adadb094bf4d1178552187247fda25611">free_debris</a> (void)</td></tr>
+<tr class="memdesc:adadb094bf4d1178552187247fda25611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère la mémoire occupée par les débris. Cette fonction est appelée par l'interface lorsque le jeu est réinitialisé ou lorsqu'on quitte le jeu.  <br /></td></tr>
+<tr class="memitem:a5cb9da69d7fc0c023cf04f0a3d3c20a5" id="r_a5cb9da69d7fc0c023cf04f0a3d3c20a5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5cb9da69d7fc0c023cf04f0a3d3c20a5">reset_debris</a> (void)</td></tr>
+<tr class="memdesc:a5cb9da69d7fc0c023cf04f0a3d3c20a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise le système de gestion des débris en supprimant tous les débris actuellement à l'écran. Cette fonction est appelée par l'interface lorsque le jeu est réinitialisé.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5dee24aaa5a86230c1744f429ed7d40a" id="r_a5dee24aaa5a86230c1744f429ed7d40a"><td class="memItemLeft"><a class="el" href="structdebris.html">debris</a> **&#160;</td><td class="memItemRight"><a class="el" href="#a5dee24aaa5a86230c1744f429ed7d40a">debris_list</a></td></tr>
+<tr class="memdesc:a5dee24aaa5a86230c1744f429ed7d40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau des débris à afficher à l'écran. debris_list est un tableau dynamique de pointeurs, qui contient tous les débris actuellement à afficher à l'écran.  <br /></td></tr>
+<tr class="memitem:aa5935d3c68426aa04917522c293ba885" id="r_aa5935d3c68426aa04917522c293ba885"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa5935d3c68426aa04917522c293ba885">size_debris</a></td></tr>
+<tr class="memdesc:aa5935d3c68426aa04917522c293ba885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Taille du tableau <a class="el" href="#a5dee24aaa5a86230c1744f429ed7d40a" title="debris_list">debris_list</a>.  <br /></td></tr>
+<tr class="memitem:a3bd2e8e2c317981e98d94889e583c6da" id="r_a3bd2e8e2c317981e98d94889e583c6da"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3bd2e8e2c317981e98d94889e583c6da">nb_debris</a></td></tr>
+<tr class="memdesc:a3bd2e8e2c317981e98d94889e583c6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de débris dans le tableau <a class="el" href="#a5dee24aaa5a86230c1744f429ed7d40a" title="debris_list">debris_list</a>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce module gère les débris qui apparaissent à l'écran lorsqu'une brique est détruite. Les débris sont de petits rectangles qui se déplacent dans des directions aléatoires à partir de la position de la brique détruite, et disparaissent après un certain nombre de frames. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>Les fonctions de ce module sont déjà écrites, vous n'avez pas à les implémenter vous même. Vous devez cependant appeler <a class="el" href="#a8f4925ee142dc8c6023e33093e190eff" title="Ajoute des débris à partir d&#39;un rectangle donné correspondant à la position et la taille de la brique...">add_debris()</a> dans la fonction <a class="el" href="game__bricks_8h.html#aff980d4420910e1eb6b530350f10185d" title="Retire la brique d&#39;indice i du jeu, en mettant à jour l&#39;état du jeu en conséquence (score du joueur,...">game_remove_brick()</a> du module game_bricks.c pour ajouter des débris à chaque fois qu'une brique est détruite. </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="game__debris_8h_source.html">game_debris.h</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a675a2dd45719a21b6bcf55489460f8b2" name="a675a2dd45719a21b6bcf55489460f8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675a2dd45719a21b6bcf55489460f8b2">&#9670;&#160;</a></span>DEBRIS_MAX_FRAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBRIS_MAX_FRAME&#160;&#160;&#160;60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Nombre de frames pendant lesquelles les débris restent à l'écran avant de disparaître. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__debris_8h_source.html#l00037">37</a> du fichier <a class="el" href="game__debris_8h_source.html">game_debris.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a03f3ee53b01ca045658f8a497ed7353a" name="a03f3ee53b01ca045658f8a497ed7353a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f3ee53b01ca045658f8a497ed7353a">&#9670;&#160;</a></span>init_debris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_debris </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise le système de gestion des débris. Cette fonction doit est appelée par l'interface. </p>
+
+</div>
+</div>
+<a id="a8f4925ee142dc8c6023e33093e190eff" name="a8f4925ee142dc8c6023e33093e190eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f4925ee142dc8c6023e33093e190eff">&#9670;&#160;</a></span>add_debris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_debris </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrectangle.html">rectangle</a> *</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute des débris à partir d'un rectangle donné correspondant à la position et la taille de la brique détruite. Les débris sont générés à partir du rectangle, avec des vitesses aléatoires. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>C'est la seule fonction de ce module que vous devez appeler dans votre code, à chaque fois qu'une brique est détruite (dans la fonction <a class="el" href="game__bricks_8h.html#aff980d4420910e1eb6b530350f10185d" title="Retire la brique d&#39;indice i du jeu, en mettant à jour l&#39;état du jeu en conséquence (score du joueur,...">game_remove_brick()</a> du module game_bricks.c). </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>Le rectangle correspondant à la position et la taille de la brique détruite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f451a802b94ffa2cd6e53d72782310a" name="a3f451a802b94ffa2cd6e53d72782310a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f451a802b94ffa2cd6e53d72782310a">&#9670;&#160;</a></span>update_debris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_debris </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Met à jour l'état des débris. Cette fonction est appelée à chaque frame par l'interface. </p>
+
+</div>
+</div>
+<a id="adadb094bf4d1178552187247fda25611" name="adadb094bf4d1178552187247fda25611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadb094bf4d1178552187247fda25611">&#9670;&#160;</a></span>free_debris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_debris </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libère la mémoire occupée par les débris. Cette fonction est appelée par l'interface lorsque le jeu est réinitialisé ou lorsqu'on quitte le jeu. </p>
+
+</div>
+</div>
+<a id="a5cb9da69d7fc0c023cf04f0a3d3c20a5" name="a5cb9da69d7fc0c023cf04f0a3d3c20a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb9da69d7fc0c023cf04f0a3d3c20a5">&#9670;&#160;</a></span>reset_debris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reset_debris </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Réinitialise le système de gestion des débris en supprimant tous les débris actuellement à l'écran. Cette fonction est appelée par l'interface lorsque le jeu est réinitialisé. </p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a5dee24aaa5a86230c1744f429ed7d40a" name="a5dee24aaa5a86230c1744f429ed7d40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dee24aaa5a86230c1744f429ed7d40a">&#9670;&#160;</a></span>debris_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdebris.html">debris</a>** debris_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tableau des débris à afficher à l'écran. debris_list est un tableau dynamique de pointeurs, qui contient tous les débris actuellement à afficher à l'écran. </p>
+
+</div>
+</div>
+<a id="aa5935d3c68426aa04917522c293ba885" name="aa5935d3c68426aa04917522c293ba885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5935d3c68426aa04917522c293ba885">&#9670;&#160;</a></span>size_debris</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int size_debris</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Taille du tableau <a class="el" href="#a5dee24aaa5a86230c1744f429ed7d40a" title="debris_list">debris_list</a>. </p>
+
+</div>
+</div>
+<a id="a3bd2e8e2c317981e98d94889e583c6da" name="a3bd2e8e2c317981e98d94889e583c6da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd2e8e2c317981e98d94889e583c6da">&#9670;&#160;</a></span>nb_debris</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nb_debris</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nombre de débris dans le tableau <a class="el" href="#a5dee24aaa5a86230c1744f429ed7d40a" title="debris_list">debris_list</a>. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="game__debris_8h.html">game_debris.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

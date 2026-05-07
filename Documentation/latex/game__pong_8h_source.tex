@@ -1,0 +1,81 @@
+\doxysection{game\+\_\+pong.\+h}
+\hypertarget{game__pong_8h_source}{}\label{game__pong_8h_source}\doxymbox{\hyperlink{game__pong_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_PONG\_H\_}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ GAME\_PONG\_H\_}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00010}00010\ \textcolor{comment}{/*\ \ \_\_\_\_\ \ \ \_\_\_\ \ \_\ \ \ \_\ \ \_\_\_\_\ \ \ \ \_\_\_\_\ \ \ \ \_\ \ \ \ \_\_\ \ \_\_\ \_\_\_\_\_\ \ */}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00011}00011\ \textcolor{comment}{/*\ |\ \ \_\ \(\backslash\)\ /\ \_\ \(\backslash\)|\ \(\backslash\)\ |\ |/\ \_\_\_|\ \ /\ \_\_\_|\ \ /\ \(\backslash\)\ \ |\ \ \(\backslash\)/\ \ |\ \_\_\_\_|\ */}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00012}00012\ \textcolor{comment}{/*\ |\ |\_)\ |\ |\ |\ |\ \ \(\backslash\)|\ |\ |\ \ \_\ \ |\ |\ \ \_\ \ /\ \_\ \(\backslash\)\ |\ |\(\backslash\)/|\ |\ \ \_|\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00013}00013\ \textcolor{comment}{/*\ |\ \ \_\_/|\ |\_|\ |\ |\(\backslash\)\ \ |\ |\_|\ |\ |\ |\_|\ |/\ \_\_\_\ \(\backslash\)|\ |\ \ |\ |\ |\_\_\_\ \ */}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00014}00014\ \textcolor{comment}{/*\ |\_|\ \ \ \ \(\backslash\)\_\_\_/|\_|\ \(\backslash\)\_|\(\backslash\)\_\_\_\_|\ \ \(\backslash\)\_\_\_\_/\_/\ \ \ \(\backslash\)\_\(\backslash\)\_|\ \ |\_|\_\_\_\_\_|\ */}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{game_8h}{game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{game__bricks_8h}{game\_bricks.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{game__geometry_8h}{game\_geometry.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00020}00020\ \textcolor{comment}{/******************************/}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00021}00021\ \textcolor{comment}{/*+\ Création\ et\ fin\ d'un\ jeu\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00022}00022\ \textcolor{comment}{/******************************/}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00037}\doxymbox{\hyperlink{game__pong_8h_af89f1cd51c81756201dbfa1fd6424621}{00037}}\ \doxymbox{\hyperlink{structgame}{game}}\ *\doxymbox{\hyperlink{game__pong_8h_af89f1cd51c81756201dbfa1fd6424621}{create\_pong\_game}}(}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_columns,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_rows,\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{short}\ player\_one\_mode,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{short}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ player\_two\_mode,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{short}\ nb\_balls,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ bonuses\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00051}00051\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00072}\doxymbox{\hyperlink{game__pong_8h_a1ed19a9bb8a02326dcaad7dbd64601f4}{00072}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__pong_8h_a1ed19a9bb8a02326dcaad7dbd64601f4}{game\_pong\_end}}(}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00073}00073\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00074}00074\ \ \ \ \ \textcolor{keywordtype}{short}\ *winner\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00077}00077\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00089}\doxymbox{\hyperlink{game__pong_8h_afd8fb5bc4527dd9ecf66829189b3a032}{00089}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__pong_8h_afd8fb5bc4527dd9ecf66829189b3a032}{game\_pongia}}(\doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ i\ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00092}00092\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00094}00094\ \textcolor{comment}{/************************/}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00095}00095\ \textcolor{comment}{/*+\ Gestion\ des\ balles\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00096}00096\ \textcolor{comment}{/************************/}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00113}\doxymbox{\hyperlink{game__pong_8h_ae4829a4a2a72d28078575278e7a6b800}{00113}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__pong_8h_ae4829a4a2a72d28078575278e7a6b800}{game\_add\_ball\_player}}(}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00114}00114\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00115}00115\ \ \ \ \ \textcolor{keywordtype}{short}\ player,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ dessus\ duquel\ la\ balle\ doit\ être\ créée.}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00117}00117\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701}{power}}\ pow\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bonus).}}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00119}00119\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00135}\doxymbox{\hyperlink{game__pong_8h_a288b828dc83a52245181e0c49e93ea4f}{00135}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__pong_8h_a288b828dc83a52245181e0c49e93ea4f}{game\_add\_ball\_center}}(}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00136}00136\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00137}00137\ \ \ \ \ \textcolor{keywordtype}{double}\ f,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00139}00139\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701}{power}}\ pow\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00141}00141\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00155}\doxymbox{\hyperlink{game__pong_8h_a9ebeadbc27221208217e98f9f5c38beb}{00155}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{game__pong_8h_a9ebeadbc27221208217e98f9f5c38beb}{game\_remove\_ball}}(}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00156}00156\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00157}00157\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00158}00158\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00184}\doxymbox{\hyperlink{game__pong_8h_a3f55ac4d3ce268f707213b7ae35f160c}{00184}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__pong_8h_a3f55ac4d3ce268f707213b7ae35f160c}{ball\_hits\_wall}}(}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00185}00185\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00186}00186\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00187}00187\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00207}\doxymbox{\hyperlink{game__pong_8h_a241583bbe648a28a5c591a11d86573f8}{00207}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__pong_8h_a241583bbe648a28a5c591a11d86573f8}{ball\_hits\_paddle}}(}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00208}00208\ \ \ \ \ \doxymbox{\hyperlink{structgame}{game}}\ *g,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00209}00209\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00210}00210\ \ \ \ \ \doxymbox{\hyperlink{structpaddle}{paddle}}\ *\doxymbox{\hyperlink{structpaddle}{paddle}}\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00211}00211\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00230}\doxymbox{\hyperlink{game__pong_8h_a25e987db7b32c923bc2b4f8fc4058e6d}{00230}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__pong_8h_a25e987db7b32c923bc2b4f8fc4058e6d}{ball\_collide}}(\doxymbox{\hyperlink{structball}{ball}}\ *b1,\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structball}{ball}}\ *b2\ \ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00232}00232\ );}
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{game__pong_8h_source_l00234}00234\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_PONG\_H\_}}
+
+\end{DoxyCode}

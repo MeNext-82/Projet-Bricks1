@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ICBG: Référence du fichier game_pong.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ICBG
+   </div>
+   <div id="projectbrief">ICBG : The InitC Bricks Game</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('game__pong_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier game_pong.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fonctions utilisées pour gérer un jeu de Pong, c'est à dire un jeu sans briques, avec des bonus générés aléatoirement.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game__bricks_8h_source.html">game_bricks.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>&quot;</code><br />
+</div>
+<p><a href="game__pong_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af89f1cd51c81756201dbfa1fd6424621" id="r_af89f1cd51c81756201dbfa1fd6424621"><td class="memItemLeft"><a class="el" href="structgame.html">game</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af89f1cd51c81756201dbfa1fd6424621">create_pong_game</a> (int nb_columns, int nb_rows, short player_one_mode, short player_two_mode, short nb_balls, bool bonuses)</td></tr>
+<tr class="memdesc:af89f1cd51c81756201dbfa1fd6424621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'un nouveau jeu de Pong avec les paramètres spécifiés.  <br /></td></tr>
+<tr class="memitem:a1ed19a9bb8a02326dcaad7dbd64601f4" id="r_a1ed19a9bb8a02326dcaad7dbd64601f4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1ed19a9bb8a02326dcaad7dbd64601f4">game_pong_end</a> (<a class="el" href="structgame.html">game</a> *g, short *winner)</td></tr>
+<tr class="memdesc:a1ed19a9bb8a02326dcaad7dbd64601f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si le jeu de Pong est terminé.  <br /></td></tr>
+<tr class="memitem:afd8fb5bc4527dd9ecf66829189b3a032" id="r_afd8fb5bc4527dd9ecf66829189b3a032"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afd8fb5bc4527dd9ecf66829189b3a032">game_pongia</a> (<a class="el" href="structgame.html">game</a> *g, short i)</td></tr>
+<tr class="memdesc:afd8fb5bc4527dd9ecf66829189b3a032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implémentation de l'IA en mode Pong.  <br /></td></tr>
+<tr class="memitem:ae4829a4a2a72d28078575278e7a6b800" id="r_ae4829a4a2a72d28078575278e7a6b800"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae4829a4a2a72d28078575278e7a6b800">game_add_ball_player</a> (<a class="el" href="structgame.html">game</a> *g, short player, <a class="el" href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701">power</a> pow)</td></tr>
+<tr class="memdesc:ae4829a4a2a72d28078575278e7a6b800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une nouvelle balle au jeu, en la créant au dessus de la raquette du joueur spécifié.  <br /></td></tr>
+<tr class="memitem:a288b828dc83a52245181e0c49e93ea4f" id="r_a288b828dc83a52245181e0c49e93ea4f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a288b828dc83a52245181e0c49e93ea4f">game_add_ball_center</a> (<a class="el" href="structgame.html">game</a> *g, double f, <a class="el" href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701">power</a> pow)</td></tr>
+<tr class="memdesc:a288b828dc83a52245181e0c49e93ea4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une nouvelle balle au jeu, en la créant au milieu (verticalement) du plateau. La position horizontale de la balle est déterminée par le paramètre f, qui doit être compris entre 0 et 1 et représente la position relative de la balle sur le plateau (0 pour le bord gauche, 1 pour le bord droit).  <br /></td></tr>
+<tr class="memitem:a9ebeadbc27221208217e98f9f5c38beb" id="r_a9ebeadbc27221208217e98f9f5c38beb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9ebeadbc27221208217e98f9f5c38beb">game_remove_ball</a> (<a class="el" href="structgame.html">game</a> *g, int i)</td></tr>
+<tr class="memdesc:a9ebeadbc27221208217e98f9f5c38beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime la balle d'indice <code class="param">i</code> du jeu.  <br /></td></tr>
+<tr class="memitem:a3f55ac4d3ce268f707213b7ae35f160c" id="r_a3f55ac4d3ce268f707213b7ae35f160c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3f55ac4d3ce268f707213b7ae35f160c">ball_hits_wall</a> (<a class="el" href="structgame.html">game</a> *g, int i)</td></tr>
+<tr class="memdesc:a3f55ac4d3ce268f707213b7ae35f160c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si une balle touche un mur et change l'état du jeu en conséquence (inversion de la vitesse de la balle, perte de balle, etc.).  <br /></td></tr>
+<tr class="memitem:a241583bbe648a28a5c591a11d86573f8" id="r_a241583bbe648a28a5c591a11d86573f8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a241583bbe648a28a5c591a11d86573f8">ball_hits_paddle</a> (<a class="el" href="structgame.html">game</a> *g, int i, <a class="el" href="structpaddle.html">paddle</a> *<a class="el" href="structpaddle.html">paddle</a>)</td></tr>
+<tr class="memdesc:a241583bbe648a28a5c591a11d86573f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si une balle touche une raquette et change l'état du jeu en conséquence (changement de la vitesse de la balle).  <br /></td></tr>
+<tr class="memitem:a25e987db7b32c923bc2b4f8fc4058e6d" id="r_a25e987db7b32c923bc2b4f8fc4058e6d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a25e987db7b32c923bc2b4f8fc4058e6d">ball_collide</a> (<a class="el" href="structball.html">ball</a> *b1, <a class="el" href="structball.html">ball</a> *b2)</td></tr>
+<tr class="memdesc:a25e987db7b32c923bc2b4f8fc4058e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si deux balles se touchent et change l'état du jeu en conséquence (changement de la vitesse des balles).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fonctions utilisées pour gérer un jeu de Pong, c'est à dire un jeu sans briques, avec des bonus générés aléatoirement. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="game__pong_8h_source.html">game_pong.h</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="af89f1cd51c81756201dbfa1fd6424621" name="af89f1cd51c81756201dbfa1fd6424621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89f1cd51c81756201dbfa1fd6424621">&#9670;&#160;</a></span>create_pong_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgame.html">game</a> * create_pong_game </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nb_columns</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nb_rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>player_one_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>player_two_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>nb_balls</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bonuses</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création d'un nouveau jeu de Pong avec les paramètres spécifiés. </p>
+<p>La fonction doit initialiser les champs du jeu de manière appropriée pour le mode Pong.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>On pourra utiliser les fonctions écrites plus bas pour créer les balles.</dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers le jeu créé. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nb_columns</td><td>Nombre de colonnes du plateau de jeu.  </td></tr>
+    <tr><td class="paramname">nb_rows</td><td>Nombre de lignes du plateau de jeu.  </td></tr>
+    <tr><td class="paramname">player_one_mode</td><td>Mode de jeu du premier joueur (0: pas de premier joueur, 1: premier joueur contrôlé par l'IA, 2: premier joueur contrôlé par un humain).  </td></tr>
+    <tr><td class="paramname">player_two_mode</td><td>Mode de jeu du deuxième joueur (0: pas de deuxième joueur, 1: deuxième joueur contrôlé par l'IA, 2: deuxième joueur contrôlé par un humain).  </td></tr>
+    <tr><td class="paramname">nb_balls</td><td>Nombre de balles à créer au début du jeu (au moins 1 et au plus 8, si le paramètre est supérieur à 8, il sera réduit à 8).  </td></tr>
+    <tr><td class="paramname">bonuses</td><td>Indique si les bonus sont activés ou non dans le jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1ed19a9bb8a02326dcaad7dbd64601f4" name="a1ed19a9bb8a02326dcaad7dbd64601f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed19a9bb8a02326dcaad7dbd64601f4">&#9670;&#160;</a></span>game_pong_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool game_pong_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short *</td>          <td class="paramname"><span class="paramname"><em>winner</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Teste si le jeu de Pong est terminé. </p>
+<p>La fin d'un jeu de Pong dépend du nombre de joueur:</p><ul>
+<li>S'il y a deux joueurs, le jeu prend fin lorsqu'un des deux joueurs perd tous ses points de vie. Dans ce cas le joueur restant gagne la partie.</li>
+<li>S'il n'y a qu'un seul joueur, le jeu prend fin lorsque ce joueur perd tous ses points de vie. Dans ce cas, il gagne la partie par défaut.</li>
+<li>S'il n'y a aucun joueur, le jeu ne doit jamais se terminer (il n'y a pas de gagnant dans ce cas).</li>
+</ul>
+<dl class="section remark"><dt>Remarques</dt><dd>La fonction doit stocker dans <code class="param">winner</code> le numéro du joueur gagnant (0 pour le joueur 1, 1 pour le joueur 2).</dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si le jeu est terminé, false sinon. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">winner</td><td>Pointeur vers une variable dans laquelle la fonction doit stocker le numéro du joueur gagnant (0 pour le joueur 1, 1 pour le joueur 2) si le jeu est terminé. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd8fb5bc4527dd9ecf66829189b3a032" name="afd8fb5bc4527dd9ecf66829189b3a032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd8fb5bc4527dd9ecf66829189b3a032">&#9670;&#160;</a></span>game_pongia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool game_pongia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implémentation de l'IA en mode Pong. </p>
+<p>La fonction choisit une direction de déplacement pour la raquette du joueur <code class="param">i</code> contrôlé par l'IA, et modifie le paramètre <a class="el" href="structpaddle.html#aebb2c694aa0ece3f9bb10e4f0261cadc" title="speed_x">speed_x</a> de la raquette en conséquence. L'IA suit simplement la balle avec la raquette. Si la balle est à gauche de la raquette, elle se déplace vers la gauche, si elle est à droite, elle se déplace vers la droite, sinon elle suit la vitesse horizontale de la balle. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">i</td><td>Joueur contrôlé par l'IA (0 pour le joueur 1, 1 pour le joueur 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae4829a4a2a72d28078575278e7a6b800" name="ae4829a4a2a72d28078575278e7a6b800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4829a4a2a72d28078575278e7a6b800">&#9670;&#160;</a></span>game_add_ball_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool game_add_ball_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>player</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701">power</a></td>          <td class="paramname"><span class="paramname"><em>pow</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute une nouvelle balle au jeu, en la créant au dessus de la raquette du joueur spécifié. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>La fonction doit allouer une nouvelle balle et l'ajouter au tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a> du jeu. Si le tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a> est plein (c'est à dire si <a class="el" href="structgame.html#a854c2e6d5fe7e26f15be668c2c155c69" title="nb_balls">nb_balls</a> est égal à <a class="el" href="structgame.html#aa24096b5a56533bfaaeb3e9d5608a9c1" title="size_balls">size_balls</a>), la fonction doit doubler la taille du tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a> pour y faire de la place avant d'ajouter la nouvelle balle.</dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la balle a été ajoutée, false sinon. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">player</td><td>Le joueur (0 pour le joueur 1, 1 pour le joueur 2) au  </td></tr>
+    <tr><td class="paramname">pow</td><td>Le type de bonus que la balle doit avoir (<a class="el" href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c" title="Aucun bonus.">POW_NONE</a> si aucun </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a288b828dc83a52245181e0c49e93ea4f" name="a288b828dc83a52245181e0c49e93ea4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288b828dc83a52245181e0c49e93ea4f">&#9670;&#160;</a></span>game_add_ball_center()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_add_ball_center </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701">power</a></td>          <td class="paramname"><span class="paramname"><em>pow</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute une nouvelle balle au jeu, en la créant au milieu (verticalement) du plateau. La position horizontale de la balle est déterminée par le paramètre f, qui doit être compris entre 0 et 1 et représente la position relative de la balle sur le plateau (0 pour le bord gauche, 1 pour le bord droit). </p>
+<dl class="section remark"><dt>Remarques</dt><dd>La fonction doit allouer une nouvelle balle et l'ajouter au tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a> du jeu. Si le tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a> est plein (c'est à dire si <a class="el" href="structgame.html#a854c2e6d5fe7e26f15be668c2c155c69" title="nb_balls">nb_balls</a> est égal à <a class="el" href="structgame.html#aa24096b5a56533bfaaeb3e9d5608a9c1" title="size_balls">size_balls</a>), la fonction doit doubler la taille du tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a> pour y faire de la place avant d'ajouter la nouvelle balle. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">f</td><td>La position relative de la balle sur le plateau (0 pour le bord gauche, 1 pour le bord droit).  </td></tr>
+    <tr><td class="paramname">pow</td><td>Le type de bonus que la balle doit avoir (<a class="el" href="game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c" title="Aucun bonus.">POW_NONE</a> si aucun bonus). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9ebeadbc27221208217e98f9f5c38beb" name="a9ebeadbc27221208217e98f9f5c38beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ebeadbc27221208217e98f9f5c38beb">&#9670;&#160;</a></span>game_remove_ball()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_remove_ball </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supprime la balle d'indice <code class="param">i</code> du jeu. </p>
+<p>La fonction doit libérer la mémoire occupée par la balle, la retirer du tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a>. Pour combler le trou, on réorganisera le tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a> de manière en remplaçant la balle supprimée par la dernière balle du tableau (celle d'indice <a class="el" href="structgame.html#a854c2e6d5fe7e26f15be668c2c155c69" title="nb_balls">nb_balls</a> - 1). Enfin, la fonction doit décrémenter le nombre de balles nb_balls (on a retiré une balle du jeu). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">i</td><td>L'indice de la balle dans le tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f55ac4d3ce268f707213b7ae35f160c" name="a3f55ac4d3ce268f707213b7ae35f160c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f55ac4d3ce268f707213b7ae35f160c">&#9670;&#160;</a></span>ball_hits_wall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ball_hits_wall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Teste si une balle touche un mur et change l'état du jeu en conséquence (inversion de la vitesse de la balle, perte de balle, etc.). </p>
+<p>Les conséquences d'une collision avec un mur sont les suivantes :</p><ul>
+<li>Si la balle touche un mur vertical (gauche ou droite), sa vitesse horizontale est inversée.</li>
+<li>Si elle touche le mur du bas, et qu'il y a un joueur 1, la balle est perdue.</li>
+<li>Si elle touche le mur du bas, et qu'il n'y a pas de joueur 1, sa vitesse verticale est inversée.</li>
+<li>Si elle touche le mur du haut et qu'il y a un joueur 2, la balle est perdue.</li>
+<li>Si elle touche le mur du haut et qu'il n'y a pas de joueur 2, sa vitesse verticale est inversée.</li>
+</ul>
+<dl class="section attention"><dt>Attention</dt><dd>Si une balle est perdue, elle est supprimée du jeu (on utilisera <a class="el" href="#a9ebeadbc27221208217e98f9f5c38beb" title="Supprime la balle d&#39;indice i du jeu.">game_remove_ball()</a>) et le joueur qui perd la balle (1 ou 2) perd un point de vie (on décrémentera le paramètre <a class="el" href="structpaddle.html#ae448fb16f537982185a0c5e8db56bdc6" title="health">health</a> de la raquette du joueur qui perd la balle). Si il y a un autre joueur, son score de buts est incrémenté (le paramètre <a class="el" href="structpaddle.html#ae4e54cd1fe49769f7b54b5427cda6460" title="goals">goals</a>).</dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la balle touche un mur, false sinon. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">i</td><td>L'indice de la balle dans le tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a241583bbe648a28a5c591a11d86573f8" name="a241583bbe648a28a5c591a11d86573f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241583bbe648a28a5c591a11d86573f8">&#9670;&#160;</a></span>ball_hits_paddle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ball_hits_paddle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpaddle.html">paddle</a> *</td>          <td class="paramname"><span class="paramname"><em>paddle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Teste si une balle touche une raquette et change l'état du jeu en conséquence (changement de la vitesse de la balle). </p>
+<p>Pour déterminer les conséquences d'une collision entre une balle et une raquette, on doit calculer la position de la balle par rapport au centre de la raquette au moment de l'impact. Cette position détermine l'angle de rebond de la balle:</p><ul>
+<li>Si la balle touche le centre de la raquette, elle rebondira verticalement (angle de 0 degrés).</li>
+<li>Si elle touche les bords de la raquette, elle rebondira avec un angle plus prononcé (jusqu'à 60 degrés).</li>
+</ul>
+<p>Dans tous les cas la valeur absolue de la vitesse de la balle reste constante, seule sa direction change.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la balle touche la raquette, false sinon. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">i</td><td>L'indice de la balle dans le tableau <a class="el" href="structgame.html#af34afe751ed37d7bbc07038318691212" title="ball_list">ball_list</a>.  </td></tr>
+    <tr><td class="paramname"><a class="el" href="structpaddle.html" title="Structure représentant une raquette dans le jeu.">paddle</a></td><td>La raquette à vérifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25e987db7b32c923bc2b4f8fc4058e6d" name="a25e987db7b32c923bc2b4f8fc4058e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e987db7b32c923bc2b4f8fc4058e6d">&#9670;&#160;</a></span>ball_collide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ball_collide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structball.html">ball</a> *</td>          <td class="paramname"><span class="paramname"><em>b1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structball.html">ball</a> *</td>          <td class="paramname"><span class="paramname"><em>b2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Teste si deux balles se touchent et change l'état du jeu en conséquence (changement de la vitesse des balles). </p>
+<p>Pour déterminer les conséquences d'une collision entre deux balles, on calculera le vecteur qui mène du centre de la première balle au centre de la deuxième balle au moment de l'impact. Ce vecteur détermine la direction dans laquelle les balles rebondissent l'une par rapport à l'autre:</p><ul>
+<li>la première balle rebondira dans la direction opposée à ce vecteur. Sa norme (longueur) restera constante (identique à celle qu'elle avait avant), seule sa direction changera.</li>
+<li>la seconde balle rebondira dans la direction de ce vecteur. Sa norme (longueur) restera constante (identique à celle qu'elle avait avant), seule sa direction changera.</li>
+</ul>
+<dl class="section return"><dt>Renvoie</dt><dd>true si les balles se touchent, false sinon. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b1</td><td>La première balle.  </td></tr>
+    <tr><td class="paramname">b2</td><td>La deuxième balle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="game__pong_8h.html">game_pong.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

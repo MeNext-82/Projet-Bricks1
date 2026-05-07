@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ICBG: Référence du fichier game.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ICBG
+   </div>
+   <div id="projectbrief">ICBG : The InitC Bricks Game</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('game_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier game.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition de la structure de données représentant l'état du jeu et des fonctions pour manipuler cette structure.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="alloc_8h_source.html">alloc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game__debris_8h_source.html">game_debris.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game__geometry_8h_source.html">game_geometry.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div>
+<p><a href="game_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:game" id="r_game"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgame.html">game</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure représentant l'état du jeu, y compris le plateau de jeu, les briques, les balles, les raquettes.  <a href="structgame.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae1dbb0e959fde337fa4e436b61bb2bac" id="r_ae1dbb0e959fde337fa4e436b61bb2bac"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae1dbb0e959fde337fa4e436b61bb2bac">CELL_WIDTH</a>&#160;&#160;&#160;366</td></tr>
+<tr class="memdesc:ae1dbb0e959fde337fa4e436b61bb2bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur d'une cellule sur le plateau. À utiliser pour initialiser la largeur d'une nouvelle brique.  <br /></td></tr>
+<tr class="memitem:a8519cbc2997bb2eb21cf5571b37b38bd" id="r_a8519cbc2997bb2eb21cf5571b37b38bd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8519cbc2997bb2eb21cf5571b37b38bd">CELL_HEIGHT</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memdesc:a8519cbc2997bb2eb21cf5571b37b38bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hauteur d'une cellule sur le plateau. À utiliser pour la initialiser la hauteur d'une nouvelle brique.  <br /></td></tr>
+<tr class="memitem:ae17975d20fcf6c462510b2e1a601042f" id="r_ae17975d20fcf6c462510b2e1a601042f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae17975d20fcf6c462510b2e1a601042f">PADDLE_HEIGHT</a>&#160;&#160;&#160;64</td></tr>
+<tr class="memdesc:ae17975d20fcf6c462510b2e1a601042f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hauteur d'une raquette. À utiliser pour la création des raquettes.  <br /></td></tr>
+<tr class="memitem:a5247f956703cbf9b1bae869c955e4e01" id="r_a5247f956703cbf9b1bae869c955e4e01"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5247f956703cbf9b1bae869c955e4e01">PADDLE_WIDTH</a>&#160;&#160;&#160;243</td></tr>
+<tr class="memdesc:a5247f956703cbf9b1bae869c955e4e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur d'une raquette. À utiliser pour la création des raquettes.  <br /></td></tr>
+<tr class="memitem:a7a68691bc9445e0c1d86d5fb15ad7176" id="r_a7a68691bc9445e0c1d86d5fb15ad7176"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7a68691bc9445e0c1d86d5fb15ad7176">PADDLE_SMALL_WIDTH</a>&#160;&#160;&#160;115</td></tr>
+<tr class="memdesc:a7a68691bc9445e0c1d86d5fb15ad7176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur d'une petite raquette. À utiliser pour la gestion des bonus qui réduisent la taille de la raquette.  <br /></td></tr>
+<tr class="memitem:aea714ad5522fb6abc2ebb15d46320166" id="r_aea714ad5522fb6abc2ebb15d46320166"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aea714ad5522fb6abc2ebb15d46320166">PADDLE_LARGE_WIDTH</a>&#160;&#160;&#160;347</td></tr>
+<tr class="memdesc:aea714ad5522fb6abc2ebb15d46320166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur d'une grande raquette. À utiliser pour la gestion des bonus qui agrandissent la taille de la raquette.  <br /></td></tr>
+<tr class="memitem:a9a664ea51e683d266bd64471ec6dfa5f" id="r_a9a664ea51e683d266bd64471ec6dfa5f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9a664ea51e683d266bd64471ec6dfa5f">BONUS_WIDTH</a>&#160;&#160;&#160;242</td></tr>
+<tr class="memdesc:a9a664ea51e683d266bd64471ec6dfa5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur d'un bonus (hors bonus de vie). À utiliser pour la création des bonus.  <br /></td></tr>
+<tr class="memitem:a637a2b7ce929abd3266bf5fa3d0887bb" id="r_a637a2b7ce929abd3266bf5fa3d0887bb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a637a2b7ce929abd3266bf5fa3d0887bb">BONUS_HEIGHT</a>&#160;&#160;&#160;64</td></tr>
+<tr class="memdesc:a637a2b7ce929abd3266bf5fa3d0887bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hauteur d'un bonus (hors bonus de vie). À utiliser pour la création des bonus.  <br /></td></tr>
+<tr class="memitem:aafc32eada236c119ee53e1af470595d6" id="r_aafc32eada236c119ee53e1af470595d6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aafc32eada236c119ee53e1af470595d6">HEALTH_WIDTH</a>&#160;&#160;&#160;96</td></tr>
+<tr class="memdesc:aafc32eada236c119ee53e1af470595d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur d'un bonus de vie. À utiliser pour la création des bonus de vie.  <br /></td></tr>
+<tr class="memitem:a60b382357264e3e39799a678c7f21e38" id="r_a60b382357264e3e39799a678c7f21e38"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a60b382357264e3e39799a678c7f21e38">HEALTH_HEIGHT</a>&#160;&#160;&#160;96</td></tr>
+<tr class="memdesc:a60b382357264e3e39799a678c7f21e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hauteur d'un bonus de vie. À utiliser pour la création des bonus de vie.  <br /></td></tr>
+<tr class="memitem:a26dba4a5e7872d6f4e8e5272eefabee5" id="r_a26dba4a5e7872d6f4e8e5272eefabee5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a26dba4a5e7872d6f4e8e5272eefabee5">BALL_RADIUS</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:a26dba4a5e7872d6f4e8e5272eefabee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rayon d'une balle. À utiliser pour la création des balles et les calculs de collisions.  <br /></td></tr>
+<tr class="memitem:a40adb448bd1bebb3e41482a981f4d2f4" id="r_a40adb448bd1bebb3e41482a981f4d2f4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a40adb448bd1bebb3e41482a981f4d2f4">BALL_SPEED</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memdesc:a40adb448bd1bebb3e41482a981f4d2f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vitesse de la balle. À utiliser pour la création des balles.  <br /></td></tr>
+<tr class="memitem:abcbfe90f3639274ed5ef7d577d93dfbe" id="r_abcbfe90f3639274ed5ef7d577d93dfbe"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abcbfe90f3639274ed5ef7d577d93dfbe">BONUS_SPEED</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:abcbfe90f3639274ed5ef7d577d93dfbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vitesse de déplacement d'un bonus en valeur absolue.  <br /></td></tr>
+<tr class="memitem:a33dc0a325cf0042484187b192d0942f4" id="r_a33dc0a325cf0042484187b192d0942f4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a33dc0a325cf0042484187b192d0942f4">BRICK_SPEED</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a33dc0a325cf0042484187b192d0942f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vitesse de déplacement d'une brique en valeur absolue.  <br /></td></tr>
+<tr class="memitem:adab38e65f74e634284c78af856cd9aa2" id="r_adab38e65f74e634284c78af856cd9aa2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adab38e65f74e634284c78af856cd9aa2">PADDLE_BASE_SPEED</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:adab38e65f74e634284c78af856cd9aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vitesse de base de déplacement d'une raquette en valeur absolue.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a5d069ca8708a30d3ae09a065989ec1f7" id="r_a5d069ca8708a30d3ae09a065989ec1f7"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a5d069ca8708a30d3ae09a065989ec1f7">game_mode</a> { <a class="el" href="#a5d069ca8708a30d3ae09a065989ec1f7aaa94da88e26e96d06b0b9bd0f125194c">GAME_PONG</a>
+, <a class="el" href="#a5d069ca8708a30d3ae09a065989ec1f7a3cf31b525d16637319d0200b18691667">GAME_BRICKS</a>
+, <a class="el" href="#a5d069ca8708a30d3ae09a065989ec1f7aca1e7647ba3085805095581899480897">GAME_SIZE</a>
+ }</td></tr>
+<tr class="memdesc:a5d069ca8708a30d3ae09a065989ec1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les deux modes de jeu disponibles.  <a href="#a5d069ca8708a30d3ae09a065989ec1f7">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a905763f78a0927e5ef74a131394aa4fc" id="r_a905763f78a0927e5ef74a131394aa4fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a905763f78a0927e5ef74a131394aa4fc">free_game</a> (<a class="el" href="structgame.html">game</a> *the_game)</td></tr>
+<tr class="memdesc:a905763f78a0927e5ef74a131394aa4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libération d'un jeu.  <br /></td></tr>
+<tr class="memitem:ad5e31d834b4a38eac6f032edbfc0f783" id="r_ad5e31d834b4a38eac6f032edbfc0f783"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad5e31d834b4a38eac6f032edbfc0f783">game_move_player</a> (<a class="el" href="structgame.html">game</a> *g, short p, short dir)</td></tr>
+<tr class="memdesc:ad5e31d834b4a38eac6f032edbfc0f783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie le déplacement de la raquette du joueur spécifié (si il existe).  <br /></td></tr>
+<tr class="memitem:a36c802f03552d2ae6e5dada4cee9e827" id="r_a36c802f03552d2ae6e5dada4cee9e827"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a36c802f03552d2ae6e5dada4cee9e827">game_apply_moves</a> (<a class="el" href="structgame.html">game</a> *<a class="el" href="structgame.html">game</a>)</td></tr>
+<tr class="memdesc:a36c802f03552d2ae6e5dada4cee9e827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bouge tous les objets du jeu selon leur vitesse : les raquettes, les balles, les bonus et aussi les briques quand le bonus de gravité est actif.  <br /></td></tr>
+<tr class="memitem:a455582e28378f9b71a1727a7c0e30801" id="r_a455582e28378f9b71a1727a7c0e30801"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a455582e28378f9b71a1727a7c0e30801">game_place_bonus_pong</a> (<a class="el" href="structgame.html">game</a> *g)</td></tr>
+<tr class="memdesc:a455582e28378f9b71a1727a7c0e30801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute un nouveau bonus au jeu, à une coordonnée horizontale aléatoire au centre du plateau. Utilisé dans le mode Pong pour générer des bonus aléatoires pendant la partie.  <br /></td></tr>
+<tr class="memitem:a7599e32dde5a9b80dec1c811937fad80" id="r_a7599e32dde5a9b80dec1c811937fad80"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7599e32dde5a9b80dec1c811937fad80">game_handle_collisions</a> (<a class="el" href="structgame.html">game</a> *g)</td></tr>
+<tr class="memdesc:a7599e32dde5a9b80dec1c811937fad80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traite les collisions des balles avec les murs, les raquettes et les briques et les collisions des bonus avec les raquettes.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition de la structure de données représentant l'état du jeu et des fonctions pour manipuler cette structure. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="ae1dbb0e959fde337fa4e436b61bb2bac" name="ae1dbb0e959fde337fa4e436b61bb2bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1dbb0e959fde337fa4e436b61bb2bac">&#9670;&#160;</a></span>CELL_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CELL_WIDTH&#160;&#160;&#160;366</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Largeur d'une cellule sur le plateau. À utiliser pour initialiser la largeur d'une nouvelle brique. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00034">34</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a8519cbc2997bb2eb21cf5571b37b38bd" name="a8519cbc2997bb2eb21cf5571b37b38bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8519cbc2997bb2eb21cf5571b37b38bd">&#9670;&#160;</a></span>CELL_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CELL_HEIGHT&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hauteur d'une cellule sur le plateau. À utiliser pour la initialiser la hauteur d'une nouvelle brique. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00044">44</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="ae17975d20fcf6c462510b2e1a601042f" name="ae17975d20fcf6c462510b2e1a601042f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17975d20fcf6c462510b2e1a601042f">&#9670;&#160;</a></span>PADDLE_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PADDLE_HEIGHT&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hauteur d'une raquette. À utiliser pour la création des raquettes. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00053">53</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a5247f956703cbf9b1bae869c955e4e01" name="a5247f956703cbf9b1bae869c955e4e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5247f956703cbf9b1bae869c955e4e01">&#9670;&#160;</a></span>PADDLE_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PADDLE_WIDTH&#160;&#160;&#160;243</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Largeur d'une raquette. À utiliser pour la création des raquettes. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00062">62</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a7a68691bc9445e0c1d86d5fb15ad7176" name="a7a68691bc9445e0c1d86d5fb15ad7176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a68691bc9445e0c1d86d5fb15ad7176">&#9670;&#160;</a></span>PADDLE_SMALL_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PADDLE_SMALL_WIDTH&#160;&#160;&#160;115</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Largeur d'une petite raquette. À utiliser pour la gestion des bonus qui réduisent la taille de la raquette. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00072">72</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="aea714ad5522fb6abc2ebb15d46320166" name="aea714ad5522fb6abc2ebb15d46320166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea714ad5522fb6abc2ebb15d46320166">&#9670;&#160;</a></span>PADDLE_LARGE_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PADDLE_LARGE_WIDTH&#160;&#160;&#160;347</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Largeur d'une grande raquette. À utiliser pour la gestion des bonus qui agrandissent la taille de la raquette. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00082">82</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a9a664ea51e683d266bd64471ec6dfa5f" name="a9a664ea51e683d266bd64471ec6dfa5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a664ea51e683d266bd64471ec6dfa5f">&#9670;&#160;</a></span>BONUS_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BONUS_WIDTH&#160;&#160;&#160;242</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Largeur d'un bonus (hors bonus de vie). À utiliser pour la création des bonus. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00091">91</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a637a2b7ce929abd3266bf5fa3d0887bb" name="a637a2b7ce929abd3266bf5fa3d0887bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637a2b7ce929abd3266bf5fa3d0887bb">&#9670;&#160;</a></span>BONUS_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BONUS_HEIGHT&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hauteur d'un bonus (hors bonus de vie). À utiliser pour la création des bonus. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00101">101</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="aafc32eada236c119ee53e1af470595d6" name="aafc32eada236c119ee53e1af470595d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc32eada236c119ee53e1af470595d6">&#9670;&#160;</a></span>HEALTH_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEALTH_WIDTH&#160;&#160;&#160;96</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Largeur d'un bonus de vie. À utiliser pour la création des bonus de vie. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00110">110</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a60b382357264e3e39799a678c7f21e38" name="a60b382357264e3e39799a678c7f21e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b382357264e3e39799a678c7f21e38">&#9670;&#160;</a></span>HEALTH_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEALTH_HEIGHT&#160;&#160;&#160;96</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hauteur d'un bonus de vie. À utiliser pour la création des bonus de vie. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00119">119</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a26dba4a5e7872d6f4e8e5272eefabee5" name="a26dba4a5e7872d6f4e8e5272eefabee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26dba4a5e7872d6f4e8e5272eefabee5">&#9670;&#160;</a></span>BALL_RADIUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BALL_RADIUS&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rayon d'une balle. À utiliser pour la création des balles et les calculs de collisions. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>La balle est représentée par un rectangle de largeur et de hauteur égales à BALL_RADIUS * 2;</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>Ne pas changer cette valeur! </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00133">133</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a40adb448bd1bebb3e41482a981f4d2f4" name="a40adb448bd1bebb3e41482a981f4d2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40adb448bd1bebb3e41482a981f4d2f4">&#9670;&#160;</a></span>BALL_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BALL_SPEED&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vitesse de la balle. À utiliser pour la création des balles. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>Peut-être changé pour rendre le jeu plus facile ou plus difficile. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00142">142</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="abcbfe90f3639274ed5ef7d577d93dfbe" name="abcbfe90f3639274ed5ef7d577d93dfbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcbfe90f3639274ed5ef7d577d93dfbe">&#9670;&#160;</a></span>BONUS_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BONUS_SPEED&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vitesse de déplacement d'un bonus en valeur absolue. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00148">148</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="a33dc0a325cf0042484187b192d0942f4" name="a33dc0a325cf0042484187b192d0942f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33dc0a325cf0042484187b192d0942f4">&#9670;&#160;</a></span>BRICK_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BRICK_SPEED&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vitesse de déplacement d'une brique en valeur absolue. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00154">154</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a id="adab38e65f74e634284c78af856cd9aa2" name="adab38e65f74e634284c78af856cd9aa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adab38e65f74e634284c78af856cd9aa2">&#9670;&#160;</a></span>PADDLE_BASE_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PADDLE_BASE_SPEED&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vitesse de base de déplacement d'une raquette en valeur absolue. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>Les bonus affectent la vitesse de déplacement de la raquette:<ul>
+<li>en multipliant cette valeur par 2 (bonus de vitesse)</li>
+<li>en la divisant par 2 (bonus de ralentissement). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00165">165</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a5d069ca8708a30d3ae09a065989ec1f7" name="a5d069ca8708a30d3ae09a065989ec1f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d069ca8708a30d3ae09a065989ec1f7">&#9670;&#160;</a></span>game_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a5d069ca8708a30d3ae09a065989ec1f7">game_mode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Les deux modes de jeu disponibles. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a5d069ca8708a30d3ae09a065989ec1f7aaa94da88e26e96d06b0b9bd0f125194c" name="a5d069ca8708a30d3ae09a065989ec1f7aaa94da88e26e96d06b0b9bd0f125194c"></a>GAME_PONG&#160;</td><td class="fielddoc"><p>Mode de jeu Pong (pas de briques, les bonus sont générés automatiquement de façon aléatoire). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d069ca8708a30d3ae09a065989ec1f7a3cf31b525d16637319d0200b18691667" name="a5d069ca8708a30d3ae09a065989ec1f7a3cf31b525d16637319d0200b18691667"></a>GAME_BRICKS&#160;</td><td class="fielddoc"><p>Mode de jeu Briques (les bonus sont générés aléatoirement quand une brique est détruite). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d069ca8708a30d3ae09a065989ec1f7aca1e7647ba3085805095581899480897" name="a5d069ca8708a30d3ae09a065989ec1f7aca1e7647ba3085805095581899480897"></a>GAME_SIZE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Définition à la ligne <a class="el" href="game_8h_source.html#l00175">175</a> du fichier <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a905763f78a0927e5ef74a131394aa4fc" name="a905763f78a0927e5ef74a131394aa4fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905763f78a0927e5ef74a131394aa4fc">&#9670;&#160;</a></span>free_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_game </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>the_game</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libération d'un jeu. </p>
+<dl class="section remark"><dt>Remarques</dt><dd>Les fonctions de création sont écrite dans game_pong.c et game_bricks.c. La fonction de libération est écrite dans game.c car elle est commune aux deux modes de jeu. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">the_game</td><td>Le jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad5e31d834b4a38eac6f032edbfc0f783" name="ad5e31d834b4a38eac6f032edbfc0f783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e31d834b4a38eac6f032edbfc0f783">&#9670;&#160;</a></span>game_move_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_move_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie le déplacement de la raquette du joueur spécifié (si il existe). </p>
+<p>La fonction devra mettre à jour la vitesse de déplacement de la raquette du joueur spécifié en fonction de la direction donnée en paramètre. Si <code class="param">dir</code> est égal à -1, la raquette doit se déplacer vers la gauche, si dir est égal à 1, elle doit se déplacer vers la droite, sinon elle doit s'arrêter. La valeur de vitesse de déplacement doit être égale à <a class="el" href="#adab38e65f74e634284c78af856cd9aa2" title="Vitesse de base de déplacement d&#39;une raquette en valeur absolue.">PADDLE_BASE_SPEED</a> (ou à sa valeur modifiée par les bonus) dans la direction indiquée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu.  </td></tr>
+    <tr><td class="paramname">p</td><td>Numéro du joueur (0 ou 1).  </td></tr>
+    <tr><td class="paramname">dir</td><td>Direction du déplacement (-1 pour gauche, 1 pour droite, 0 pour arrêt). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a36c802f03552d2ae6e5dada4cee9e827" name="a36c802f03552d2ae6e5dada4cee9e827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c802f03552d2ae6e5dada4cee9e827">&#9670;&#160;</a></span>game_apply_moves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_apply_moves </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>game</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bouge tous les objets du jeu selon leur vitesse : les raquettes, les balles, les bonus et aussi les briques quand le bonus de gravité est actif. </p>
+<p>Les objets sont déplacés en additionnant leur vitesse à leur position. Cette fonction est appelée par l'interface à chaque tour de la boucle de jeu après avoir pris en compte les actions de l'utilisateur.</p>
+<dl class="section attention"><dt>Attention</dt><dd>Pour les mouvements des raquettes, il faut veiller à ce que les raquettes ne sortent pas du plateau de jeu. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structgame.html" title="Structure représentant l&#39;état du jeu, y compris le plateau de jeu, les briques, les balles,...">game</a></td><td>Le jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a455582e28378f9b71a1727a7c0e30801" name="a455582e28378f9b71a1727a7c0e30801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455582e28378f9b71a1727a7c0e30801">&#9670;&#160;</a></span>game_place_bonus_pong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_place_bonus_pong </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute un nouveau bonus au jeu, à une coordonnée horizontale aléatoire au centre du plateau. Utilisé dans le mode Pong pour générer des bonus aléatoires pendant la partie. </p>
+<p>Le bonus se déplacera ensuite verticalement vers le bas ou vers le haut selon les joueurs présents dans le jeu :</p><ul>
+<li>si il n'y a qu'un seul joueur, le bonus se déplacera vers ce joueur,</li>
+<li>sinon il se déplacera dans une direction aléatoire.</li>
+</ul>
+<p>Cette fonction est appelée par l'interface régulièrement pendant la boucle de jeu après <a class="el" href="#a36c802f03552d2ae6e5dada4cee9e827" title="Bouge tous les objets du jeu selon leur vitesse : les raquettes, les balles, les bonus et aussi les b...">game_apply_moves()</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7599e32dde5a9b80dec1c811937fad80" name="a7599e32dde5a9b80dec1c811937fad80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7599e32dde5a9b80dec1c811937fad80">&#9670;&#160;</a></span>game_handle_collisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game_handle_collisions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame.html">game</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Traite les collisions des balles avec les murs, les raquettes et les briques et les collisions des bonus avec les raquettes. </p>
+<p>Cette fonction est appelée à chaque tour de la boucle de jeu après <a class="el" href="#a36c802f03552d2ae6e5dada4cee9e827" title="Bouge tous les objets du jeu selon leur vitesse : les raquettes, les balles, les bonus et aussi les b...">game_apply_moves()</a> pour mettre à jour l'état du jeu en fonction des différentes collisions qui peuvent se produire entre les objets du jeu. Elle supprime également les balles et les bonus qui sortent du plateau de jeu. Elle génère aussi une nouvelle balle si toutes les balles ont été perdues et que le jeu n'est pas terminé.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>Cette fonction doit appeler ball_hits_wall, ball_hits_paddle et ball_hits_brick pour gérer les différentes collisions. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Le jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="game_8h.html">game.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

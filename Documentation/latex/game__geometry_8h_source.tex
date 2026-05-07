@@ -1,0 +1,188 @@
+\doxysection{game\+\_\+geometry.\+h}
+\hypertarget{game__geometry_8h_source}{}\label{game__geometry_8h_source}\doxymbox{\hyperlink{game__geometry_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_GEOMETRY\_H\_}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ GAME\_GEOMETRY\_H\_}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00013}00013\ \textcolor{comment}{/*\ \ \ \_\_\_\_\ \_\_\_\_\_\ \_\_\_\ \ \_\_\ \ \_\_\ \_\_\_\_\_\ \_\_\_\_\_\ \_\_\_\_\_\_\ \ \ \_\_\ */}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00014}00014\ \textcolor{comment}{/*\ \ /\ \_\_\_|\ \_\_\_\_/\ \_\ \(\backslash\)|\ \ \(\backslash\)/\ \ |\ \_\_\_\_|\_\ \ \ \_|\ \ \_\ \(\backslash\)\ \(\backslash\)\ /\ /\ */}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00015}00015\ \textcolor{comment}{/*\ |\ |\ \ \_|\ \ \_||\ |\ |\ |\ |\(\backslash\)/|\ |\ \ \_|\ \ \ |\ |\ |\ |\_)\ \(\backslash\)\ V\ /\ \ */}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00016}00016\ \textcolor{comment}{/*\ |\ |\_|\ |\ |\_\_|\ |\_|\ |\ |\ \ |\ |\ |\_\_\_\ \ |\ |\ |\ \ \_\ <\ |\ |\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00017}00017\ \textcolor{comment}{/*\ \ \(\backslash\)\_\_\_\_|\_\_\_\_\_\(\backslash\)\_\_\_/|\_|\ \ |\_|\_\_\_\_\_|\ |\_|\ |\_|\ \(\backslash\)\_\(\backslash\)|\_|\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00024}00024\ \textcolor{comment}{/****************/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00025}00025\ \textcolor{comment}{/*+\ Rectangles\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00026}00026\ \textcolor{comment}{/****************/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00043}\doxymbox{\hyperlink{structrectangle}{00043}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00044}\doxymbox{\hyperlink{structrectangle_af88b946fb90d5f08b5fb740c70e98c10}{00044}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structrectangle_af88b946fb90d5f08b5fb740c70e98c10}{x}};\ \textcolor{comment}{//\ Coordonnée\ horizontale\ du\ coin\ supérieur\ gauche\ du\ rectangle.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00045}\doxymbox{\hyperlink{structrectangle_ab927965981178aa1fba979a37168db2a}{00045}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structrectangle_ab927965981178aa1fba979a37168db2a}{y}};\ \textcolor{comment}{//\ Coordonnée\ verticale\ du\ coin\ supérieur\ gauche\ du\ rectangle.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00046}\doxymbox{\hyperlink{structrectangle_aac374e320caaadeca4874add33b62af2}{00046}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structrectangle_aac374e320caaadeca4874add33b62af2}{w}};\ \ \ \ \textcolor{comment}{//\ Largeur\ du\ rectangle.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00047}\doxymbox{\hyperlink{structrectangle_a16611451551e3d15916bae723c3f59f7}{00047}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structrectangle_a16611451551e3d15916bae723c3f59f7}{h}};\ \ \ \ \textcolor{comment}{//\ Hauteur\ du\ rectangle.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00048}00048\ \}\ \doxymbox{\hyperlink{structrectangle}{rectangle}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00056}\doxymbox{\hyperlink{game__geometry_8h_ac8a4937f3bc10a476e4a7c22c6c574f8}{00056}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{game__geometry_8h_ac8a4937f3bc10a476e4a7c22c6c574f8}{rectangles\_overlap}}(\doxymbox{\hyperlink{structrectangle}{rectangle}}\ *r1,\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structrectangle}{rectangle}}\ *r2\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00058}00058\ );}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00060}00060\ \textcolor{comment}{/**************/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00061}00061\ \textcolor{comment}{/*+\ Raquette\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00062}00062\ \textcolor{comment}{/**************/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00082}\doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1b}{00082}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00083}\doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f}{00083}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba72123bce81b2e54cb80038c7f4d2a92f}{SPEED\_NORMAL}},\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00084}\doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469}{00084}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1bac1d4c56fe55e217a20948e5dfdf15469}{SPEED\_SLOW}},\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00085}\doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59}{00085}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1ba10e524d624d32a53f007da8032f61f59}{SPEED\_FAST}}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00086}00086\ \}\ \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1b}{speed\_mode}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00100}\doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391}{00100}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00101}\doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b}{00101}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b}{PADDLE\_NORMAL}},\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00102}\doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b}{00102}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b}{PADDLE\_SMALL}},\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00103}\doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279}{00103}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279}{PADDLE\_LARGE}}\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00104}00104\ \}\ \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391}{paddle\_size}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00110}\doxymbox{\hyperlink{structpaddle}{00110}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00111}\doxymbox{\hyperlink{structpaddle_ae3bb4eb9686730f8da93dd09fa10c246}{00111}}\ \ \ \ \ \doxymbox{\hyperlink{structrectangle}{rectangle}}\ \doxymbox{\hyperlink{structpaddle_ae3bb4eb9686730f8da93dd09fa10c246}{rect}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00113}\doxymbox{\hyperlink{structpaddle_aebb2c694aa0ece3f9bb10e4f0261cadc}{00113}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structpaddle_aebb2c694aa0ece3f9bb10e4f0261cadc}{speed\_x}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00115}\doxymbox{\hyperlink{structpaddle_a01ab94b590a64c603dd3da13220e486e}{00115}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a575adb0267e99d33195ccb846d2be391}{paddle\_size}}\ \doxymbox{\hyperlink{structpaddle_a01ab94b590a64c603dd3da13220e486e}{size}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00116}\doxymbox{\hyperlink{structpaddle_adeb1219eccc2cc158906c2daf18bc1ad}{00116}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a2f9013a31a070d69d1b53ee9525e6c1b}{speed\_mode}}\ \doxymbox{\hyperlink{structpaddle_adeb1219eccc2cc158906c2daf18bc1ad}{smode}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00117}\doxymbox{\hyperlink{structpaddle_abb167350350ffbc934382b6d3ecafead}{00117}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structpaddle_abb167350350ffbc934382b6d3ecafead}{bottom}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00119}\doxymbox{\hyperlink{structpaddle_ae448fb16f537982185a0c5e8db56bdc6}{00119}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpaddle_ae448fb16f537982185a0c5e8db56bdc6}{health}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00120}\doxymbox{\hyperlink{structpaddle_aef160b7437d94056f1dc59646cd5b87d}{00120}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpaddle_aef160b7437d94056f1dc59646cd5b87d}{score}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00121}\doxymbox{\hyperlink{structpaddle_ae4e54cd1fe49769f7b54b5427cda6460}{00121}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpaddle_ae4e54cd1fe49769f7b54b5427cda6460}{goals}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00122}\doxymbox{\hyperlink{structpaddle_afa0475c593c01ac5eae71960f0a70cf7}{00122}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpaddle_afa0475c593c01ac5eae71960f0a70cf7}{bonuses}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00123}\doxymbox{\hyperlink{structpaddle_a222cc0f5e9d201c71dcf517b16afedaf}{00123}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpaddle_a222cc0f5e9d201c71dcf517b16afedaf}{bricks}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00124}00124\ \}\ \doxymbox{\hyperlink{structpaddle}{paddle}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00132}\doxymbox{\hyperlink{game__geometry_8h_a762cc1de211dec4140b51ac3f5a2332f}{00132}}\ \doxymbox{\hyperlink{structpaddle}{paddle}}\ *\doxymbox{\hyperlink{game__geometry_8h_a762cc1de211dec4140b51ac3f5a2332f}{create\_paddle}}(}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00133}00133\ \ \ \ \ \textcolor{keywordtype}{bool}\ bottom,\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00135}00135\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_rows,\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00137}00137\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_columns\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00139}00139\ );}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00141}00141\ \textcolor{comment}{/************/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00142}00142\ \textcolor{comment}{/*+\ Balles\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00143}00143\ \textcolor{comment}{/************/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00148}\doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701}{00148}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00149}\doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50}{00149}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50}{POW\_RED}},\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00150}\doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c}{00150}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c}{POW\_GREEN}},\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00151}\doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c}{00151}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c}{POW\_NONE}},\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00153}00153\ \}\ \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701}{power}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00159}\doxymbox{\hyperlink{structball}{00159}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00160}00160\ \ \ \ \ \doxymbox{\hyperlink{structrectangle}{rectangle}}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00161}\doxymbox{\hyperlink{structball_ae3bb4eb9686730f8da93dd09fa10c246}{00161}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structball_ae3bb4eb9686730f8da93dd09fa10c246}{rect}};\ \textcolor{comment}{//\ Rectangle\ représentant\ la\ position\ et\ la\ taille\ de\ la\ balle.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00162}\doxymbox{\hyperlink{structball_aebb2c694aa0ece3f9bb10e4f0261cadc}{00162}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structball_aebb2c694aa0ece3f9bb10e4f0261cadc}{speed\_x}};\ \textcolor{comment}{//\ Vitesse\ horizontale\ de\ la\ balle\ (positive\ vers\ la\ droite,}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ négative\ vers\ la\ gauche).}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00164}\doxymbox{\hyperlink{structball_a6710926b8c4035973f5dae24886ff9e5}{00164}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structball_a6710926b8c4035973f5dae24886ff9e5}{speed\_y}};\ \textcolor{comment}{//\ Vitesse\ verticale\ de\ la\ balle\ (positive\ vers\ le\ bas,}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ négative\ vers\ le\ haut).}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00166}\doxymbox{\hyperlink{structball_aea678c244f0a2d57c55eaf866095376b}{00166}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structball_aea678c244f0a2d57c55eaf866095376b}{last\_hit}};\ \ \ \textcolor{comment}{//\ Indique\ le\ dernier\ côté\ qui\ a\ touché\ la\ balle\ (0\ pour\ bas}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ou\ 1\ pour\ haut),\ ou\ -\/1\ si\ la\ balle\ n'a\ pas\ encore\ été}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ touchée\ par\ un\ joueur.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00169}\doxymbox{\hyperlink{structball_a0801cbd209e22b16e5059a3b4922320a}{00169}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a4aacd7f6a06e4071d328a3b2c9986701}{power}}\ \doxymbox{\hyperlink{structball_a0801cbd209e22b16e5059a3b4922320a}{powerup}};\ \textcolor{comment}{//\ Bonus\ actif\ sur\ la\ balle\ (\#POW\_NONE\ si\ aucun\ bonus\ actif).}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00170}00170\ \}\ \doxymbox{\hyperlink{structball}{ball}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00178}\doxymbox{\hyperlink{game__geometry_8h_a0ae6198669bad5044cbdf4c7980ced9d}{00178}}\ \doxymbox{\hyperlink{structball}{ball}}\ *\doxymbox{\hyperlink{game__geometry_8h_a0ae6198669bad5044cbdf4c7980ced9d}{create\_ball}}(}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00179}00179\ \ \ \ \ \textcolor{keywordtype}{double}\ x,\ \textcolor{comment}{//\ Coordonnée\ horizontale\ du\ coin\ supérieur\ gauche\ de\ la\ balle.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00180}00180\ \ \ \ \ \textcolor{keywordtype}{double}\ y,\ \textcolor{comment}{//\ Coordonnée\ verticale\ du\ coin\ supérieur\ gauche\ de\ la\ balle.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00181}00181\ \ \ \ \ \textcolor{keywordtype}{bool}\ top\ \ \textcolor{comment}{//\ Indique\ si\ la\ balle\ est\ créée\ en\ haut\ (true)\ ou\ en\ bas\ (false)}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ du\ plateau\ de\ jeu,\ ce\ qui\ détermine\ la\ direction\ initiale\ de\ la}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ balle.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00184}00184\ );}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00192}\doxymbox{\hyperlink{game__geometry_8h_a306e58724ce16d3d4993e4195b71938c}{00192}}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{game__geometry_8h_a306e58724ce16d3d4993e4195b71938c}{ball\_speednorm}}(\doxymbox{\hyperlink{structball}{ball}}\ *b);}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00194}00194\ \textcolor{comment}{/*************/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00195}00195\ \textcolor{comment}{/*+\ Briques\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00196}00196\ \textcolor{comment}{/*************/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00206}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{00206}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00207}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79}{00207}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79}{BLUE}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00208}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa0c9ed06b5de60ddd26bb2808e5f4b5dd}{00208}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa0c9ed06b5de60ddd26bb2808e5f4b5dd}{LIGHTGREEN}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00209}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d}{00209}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d}{PURPLE}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00210}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf80f9a890089d211842d59625e561f88}{00210}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf80f9a890089d211842d59625e561f88}{RED}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00211}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0face9ee4c1a6b777940c7f3a766a9a88d4}{00211}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0face9ee4c1a6b777940c7f3a766a9a88d4}{ORANGE}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00212}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa272b71e84bc2640b193e9fe3c72cb3de}{00212}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa272b71e84bc2640b193e9fe3c72cb3de}{LIGHTBLUE}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00213}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fae735a848bf82163a19236ead1c3ef2d2}{00213}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fae735a848bf82163a19236ead1c3ef2d2}{YELLOW}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00214}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf79adcdefe686bdc500ad2733af34c36}{00214}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0faf79adcdefe686bdc500ad2733af34c36}{DARKGREEN}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00215}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa3fb6c4ad00f4ad98553e01229d1803ac}{00215}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa3fb6c4ad00f4ad98553e01229d1803ac}{GRAY}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00216}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570}{00216}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570}{BROWN}},}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00217}\doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e}{00217}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0fa7e78d8711461f4f9f626ccf0e1e8070e}{COLSIZE}}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00218}00218\ \}\ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\_color}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00224}\doxymbox{\hyperlink{structbrick}{00224}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00225}00225\ \ \ \ \ \textcolor{comment}{//\ Propriétés\ de\ la\ brique}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00226}\doxymbox{\hyperlink{structbrick_aecb0dff5dcf4dc859dac9d774241f354}{00226}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\_color}}\ \doxymbox{\hyperlink{structbrick_aecb0dff5dcf4dc859dac9d774241f354}{color}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00227}\doxymbox{\hyperlink{structbrick_ae3bb4eb9686730f8da93dd09fa10c246}{00227}}\ \ \ \ \ \doxymbox{\hyperlink{structrectangle}{rectangle}}\ \doxymbox{\hyperlink{structbrick_ae3bb4eb9686730f8da93dd09fa10c246}{rect}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ brique.\ La\ largeur\ et\ la\ hauteur\ sont\ généralement\ égales}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ à\ \#CELL\_X\ et\ \#CELL\_Y,\ mais\ peuvent\ être\ ajustées\ pour\ les}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ briques\ plus\ résistantes.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00231}\doxymbox{\hyperlink{structbrick_ae448fb16f537982185a0c5e8db56bdc6}{00231}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structbrick_ae448fb16f537982185a0c5e8db56bdc6}{health}};\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00232}\doxymbox{\hyperlink{structbrick_ae7fb049f4b5173a202e774b3eb3e64e4}{00232}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structbrick_ae7fb049f4b5173a202e774b3eb3e64e4}{max\_health}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00233}\doxymbox{\hyperlink{structbrick_af17b5de4074fb8cec910e0949474a81b}{00233}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structbrick_af17b5de4074fb8cec910e0949474a81b}{origin}};\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//(index\ dans\ le\ tableau\ board).\ Utile\ pour\ les\ briques\ en}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ mouvement\ qui\ changent\ de\ position\ sur\ le\ plateau.}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00237}00237\ \ \ \ \ \textcolor{comment}{//\ Propriétés\ de\ l'animation\ de\ la\ brique}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00238}\doxymbox{\hyperlink{structbrick_aa58cd94610b54a31fa7bb2ac7eedfcee}{00238}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structbrick_aa58cd94610b54a31fa7bb2ac7eedfcee}{nb\_frames}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ brique\ (0\ si\ la\ brique\ n'est\ pas\ en\ mouvement).}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00240}\doxymbox{\hyperlink{structbrick_a6dc6e6f3c75c509ce943163afb5dade7}{00240}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structbrick_a6dc6e6f3c75c509ce943163afb5dade7}{speed}};\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00241}00241\ \}\ \doxymbox{\hyperlink{structbrick}{brick}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00249}\doxymbox{\hyperlink{game__geometry_8h_a6b587564ebd53a06f29b7d13b41854a9}{00249}}\ \doxymbox{\hyperlink{structbrick}{brick}}\ *\doxymbox{\hyperlink{game__geometry_8h_a6b587564ebd53a06f29b7d13b41854a9}{create\_brick}}(}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00250}00250\ \ \ \ \ \textcolor{keywordtype}{double}\ x,\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00251}00251\ \ \ \ \ \textcolor{keywordtype}{double}\ y,\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00252}00252\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a1c49a0130453066c52f6c10399a4aa0f}{brick\_color}}\ color,\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00253}00253\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_health,\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00254}00254\ \ \ \ \ \textcolor{keywordtype}{int}\ origin\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00255}00255\ );}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00257}00257\ \textcolor{comment}{/***********/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00258}00258\ \textcolor{comment}{/*+\ Bonus\ +*/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00259}00259\ \textcolor{comment}{/***********/}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00261}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504cae}{00261}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00262}00262\ \ \ \ \ \textcolor{comment}{//\ Bonus\ disponibles\ en\ mode\ Pong\ ET\ en\ mode\ Briques}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00263}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010}{00263}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010}{BNS\_SHRINK}},\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00264}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6}{00264}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6}{BNS\_GROW}},\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00265}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498}{00265}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498}{BNS\_SPEEDUP}},\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00266}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f}{00266}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f}{BNS\_SLOWDOWN}},\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00267}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240}{00267}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240}{BNS\_SCORE50}},\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00268}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3}{00268}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3}{BNS\_SCORE100}},\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00269}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5}{00269}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5}{BNS\_SCORE250}},\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00270}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b}{00270}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b}{BNS\_SCORE500}},\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00271}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0}{00271}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0}{BNS\_HEALTH}},\ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00272}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa}{00272}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa}{BNS\_NEWBALL}},\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00274}00274\ \ \ \ \ \textcolor{comment}{//\ Bonus\ spécifique\ au\ mode\ briques}}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00275}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837}{00275}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837}{BNS\_COLORBALL}},\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00278}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1}{00278}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1}{BNS\_STRONGBALL}},\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00280}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6}{00280}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6}{BNS\_GRAVITY}},\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00282}\doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da}{00282}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da}{BNS\_SIZE}}\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00284}00284\ \}\ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504cae}{bonus\_type}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00286}\doxymbox{\hyperlink{structbonus}{00286}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00287}\doxymbox{\hyperlink{structbonus_ae3bb4eb9686730f8da93dd09fa10c246}{00287}}\ \ \ \ \ \doxymbox{\hyperlink{structrectangle}{rectangle}}\ \doxymbox{\hyperlink{structbonus_ae3bb4eb9686730f8da93dd09fa10c246}{rect}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00291}\doxymbox{\hyperlink{structbonus_ad61637b5f3e51ed2519d15346f51d5fc}{00291}}\ \ \ \ \ \doxymbox{\hyperlink{game__geometry_8h_a8f9fcedca9f2f9318215294c30504cae}{bonus\_type}}\ \doxymbox{\hyperlink{structbonus_ad61637b5f3e51ed2519d15346f51d5fc}{type}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00292}\doxymbox{\hyperlink{structbonus_a6710926b8c4035973f5dae24886ff9e5}{00292}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structbonus_a6710926b8c4035973f5dae24886ff9e5}{speed\_y}};\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00295}\doxymbox{\hyperlink{structbonus_a177270d3fbf5a206faef1db19173c239}{00295}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structbonus_a177270d3fbf5a206faef1db19173c239}{frame}};\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00298}00298\ \}\ \doxymbox{\hyperlink{structbonus}{bonus}};}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00310}\doxymbox{\hyperlink{game__geometry_8h_a451d52ccdc17f5ce39e67b4b8e1abf40}{00310}}\ \doxymbox{\hyperlink{structbonus}{bonus}}\ *\doxymbox{\hyperlink{game__geometry_8h_a451d52ccdc17f5ce39e67b4b8e1abf40}{create\_random\_bonus}}(}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00311}00311\ \ \ \ \ \textcolor{keywordtype}{double}\ x,\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00312}00312\ \ \ \ \ \textcolor{keywordtype}{double}\ y,\ \ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00313}00313\ \ \ \ \ \textcolor{keywordtype}{bool}\ down,\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00315}00315\ \ \ \ \ \textcolor{keywordtype}{bool}\ bricks\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00317}00317\ );}
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{game__geometry_8h_source_l00319}00319\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_GEOMETRY\_H\_}}
+
+\end{DoxyCode}

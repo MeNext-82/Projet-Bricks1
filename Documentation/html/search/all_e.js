@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['paddle_0',['paddle',['../structpaddle.html',1,'']]],
+  ['paddle_5fbase_5fspeed_1',['PADDLE_BASE_SPEED',['../game_8h.html#adab38e65f74e634284c78af856cd9aa2',1,'game.h']]],
+  ['paddle_5fheight_2',['PADDLE_HEIGHT',['../game_8h.html#ae17975d20fcf6c462510b2e1a601042f',1,'game.h']]],
+  ['paddle_5flarge_3',['PADDLE_LARGE',['../game__geometry_8h.html#a575adb0267e99d33195ccb846d2be391a43e6d70f9bc50a39e54220621f24f279',1,'game_geometry.h']]],
+  ['paddle_5flarge_5fwidth_4',['PADDLE_LARGE_WIDTH',['../game_8h.html#aea714ad5522fb6abc2ebb15d46320166',1,'game.h']]],
+  ['paddle_5fnormal_5',['PADDLE_NORMAL',['../game__geometry_8h.html#a575adb0267e99d33195ccb846d2be391ac64787a206929763600c08d272e1a08b',1,'game_geometry.h']]],
+  ['paddle_5fsize_6',['paddle_size',['../game__geometry_8h.html#a575adb0267e99d33195ccb846d2be391',1,'game_geometry.h']]],
+  ['paddle_5fsmall_7',['PADDLE_SMALL',['../game__geometry_8h.html#a575adb0267e99d33195ccb846d2be391a318611db888f56ffa3b15434978c024b',1,'game_geometry.h']]],
+  ['paddle_5fsmall_5fwidth_8',['PADDLE_SMALL_WIDTH',['../game_8h.html#a7a68691bc9445e0c1d86d5fb15ad7176',1,'game.h']]],
+  ['paddle_5fwidth_9',['PADDLE_WIDTH',['../game_8h.html#a5247f956703cbf9b1bae869c955e4e01',1,'game.h']]],
+  ['paddles_10',['paddles',['../structgame.html#a2747705ccd15b3102fe4b2b506ede0eb',1,'game']]],
+  ['pause_5ftime_5fcounter_11',['pause_time_counter',['../utils_8h.html#a11fa979c12e17c772edf91a6e16f6224',1,'utils.h']]],
+  ['permutation_12',['permutation',['../structscore__table.html#a45b1e9ba5ab2a4e6d9b26818e51e0463',1,'score_table']]],
+  ['player_5findex_13',['player_index',['../structscore__table.html#ac46dd81307b498cca4749973c32fbfe0',1,'score_table']]],
+  ['player_5fmodes_14',['player_modes',['../structgame.html#a2903948f554158be16d7f246e6ecd818',1,'game']]],
+  ['pow_5fgreen_15',['POW_GREEN',['../game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701ae0e73bc8b8331874e692f6661e7b0a6c',1,'game_geometry.h']]],
+  ['pow_5fnone_16',['POW_NONE',['../game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701aedfa5627df540163ca36df551f8e8b4c',1,'game_geometry.h']]],
+  ['pow_5fred_17',['POW_RED',['../game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701af68a0b7d6add56fcc49636bffb185b50',1,'game_geometry.h']]],
+  ['power_18',['power',['../game__geometry_8h.html#a4aacd7f6a06e4071d328a3b2c9986701',1,'game_geometry.h']]],
+  ['powerup_19',['powerup',['../structball.html#a0801cbd209e22b16e5059a3b4922320a',1,'ball']]],
+  ['print_5fdebug_20',['PRINT_DEBUG',['../error_8h.html#ab5caa27482a6259f023da3e67c9354ab',1,'error.h']]],
+  ['print_5ferror_21',['PRINT_ERROR',['../error_8h.html#aa9e84097935649043db7912bb37623d4',1,'error.h']]],
+  ['purple_22',['PURPLE',['../game__geometry_8h.html#a1c49a0130453066c52f6c10399a4aa0fa2772ad7cd64f03c2aed60f91c69fa69d',1,'game_geometry.h']]]
+];

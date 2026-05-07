@@ -1,0 +1,169 @@
+\doxysection{Référence du fichier utils.\+h}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{utils.h@{utils.h}}
+{\ttfamily \+\#include $<$SDL2/\+\+SDL\+\_\+timer.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{utils_8h_affe776513b24d84b39af8ab0930fef7f}{max}}(a,  b)
+\begin{DoxyCompactList}\small\item\em Macro pour calculer le maximum de deux valeurs. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{utils_8h_ac6afabdc09a49a433ee19d8a9486056d}{min}}(a,  b)
+\begin{DoxyCompactList}\small\item\em Macro pour calculer le minimum de deux valeurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{utils_8h_ae8857dcf75600277c0cbc79a687090ab}{random\+\_\+double}} (double \doxymbox{\hyperlink{utils_8h_ac6afabdc09a49a433ee19d8a9486056d}{min}}, double \doxymbox{\hyperlink{utils_8h_affe776513b24d84b39af8ab0930fef7f}{max}})
+\begin{DoxyCompactList}\small\item\em Génère un nombre aléatoire de type double entre {\ttfamily min} et {\ttfamily max}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{utils_8h_a0d0eb5d5437c1590a8deae6822c74f43}{init\+\_\+time\+\_\+counter}} (void)
+\begin{DoxyCompactList}\small\item\em Initialisation du compteur de temps. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{utils_8h_a5ccf774bc755f17fab7af5d7620c1f25}{init\+\_\+time\+\_\+counter\+\_\+start}} (long start)
+\begin{DoxyCompactList}\small\item\em Initialisation du compteur de temps à une valeur spécifique. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{utils_8h_a11fa979c12e17c772edf91a6e16f6224}{pause\+\_\+time\+\_\+counter}} (void)
+\begin{DoxyCompactList}\small\item\em Met le compteur de temps en pause. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{utils_8h_aa146908ed3c7de1c145e89c3d10edefb}{resume\+\_\+time\+\_\+counter}} (void)
+\begin{DoxyCompactList}\small\item\em Reprend le compteur de temps après une pause. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{utils_8h_af834953585ace39ffae1f30d5a55709f}{get\+\_\+time\+\_\+counter}} (void)
+\begin{DoxyCompactList}\small\item\em Récupère la valeur du compteur de temps en millisecondes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{utils_8h_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{utils_8h_affe776513b24d84b39af8ab0930fef7f}\index{utils.h@{utils.h}!max@{max}}
+\index{max@{max}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily \label{utils_8h_affe776513b24d84b39af8ab0930fef7f} 
+\+\#define max(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)\ >\ (b)\ ?\ (a)\ :\ (b))}
+
+\end{DoxyCode}
+
+
+Macro pour calculer le maximum de deux valeurs. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{utils_8h_source_l00012}{12}} du fichier \doxymbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+
+\Hypertarget{utils_8h_ac6afabdc09a49a433ee19d8a9486056d}\index{utils.h@{utils.h}!min@{min}}
+\index{min@{min}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily \label{utils_8h_ac6afabdc09a49a433ee19d8a9486056d} 
+\+\#define min(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)\ <\ (b)\ ?\ (a)\ :\ (b))}
+
+\end{DoxyCode}
+
+
+Macro pour calculer le minimum de deux valeurs. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{utils_8h_source_l00017}{17}} du fichier \doxymbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{utils_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{utils_8h_ae8857dcf75600277c0cbc79a687090ab}\index{utils.h@{utils.h}!random\_double@{random\_double}}
+\index{random\_double@{random\_double}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{random\_double()}{random\_double()}}
+{\footnotesize\ttfamily \label{utils_8h_ae8857dcf75600277c0cbc79a687090ab} 
+double random\+\_\+double (\begin{DoxyParamCaption}\item[{double}]{min}{, }\item[{double}]{max}{}\end{DoxyParamCaption})}
+
+
+
+Génère un nombre aléatoire de type double entre {\ttfamily min} et {\ttfamily max}. 
+
+\begin{DoxyReturn}{Renvoie}
+Un nombre aléatoire de type double entre {\ttfamily min} et {\ttfamily max}. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em \doxylink{utils_8h_ac6afabdc09a49a433ee19d8a9486056d}{min}} & La valeur minimale du double aléatoire.  \\
+\hline
+{\em \doxylink{utils_8h_affe776513b24d84b39af8ab0930fef7f}{max}} & La valeur maximale du double aléatoire. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{utils_8h_a0d0eb5d5437c1590a8deae6822c74f43}\index{utils.h@{utils.h}!init\_time\_counter@{init\_time\_counter}}
+\index{init\_time\_counter@{init\_time\_counter}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{init\_time\_counter()}{init\_time\_counter()}}
+{\footnotesize\ttfamily \label{utils_8h_a0d0eb5d5437c1590a8deae6822c74f43} 
+void init\+\_\+time\+\_\+counter (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initialisation du compteur de temps. 
+
+\begin{DoxyRemark}{Remarques}
+Cette fonction est appelée par l\textquotesingle{}interface. Vous ne devez pas l\textquotesingle{}appeler vous même. 
+\end{DoxyRemark}
+\Hypertarget{utils_8h_a5ccf774bc755f17fab7af5d7620c1f25}\index{utils.h@{utils.h}!init\_time\_counter\_start@{init\_time\_counter\_start}}
+\index{init\_time\_counter\_start@{init\_time\_counter\_start}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{init\_time\_counter\_start()}{init\_time\_counter\_start()}}
+{\footnotesize\ttfamily \label{utils_8h_a5ccf774bc755f17fab7af5d7620c1f25} 
+void init\+\_\+time\+\_\+counter\+\_\+start (\begin{DoxyParamCaption}\item[{long}]{start}{}\end{DoxyParamCaption})}
+
+
+
+Initialisation du compteur de temps à une valeur spécifique. 
+
+\begin{DoxyRemark}{Remarques}
+Cette fonction est appelée par l\textquotesingle{}interface. Vous ne devez pas l\textquotesingle{}appeler vous même. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Paramètres}
+{\em start} & Le temps en millisecondes auquel le compteur doit démarrer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{utils_8h_a11fa979c12e17c772edf91a6e16f6224}\index{utils.h@{utils.h}!pause\_time\_counter@{pause\_time\_counter}}
+\index{pause\_time\_counter@{pause\_time\_counter}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{pause\_time\_counter()}{pause\_time\_counter()}}
+{\footnotesize\ttfamily \label{utils_8h_a11fa979c12e17c772edf91a6e16f6224} 
+void pause\+\_\+time\+\_\+counter (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Met le compteur de temps en pause. 
+
+\begin{DoxyRemark}{Remarques}
+Cette fonction est appelée par l\textquotesingle{}interface. Vous ne devez pas l\textquotesingle{}appeler vous même. 
+\end{DoxyRemark}
+\Hypertarget{utils_8h_aa146908ed3c7de1c145e89c3d10edefb}\index{utils.h@{utils.h}!resume\_time\_counter@{resume\_time\_counter}}
+\index{resume\_time\_counter@{resume\_time\_counter}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{resume\_time\_counter()}{resume\_time\_counter()}}
+{\footnotesize\ttfamily \label{utils_8h_aa146908ed3c7de1c145e89c3d10edefb} 
+void resume\+\_\+time\+\_\+counter (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Reprend le compteur de temps après une pause. 
+
+\begin{DoxyRemark}{Remarques}
+Cette fonction est appelée par l\textquotesingle{}interface. Vous ne devez pas l\textquotesingle{}appeler vous même. 
+\end{DoxyRemark}
+\Hypertarget{utils_8h_af834953585ace39ffae1f30d5a55709f}\index{utils.h@{utils.h}!get\_time\_counter@{get\_time\_counter}}
+\index{get\_time\_counter@{get\_time\_counter}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{get\_time\_counter()}{get\_time\_counter()}}
+{\footnotesize\ttfamily \label{utils_8h_af834953585ace39ffae1f30d5a55709f} 
+int get\+\_\+time\+\_\+counter (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Récupère la valeur du compteur de temps en millisecondes. 
+
+\begin{DoxyReturn}{Renvoie}
+La valeur du compteur de temps en millisecondes.
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarques}
+Cette fonction est appelée par l\textquotesingle{}interface. Vous ne devez pas l\textquotesingle{}appeler vous même. 
+\end{DoxyRemark}

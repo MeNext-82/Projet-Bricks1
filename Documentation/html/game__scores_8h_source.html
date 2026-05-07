@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ICBG:  Fichier source de game_scores.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ICBG
+   </div>
+   <div id="projectbrief">ICBG : The InitC Bricks Game</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('game__scores_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">game_scores.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="game__scores_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef _GAME_SCORES_H_</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define _GAME_SCORES_H_</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/*  _   _ _       _       ____                           */</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/* | | | (_) __ _| |__   / ___|  ___ ___  _ __ ___  ___  */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/* | |_| | |/ _` | &#39;_ \  \___ \ / __/ _ \| &#39;__/ _ \/ __| */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/* |  _  | | (_| | | | |  ___) | (_| (_) | | |  __/\__ \ */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/* |_| |_|_|\__, |_| |_| |____/ \___\___/|_|  \___||___/ */</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/*          |___/                                        */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="alloc_8h.html">alloc.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="game_8h.html">game.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9">   33</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a816a2b0c392372c1c3ebf16606865094">   34</a></span>    <a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a816a2b0c392372c1c3ebf16606865094">SC_SCORE</a>,   </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a1d608d7f28de2495630ee74352ec57a4">   35</a></span>    <a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a1d608d7f28de2495630ee74352ec57a4">SC_GOALS</a>,   </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9aed543ae7341a37e77e815d1828ba8cf1">   36</a></span>    <a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9aed543ae7341a37e77e815d1828ba8cf1">SC_BONUS</a>,   </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9aadaa54fbd86ad7313b769689f495fcd0">   37</a></span>    <a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9aadaa54fbd86ad7313b769689f495fcd0">SC_HEALTH</a>,  </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a2dd84f63788e04c05691f38148dfee6a">   38</a></span>    <a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a2dd84f63788e04c05691f38148dfee6a">SC_BRICKS</a>,  </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a57ff65558cbed4e7b627b65e631469c8">   39</a></span>    <a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a57ff65558cbed4e7b627b65e631469c8">SC_PLAYERS</a>, </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9ae812bf288076fa01c7ec794b7a92deb4">   40</a></span>    <a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9ae812bf288076fa01c7ec794b7a92deb4">SC_TIME</a>,    </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a">   41</a></span>    <a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a">SC_SIZE</a>     </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <a class="code hl_enumeration" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9">score_type</a>;</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structscore__table.html">   68</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structscore__table.html#a7367d682545a13d06a44d90f238cf1bb">   69</a></span>    char (*<a class="code hl_variable" href="structscore__table.html#a7367d682545a13d06a44d90f238cf1bb">names</a>)[64]; </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structscore__table.html#a32e46b1a6b14d7ecb4e5adeb12fc93c9">   71</a></span>    int (*<a class="code hl_variable" href="structscore__table.html#a32e46b1a6b14d7ecb4e5adeb12fc93c9">scores</a>)[<a class="code hl_enumvalue" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a">SC_SIZE</a>]; </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structscore__table.html#a439227feff9d7f55384e8780cfc2eb82">   73</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structscore__table.html#a439227feff9d7f55384e8780cfc2eb82">size</a>; </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structscore__table.html#ac46dd81307b498cca4749973c32fbfe0">   75</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structscore__table.html#ac46dd81307b498cca4749973c32fbfe0">player_index</a>; </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structscore__table.html#a45b1e9ba5ab2a4e6d9b26818e51e0463">   76</a></span>    <span class="keywordtype">int</span> *<a class="code hl_variable" href="structscore__table.html#a45b1e9ba5ab2a4e6d9b26818e51e0463">permutation</a>; </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>} <a class="code hl_struct" href="structscore__table.html">score_table</a>;</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="game__scores_8h.html#a86c97aaf2498e429f1ffffac834dd563">   90</a></span><a class="code hl_struct" href="structscore__table.html">score_table</a> *<a class="code hl_function" href="game__scores_8h.html#a86c97aaf2498e429f1ffffac834dd563">load_score_table</a>(</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">char</span> **input, </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">int</span> size, </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">int</span> *player_score </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="game__scores_8h.html#ad607ced2195ee6c4c16b8d1ff6928ff2">  112</a></span><span class="keywordtype">char</span> **<a class="code hl_function" href="game__scores_8h.html#ad607ced2195ee6c4c16b8d1ff6928ff2">save_score_table</a>(</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_struct" href="structscore__table.html">score_table</a> *table, </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *playername, </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">int</span> *size </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="game__scores_8h.html#a648cb18d0431dcd4bc910e6a23e70a20">  126</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="game__scores_8h.html#a648cb18d0431dcd4bc910e6a23e70a20">delete_score_table</a>(</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_struct" href="structscore__table.html">score_table</a> *table </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="game__scores_8h.html#af65c575cb1d616017e09e5023e353e02">  135</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="game__scores_8h.html#af65c575cb1d616017e09e5023e353e02">sort_score_table</a>(</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_struct" href="structscore__table.html">score_table</a> *table, </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_enumeration" href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9">score_type</a> type     </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="game__scores_8h.html#a003577ee1f5c79119425e11aef9b9f0a">  154</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="game__scores_8h.html#a003577ee1f5c79119425e11aef9b9f0a">get_pong_winner_score</a>(</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_struct" href="structgame.html">game</a> *g, </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">short</span> p, </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordtype">int</span> *score_array <span class="comment">// &lt;! Pointeur vers un tableau d&#39;entiers de taille #SC_SIZE</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                     <span class="comment">// dans lequel écrire les scores.</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="game__scores_8h.html#a175e733092c3e1cca81e79488080ed5b">  172</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="game__scores_8h.html#a175e733092c3e1cca81e79488080ed5b">get_brick_winner_score</a>(</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_struct" href="structgame.html">game</a> *g,         </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">int</span> *score_array </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#endif </span><span class="comment">/* _GAME_SCORES_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aalloc_8h_html"><div class="ttname"><a href="alloc_8h.html">alloc.h</a></div><div class="ttdoc">Macros et fonctions d&#39;allocation mémoire.</div></div>
+<div class="ttc" id="agame_8h_html"><div class="ttname"><a href="game_8h.html">game.h</a></div><div class="ttdoc">Définition de la structure de données représentant l&#39;état du jeu et des fonctions pour manipuler cett...</div></div>
+<div class="ttc" id="agame__scores_8h_html_a003577ee1f5c79119425e11aef9b9f0a"><div class="ttname"><a href="game__scores_8h.html#a003577ee1f5c79119425e11aef9b9f0a">get_pong_winner_score</a></div><div class="ttdeci">bool get_pong_winner_score(game *g, short p, int *score_array)</div><div class="ttdoc">Appelée par l&#39;interface pour récupérer les scores du joueur gagnant à la fin d&#39;une partie de Pong.</div></div>
+<div class="ttc" id="agame__scores_8h_html_a175e733092c3e1cca81e79488080ed5b"><div class="ttname"><a href="game__scores_8h.html#a175e733092c3e1cca81e79488080ed5b">get_brick_winner_score</a></div><div class="ttdeci">bool get_brick_winner_score(game *g, int *score_array)</div><div class="ttdoc">Appelée par l&#39;interface pour récupérer les scores du joueur gagnant à la fin d&#39;une partie de Briques.</div></div>
+<div class="ttc" id="agame__scores_8h_html_a648cb18d0431dcd4bc910e6a23e70a20"><div class="ttname"><a href="game__scores_8h.html#a648cb18d0431dcd4bc910e6a23e70a20">delete_score_table</a></div><div class="ttdeci">void delete_score_table(score_table *table)</div><div class="ttdoc">Appelée par l&#39;interface pour supprimer un tableau de scores et libérer la mémoire allouée.</div></div>
+<div class="ttc" id="agame__scores_8h_html_a86c97aaf2498e429f1ffffac834dd563"><div class="ttname"><a href="game__scores_8h.html#a86c97aaf2498e429f1ffffac834dd563">load_score_table</a></div><div class="ttdeci">score_table * load_score_table(char **input, int size, int *player_score)</div><div class="ttdoc">Appelée par l&#39;interface pour charger un tableau de scores depuis un tableau de chaînes de caractères ...</div></div>
+<div class="ttc" id="agame__scores_8h_html_ad607ced2195ee6c4c16b8d1ff6928ff2"><div class="ttname"><a href="game__scores_8h.html#ad607ced2195ee6c4c16b8d1ff6928ff2">save_score_table</a></div><div class="ttdeci">char ** save_score_table(score_table *table, const char *playername, int *size)</div><div class="ttdoc">Appelée par l&#39;interface pour sauvegarder un tableau de scores. La fonction retourne un tableau de cha...</div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9">score_type</a></div><div class="ttdeci">score_type</div><div class="ttdoc">Paramètres affichés dans le tableau de scores.</div><div class="ttdef"><b>Definition</b> <a href="#l00033">game_scores.h:33</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9a1d608d7f28de2495630ee74352ec57a4"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a1d608d7f28de2495630ee74352ec57a4">SC_GOALS</a></div><div class="ttdeci">@ SC_GOALS</div><div class="ttdoc">Nombre de buts marqués par le joueur.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">game_scores.h:35</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9a2dd84f63788e04c05691f38148dfee6a"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a2dd84f63788e04c05691f38148dfee6a">SC_BRICKS</a></div><div class="ttdeci">@ SC_BRICKS</div><div class="ttdoc">Nombre de briques détruites par le joueur.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">game_scores.h:38</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9a57ff65558cbed4e7b627b65e631469c8"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a57ff65558cbed4e7b627b65e631469c8">SC_PLAYERS</a></div><div class="ttdeci">@ SC_PLAYERS</div><div class="ttdoc">Nombre de joueurs dans la partie (1 ou 2).</div><div class="ttdef"><b>Definition</b> <a href="#l00039">game_scores.h:39</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9a816a2b0c392372c1c3ebf16606865094"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9a816a2b0c392372c1c3ebf16606865094">SC_SCORE</a></div><div class="ttdeci">@ SC_SCORE</div><div class="ttdoc">Score global fu joueur.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">game_scores.h:34</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9aadaa54fbd86ad7313b769689f495fcd0"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9aadaa54fbd86ad7313b769689f495fcd0">SC_HEALTH</a></div><div class="ttdeci">@ SC_HEALTH</div><div class="ttdoc">Santé restante du joueur.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">game_scores.h:37</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a">SC_SIZE</a></div><div class="ttdeci">@ SC_SIZE</div><div class="ttdef"><b>Definition</b> <a href="#l00041">game_scores.h:41</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9ae812bf288076fa01c7ec794b7a92deb4"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9ae812bf288076fa01c7ec794b7a92deb4">SC_TIME</a></div><div class="ttdeci">@ SC_TIME</div><div class="ttdoc">Temps écoulé depuis le début de la partie (en secondes).</div><div class="ttdef"><b>Definition</b> <a href="#l00040">game_scores.h:40</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_aed36276ae7ac961357268efdfdbc85f9aed543ae7341a37e77e815d1828ba8cf1"><div class="ttname"><a href="game__scores_8h.html#aed36276ae7ac961357268efdfdbc85f9aed543ae7341a37e77e815d1828ba8cf1">SC_BONUS</a></div><div class="ttdeci">@ SC_BONUS</div><div class="ttdoc">Nombre de bonus collectés par le joueur.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">game_scores.h:36</a></div></div>
+<div class="ttc" id="agame__scores_8h_html_af65c575cb1d616017e09e5023e353e02"><div class="ttname"><a href="game__scores_8h.html#af65c575cb1d616017e09e5023e353e02">sort_score_table</a></div><div class="ttdeci">void sort_score_table(score_table *table, score_type type)</div><div class="ttdoc">Appelée par l&#39;interface pour trier un tableau de scores dans l&#39;ordre décroissant selon un type de sco...</div></div>
+<div class="ttc" id="astructgame_html"><div class="ttname"><a href="structgame.html">game</a></div><div class="ttdoc">Structure représentant l&#39;état du jeu, y compris le plateau de jeu, les briques, les balles,...</div><div class="ttdef"><b>Definition</b> <a href="game_8h_source.html#l00194">game.h:194</a></div></div>
+<div class="ttc" id="astructscore__table_html"><div class="ttname"><a href="structscore__table.html">score_table</a></div><div class="ttdoc">Structure représentant un tableau de scores. Elle contient les noms des joueurs, leurs scores,...</div><div class="ttdef"><b>Definition</b> <a href="#l00068">game_scores.h:68</a></div></div>
+<div class="ttc" id="astructscore__table_html_a32e46b1a6b14d7ecb4e5adeb12fc93c9"><div class="ttname"><a href="structscore__table.html#a32e46b1a6b14d7ecb4e5adeb12fc93c9">score_table::scores</a></div><div class="ttdeci">int(* scores)[SC_SIZE]</div><div class="ttdef"><b>Definition</b> <a href="#l00071">game_scores.h:71</a></div></div>
+<div class="ttc" id="astructscore__table_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="structscore__table.html#a439227feff9d7f55384e8780cfc2eb82">score_table::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="#l00073">game_scores.h:73</a></div></div>
+<div class="ttc" id="astructscore__table_html_a45b1e9ba5ab2a4e6d9b26818e51e0463"><div class="ttname"><a href="structscore__table.html#a45b1e9ba5ab2a4e6d9b26818e51e0463">score_table::permutation</a></div><div class="ttdeci">int * permutation</div><div class="ttdef"><b>Definition</b> <a href="#l00076">game_scores.h:76</a></div></div>
+<div class="ttc" id="astructscore__table_html_a7367d682545a13d06a44d90f238cf1bb"><div class="ttname"><a href="structscore__table.html#a7367d682545a13d06a44d90f238cf1bb">score_table::names</a></div><div class="ttdeci">char(* names)[64]</div><div class="ttdef"><b>Definition</b> <a href="#l00069">game_scores.h:69</a></div></div>
+<div class="ttc" id="astructscore__table_html_ac46dd81307b498cca4749973c32fbfe0"><div class="ttname"><a href="structscore__table.html#ac46dd81307b498cca4749973c32fbfe0">score_table::player_index</a></div><div class="ttdeci">int player_index</div><div class="ttdoc">Index du score du joueur actuel (-1 si non présent).</div><div class="ttdef"><b>Definition</b> <a href="#l00075">game_scores.h:75</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="game__scores_8h.html">game_scores.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

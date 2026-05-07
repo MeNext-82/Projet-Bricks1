@@ -1,0 +1,484 @@
+\doxysection{Référence du fichier game.\+h}
+\hypertarget{game_8h}{}\label{game_8h}\index{game.h@{game.h}}
+
+
+Définition de la structure de données représentant l\textquotesingle{}état du jeu et des fonctions pour manipuler cette structure.  
+
+
+{\ttfamily \+\#include "{}alloc.\+h"{}}\newline
+{\ttfamily \+\#include "{}game\+\_\+debris.\+h"{}}\newline
+{\ttfamily \+\#include "{}game\+\_\+geometry.\+h"{}}\newline
+{\ttfamily \+\#include "{}utils.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structgame}{game}}
+\begin{DoxyCompactList}\small\item\em Structure représentant l\textquotesingle{}état du jeu, y compris le plateau de jeu, les briques, les balles, les raquettes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{game_8h_ae1dbb0e959fde337fa4e436b61bb2bac}{CELL\+\_\+\+WIDTH}}~366
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}une cellule sur le plateau. À utiliser pour initialiser la largeur d\textquotesingle{}une nouvelle brique. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a8519cbc2997bb2eb21cf5571b37b38bd}{CELL\+\_\+\+HEIGHT}}~128
+\begin{DoxyCompactList}\small\item\em Hauteur d\textquotesingle{}une cellule sur le plateau. À utiliser pour la initialiser la hauteur d\textquotesingle{}une nouvelle brique. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_ae17975d20fcf6c462510b2e1a601042f}{PADDLE\+\_\+\+HEIGHT}}~64
+\begin{DoxyCompactList}\small\item\em Hauteur d\textquotesingle{}une raquette. À utiliser pour la création des raquettes. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a5247f956703cbf9b1bae869c955e4e01}{PADDLE\+\_\+\+WIDTH}}~243
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}une raquette. À utiliser pour la création des raquettes. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a7a68691bc9445e0c1d86d5fb15ad7176}{PADDLE\+\_\+\+SMALL\+\_\+\+WIDTH}}~115
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}une petite raquette. À utiliser pour la gestion des bonus qui réduisent la taille de la raquette. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_aea714ad5522fb6abc2ebb15d46320166}{PADDLE\+\_\+\+LARGE\+\_\+\+WIDTH}}~347
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}une grande raquette. À utiliser pour la gestion des bonus qui agrandissent la taille de la raquette. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a9a664ea51e683d266bd64471ec6dfa5f}{BONUS\+\_\+\+WIDTH}}~242
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}un bonus (hors bonus de vie). À utiliser pour la création des bonus. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a637a2b7ce929abd3266bf5fa3d0887bb}{BONUS\+\_\+\+HEIGHT}}~64
+\begin{DoxyCompactList}\small\item\em Hauteur d\textquotesingle{}un bonus (hors bonus de vie). À utiliser pour la création des bonus. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_aafc32eada236c119ee53e1af470595d6}{HEALTH\+\_\+\+WIDTH}}~96
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}un bonus de vie. À utiliser pour la création des bonus de vie. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a60b382357264e3e39799a678c7f21e38}{HEALTH\+\_\+\+HEIGHT}}~96
+\begin{DoxyCompactList}\small\item\em Hauteur d\textquotesingle{}un bonus de vie. À utiliser pour la création des bonus de vie. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a26dba4a5e7872d6f4e8e5272eefabee5}{BALL\+\_\+\+RADIUS}}~32
+\begin{DoxyCompactList}\small\item\em Rayon d\textquotesingle{}une balle. À utiliser pour la création des balles et les calculs de collisions. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a40adb448bd1bebb3e41482a981f4d2f4}{BALL\+\_\+\+SPEED}}~12
+\begin{DoxyCompactList}\small\item\em Vitesse de la balle. À utiliser pour la création des balles. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_abcbfe90f3639274ed5ef7d577d93dfbe}{BONUS\+\_\+\+SPEED}}~6
+\begin{DoxyCompactList}\small\item\em Vitesse de déplacement d\textquotesingle{}un bonus en valeur absolue. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_a33dc0a325cf0042484187b192d0942f4}{BRICK\+\_\+\+SPEED}}~4
+\begin{DoxyCompactList}\small\item\em Vitesse de déplacement d\textquotesingle{}une brique en valeur absolue. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game_8h_adab38e65f74e634284c78af856cd9aa2}{PADDLE\+\_\+\+BASE\+\_\+\+SPEED}}~8
+\begin{DoxyCompactList}\small\item\em Vitesse de base de déplacement d\textquotesingle{}une raquette en valeur absolue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{game_8h_a5d069ca8708a30d3ae09a065989ec1f7}{game\+\_\+mode}} \{ \doxymbox{\hyperlink{game_8h_a5d069ca8708a30d3ae09a065989ec1f7aaa94da88e26e96d06b0b9bd0f125194c}{GAME\+\_\+\+PONG}}
+, \doxymbox{\hyperlink{game_8h_a5d069ca8708a30d3ae09a065989ec1f7a3cf31b525d16637319d0200b18691667}{GAME\+\_\+\+BRICKS}}
+, \doxymbox{\hyperlink{game_8h_a5d069ca8708a30d3ae09a065989ec1f7aca1e7647ba3085805095581899480897}{GAME\+\_\+\+SIZE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Les deux modes de jeu disponibles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{game_8h_a905763f78a0927e5ef74a131394aa4fc}{free\+\_\+game}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}the\+\_\+game)
+\begin{DoxyCompactList}\small\item\em Libération d\textquotesingle{}un jeu. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game_8h_ad5e31d834b4a38eac6f032edbfc0f783}{game\+\_\+move\+\_\+player}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g, short p, short dir)
+\begin{DoxyCompactList}\small\item\em Modifie le déplacement de la raquette du joueur spécifié (si il existe). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game_8h_a36c802f03552d2ae6e5dada4cee9e827}{game\+\_\+apply\+\_\+moves}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structgame}{game}})
+\begin{DoxyCompactList}\small\item\em Bouge tous les objets du jeu selon leur vitesse :\+ les raquettes, les balles, les bonus et aussi les briques quand le bonus de gravité est actif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game_8h_a455582e28378f9b71a1727a7c0e30801}{game\+\_\+place\+\_\+bonus\+\_\+pong}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Ajoute un nouveau bonus au jeu, à une coordonnée horizontale aléatoire au centre du plateau. Utilisé dans le mode Pong pour générer des bonus aléatoires pendant la partie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{game_8h_a7599e32dde5a9b80dec1c811937fad80}{game\+\_\+handle\+\_\+collisions}} (\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Traite les collisions des balles avec les murs, les raquettes et les briques et les collisions des bonus avec les raquettes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Définition de la structure de données représentant l\textquotesingle{}état du jeu et des fonctions pour manipuler cette structure. 
+
+
+
+Définition dans le fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{game_8h_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{game_8h_ae1dbb0e959fde337fa4e436b61bb2bac}\index{game.h@{game.h}!CELL\_WIDTH@{CELL\_WIDTH}}
+\index{CELL\_WIDTH@{CELL\_WIDTH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{CELL\_WIDTH}{CELL\_WIDTH}}
+{\footnotesize\ttfamily \label{game_8h_ae1dbb0e959fde337fa4e436b61bb2bac} 
+\+\#define CELL\+\_\+\+WIDTH~366}
+
+
+
+Largeur d\textquotesingle{}une cellule sur le plateau. À utiliser pour initialiser la largeur d\textquotesingle{}une nouvelle brique. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00034}{34}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a8519cbc2997bb2eb21cf5571b37b38bd}\index{game.h@{game.h}!CELL\_HEIGHT@{CELL\_HEIGHT}}
+\index{CELL\_HEIGHT@{CELL\_HEIGHT}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{CELL\_HEIGHT}{CELL\_HEIGHT}}
+{\footnotesize\ttfamily \label{game_8h_a8519cbc2997bb2eb21cf5571b37b38bd} 
+\+\#define CELL\+\_\+\+HEIGHT~128}
+
+
+
+Hauteur d\textquotesingle{}une cellule sur le plateau. À utiliser pour la initialiser la hauteur d\textquotesingle{}une nouvelle brique. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00044}{44}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_ae17975d20fcf6c462510b2e1a601042f}\index{game.h@{game.h}!PADDLE\_HEIGHT@{PADDLE\_HEIGHT}}
+\index{PADDLE\_HEIGHT@{PADDLE\_HEIGHT}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{PADDLE\_HEIGHT}{PADDLE\_HEIGHT}}
+{\footnotesize\ttfamily \label{game_8h_ae17975d20fcf6c462510b2e1a601042f} 
+\+\#define PADDLE\+\_\+\+HEIGHT~64}
+
+
+
+Hauteur d\textquotesingle{}une raquette. À utiliser pour la création des raquettes. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00053}{53}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a5247f956703cbf9b1bae869c955e4e01}\index{game.h@{game.h}!PADDLE\_WIDTH@{PADDLE\_WIDTH}}
+\index{PADDLE\_WIDTH@{PADDLE\_WIDTH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{PADDLE\_WIDTH}{PADDLE\_WIDTH}}
+{\footnotesize\ttfamily \label{game_8h_a5247f956703cbf9b1bae869c955e4e01} 
+\+\#define PADDLE\+\_\+\+WIDTH~243}
+
+
+
+Largeur d\textquotesingle{}une raquette. À utiliser pour la création des raquettes. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00062}{62}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a7a68691bc9445e0c1d86d5fb15ad7176}\index{game.h@{game.h}!PADDLE\_SMALL\_WIDTH@{PADDLE\_SMALL\_WIDTH}}
+\index{PADDLE\_SMALL\_WIDTH@{PADDLE\_SMALL\_WIDTH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{PADDLE\_SMALL\_WIDTH}{PADDLE\_SMALL\_WIDTH}}
+{\footnotesize\ttfamily \label{game_8h_a7a68691bc9445e0c1d86d5fb15ad7176} 
+\+\#define PADDLE\+\_\+\+SMALL\+\_\+\+WIDTH~115}
+
+
+
+Largeur d\textquotesingle{}une petite raquette. À utiliser pour la gestion des bonus qui réduisent la taille de la raquette. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00072}{72}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_aea714ad5522fb6abc2ebb15d46320166}\index{game.h@{game.h}!PADDLE\_LARGE\_WIDTH@{PADDLE\_LARGE\_WIDTH}}
+\index{PADDLE\_LARGE\_WIDTH@{PADDLE\_LARGE\_WIDTH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{PADDLE\_LARGE\_WIDTH}{PADDLE\_LARGE\_WIDTH}}
+{\footnotesize\ttfamily \label{game_8h_aea714ad5522fb6abc2ebb15d46320166} 
+\+\#define PADDLE\+\_\+\+LARGE\+\_\+\+WIDTH~347}
+
+
+
+Largeur d\textquotesingle{}une grande raquette. À utiliser pour la gestion des bonus qui agrandissent la taille de la raquette. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00082}{82}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a9a664ea51e683d266bd64471ec6dfa5f}\index{game.h@{game.h}!BONUS\_WIDTH@{BONUS\_WIDTH}}
+\index{BONUS\_WIDTH@{BONUS\_WIDTH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{BONUS\_WIDTH}{BONUS\_WIDTH}}
+{\footnotesize\ttfamily \label{game_8h_a9a664ea51e683d266bd64471ec6dfa5f} 
+\+\#define BONUS\+\_\+\+WIDTH~242}
+
+
+
+Largeur d\textquotesingle{}un bonus (hors bonus de vie). À utiliser pour la création des bonus. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00091}{91}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a637a2b7ce929abd3266bf5fa3d0887bb}\index{game.h@{game.h}!BONUS\_HEIGHT@{BONUS\_HEIGHT}}
+\index{BONUS\_HEIGHT@{BONUS\_HEIGHT}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{BONUS\_HEIGHT}{BONUS\_HEIGHT}}
+{\footnotesize\ttfamily \label{game_8h_a637a2b7ce929abd3266bf5fa3d0887bb} 
+\+\#define BONUS\+\_\+\+HEIGHT~64}
+
+
+
+Hauteur d\textquotesingle{}un bonus (hors bonus de vie). À utiliser pour la création des bonus. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00101}{101}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_aafc32eada236c119ee53e1af470595d6}\index{game.h@{game.h}!HEALTH\_WIDTH@{HEALTH\_WIDTH}}
+\index{HEALTH\_WIDTH@{HEALTH\_WIDTH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{HEALTH\_WIDTH}{HEALTH\_WIDTH}}
+{\footnotesize\ttfamily \label{game_8h_aafc32eada236c119ee53e1af470595d6} 
+\+\#define HEALTH\+\_\+\+WIDTH~96}
+
+
+
+Largeur d\textquotesingle{}un bonus de vie. À utiliser pour la création des bonus de vie. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00110}{110}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a60b382357264e3e39799a678c7f21e38}\index{game.h@{game.h}!HEALTH\_HEIGHT@{HEALTH\_HEIGHT}}
+\index{HEALTH\_HEIGHT@{HEALTH\_HEIGHT}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{HEALTH\_HEIGHT}{HEALTH\_HEIGHT}}
+{\footnotesize\ttfamily \label{game_8h_a60b382357264e3e39799a678c7f21e38} 
+\+\#define HEALTH\+\_\+\+HEIGHT~96}
+
+
+
+Hauteur d\textquotesingle{}un bonus de vie. À utiliser pour la création des bonus de vie. 
+
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00119}{119}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a26dba4a5e7872d6f4e8e5272eefabee5}\index{game.h@{game.h}!BALL\_RADIUS@{BALL\_RADIUS}}
+\index{BALL\_RADIUS@{BALL\_RADIUS}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{BALL\_RADIUS}{BALL\_RADIUS}}
+{\footnotesize\ttfamily \label{game_8h_a26dba4a5e7872d6f4e8e5272eefabee5} 
+\+\#define BALL\+\_\+\+RADIUS~32}
+
+
+
+Rayon d\textquotesingle{}une balle. À utiliser pour la création des balles et les calculs de collisions. 
+
+\begin{DoxyRemark}{Remarques}
+La balle est représentée par un rectangle de largeur et de hauteur égales à BALL\+\_\+\+RADIUS \texorpdfstring{$\ast$}{*} 2;
+\end{DoxyRemark}
+\begin{DoxyAttention}{Attention}
+Ne pas changer cette valeur! 
+\end{DoxyAttention}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00133}{133}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a40adb448bd1bebb3e41482a981f4d2f4}\index{game.h@{game.h}!BALL\_SPEED@{BALL\_SPEED}}
+\index{BALL\_SPEED@{BALL\_SPEED}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{BALL\_SPEED}{BALL\_SPEED}}
+{\footnotesize\ttfamily \label{game_8h_a40adb448bd1bebb3e41482a981f4d2f4} 
+\+\#define BALL\+\_\+\+SPEED~12}
+
+
+
+Vitesse de la balle. À utiliser pour la création des balles. 
+
+\begin{DoxyRemark}{Remarques}
+Peut-\/être changé pour rendre le jeu plus facile ou plus difficile. 
+\end{DoxyRemark}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00142}{142}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_abcbfe90f3639274ed5ef7d577d93dfbe}\index{game.h@{game.h}!BONUS\_SPEED@{BONUS\_SPEED}}
+\index{BONUS\_SPEED@{BONUS\_SPEED}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{BONUS\_SPEED}{BONUS\_SPEED}}
+{\footnotesize\ttfamily \label{game_8h_abcbfe90f3639274ed5ef7d577d93dfbe} 
+\+\#define BONUS\+\_\+\+SPEED~6}
+
+
+
+Vitesse de déplacement d\textquotesingle{}un bonus en valeur absolue. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00148}{148}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a33dc0a325cf0042484187b192d0942f4}\index{game.h@{game.h}!BRICK\_SPEED@{BRICK\_SPEED}}
+\index{BRICK\_SPEED@{BRICK\_SPEED}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{BRICK\_SPEED}{BRICK\_SPEED}}
+{\footnotesize\ttfamily \label{game_8h_a33dc0a325cf0042484187b192d0942f4} 
+\+\#define BRICK\+\_\+\+SPEED~4}
+
+
+
+Vitesse de déplacement d\textquotesingle{}une brique en valeur absolue. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00154}{154}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_adab38e65f74e634284c78af856cd9aa2}\index{game.h@{game.h}!PADDLE\_BASE\_SPEED@{PADDLE\_BASE\_SPEED}}
+\index{PADDLE\_BASE\_SPEED@{PADDLE\_BASE\_SPEED}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{PADDLE\_BASE\_SPEED}{PADDLE\_BASE\_SPEED}}
+{\footnotesize\ttfamily \label{game_8h_adab38e65f74e634284c78af856cd9aa2} 
+\+\#define PADDLE\+\_\+\+BASE\+\_\+\+SPEED~8}
+
+
+
+Vitesse de base de déplacement d\textquotesingle{}une raquette en valeur absolue. 
+
+\begin{DoxyRemark}{Remarques}
+Les bonus affectent la vitesse de déplacement de la raquette:\+
+\begin{DoxyItemize}
+\item en multipliant cette valeur par 2 (bonus de vitesse)
+\item en la divisant par 2 (bonus de ralentissement). 
+\end{DoxyItemize}
+\end{DoxyRemark}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00165}{165}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{game_8h_doc-enum-members}
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{game_8h_a5d069ca8708a30d3ae09a065989ec1f7}\index{game.h@{game.h}!game\_mode@{game\_mode}}
+\index{game\_mode@{game\_mode}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_mode}{game\_mode}}
+{\footnotesize\ttfamily \label{game_8h_a5d069ca8708a30d3ae09a065989ec1f7} 
+enum \doxymbox{\hyperlink{game_8h_a5d069ca8708a30d3ae09a065989ec1f7}{game\+\_\+mode}}}
+
+
+
+Les deux modes de jeu disponibles. 
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_PONG@{GAME\_PONG}!game.h@{game.h}}
+\index{game.h@{game.h}!GAME\_PONG@{GAME\_PONG}}
+}\Hypertarget{game_8h_a5d069ca8708a30d3ae09a065989ec1f7aaa94da88e26e96d06b0b9bd0f125194c}\label{game_8h_a5d069ca8708a30d3ae09a065989ec1f7aaa94da88e26e96d06b0b9bd0f125194c} 
+GAME\+\_\+\+PONG&Mode de jeu Pong (pas de briques, les bonus sont générés automatiquement de façon aléatoire). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_BRICKS@{GAME\_BRICKS}!game.h@{game.h}}
+\index{game.h@{game.h}!GAME\_BRICKS@{GAME\_BRICKS}}
+}\Hypertarget{game_8h_a5d069ca8708a30d3ae09a065989ec1f7a3cf31b525d16637319d0200b18691667}\label{game_8h_a5d069ca8708a30d3ae09a065989ec1f7a3cf31b525d16637319d0200b18691667} 
+GAME\+\_\+\+BRICKS&Mode de jeu Briques (les bonus sont générés aléatoirement quand une brique est détruite). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_SIZE@{GAME\_SIZE}!game.h@{game.h}}
+\index{game.h@{game.h}!GAME\_SIZE@{GAME\_SIZE}}
+}\Hypertarget{game_8h_a5d069ca8708a30d3ae09a065989ec1f7aca1e7647ba3085805095581899480897}\label{game_8h_a5d069ca8708a30d3ae09a065989ec1f7aca1e7647ba3085805095581899480897} 
+GAME\+\_\+\+SIZE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game_8h_source_l00175}{175}} du fichier \doxymbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{game_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{game_8h_a905763f78a0927e5ef74a131394aa4fc}\index{game.h@{game.h}!free\_game@{free\_game}}
+\index{free\_game@{free\_game}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{free\_game()}{free\_game()}}
+{\footnotesize\ttfamily \label{game_8h_a905763f78a0927e5ef74a131394aa4fc} 
+void free\+\_\+game (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{the\+\_\+game}{}\end{DoxyParamCaption})}
+
+
+
+Libération d\textquotesingle{}un jeu. 
+
+\begin{DoxyRemark}{Remarques}
+Les fonctions de création sont écrite dans game\+\_\+pong.\+c et game\+\_\+bricks.\+c. La fonction de libération est écrite dans game.\+c car elle est commune aux deux modes de jeu. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Paramètres}
+{\em the\+\_\+game} & Le jeu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_ad5e31d834b4a38eac6f032edbfc0f783}\index{game.h@{game.h}!game\_move\_player@{game\_move\_player}}
+\index{game\_move\_player@{game\_move\_player}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_move\_player()}{game\_move\_player()}}
+{\footnotesize\ttfamily \label{game_8h_ad5e31d834b4a38eac6f032edbfc0f783} 
+void game\+\_\+move\+\_\+player (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{short}]{p}{, }\item[{short}]{dir}{}\end{DoxyParamCaption})}
+
+
+
+Modifie le déplacement de la raquette du joueur spécifié (si il existe). 
+
+La fonction devra mettre à jour la vitesse de déplacement de la raquette du joueur spécifié en fonction de la direction donnée en paramètre. Si {\ttfamily dir} est égal à -\/1, la raquette doit se déplacer vers la gauche, si dir est égal à 1, elle doit se déplacer vers la droite, sinon elle doit s\textquotesingle{}arrêter. La valeur de vitesse de déplacement doit être égale à \doxylink{game_8h_adab38e65f74e634284c78af856cd9aa2}{PADDLE\+\_\+\+BASE\+\_\+\+SPEED} (ou à sa valeur modifiée par les bonus) dans la direction indiquée. 
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu.  \\
+\hline
+{\em p} & Numéro du joueur (0 ou 1).  \\
+\hline
+{\em dir} & Direction du déplacement (-\/1 pour gauche, 1 pour droite, 0 pour arrêt). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_a36c802f03552d2ae6e5dada4cee9e827}\index{game.h@{game.h}!game\_apply\_moves@{game\_apply\_moves}}
+\index{game\_apply\_moves@{game\_apply\_moves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_apply\_moves()}{game\_apply\_moves()}}
+{\footnotesize\ttfamily \label{game_8h_a36c802f03552d2ae6e5dada4cee9e827} 
+void game\+\_\+apply\+\_\+moves (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{game}{}\end{DoxyParamCaption})}
+
+
+
+Bouge tous les objets du jeu selon leur vitesse :\+ les raquettes, les balles, les bonus et aussi les briques quand le bonus de gravité est actif. 
+
+Les objets sont déplacés en additionnant leur vitesse à leur position. Cette fonction est appelée par l\textquotesingle{}interface à chaque tour de la boucle de jeu après avoir pris en compte les actions de l\textquotesingle{}utilisateur.
+
+\begin{DoxyAttention}{Attention}
+Pour les mouvements des raquettes, il faut veiller à ce que les raquettes ne sortent pas du plateau de jeu. 
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Paramètres}
+{\em \doxylink{structgame}{game}} & Le jeu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_a455582e28378f9b71a1727a7c0e30801}\index{game.h@{game.h}!game\_place\_bonus\_pong@{game\_place\_bonus\_pong}}
+\index{game\_place\_bonus\_pong@{game\_place\_bonus\_pong}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_place\_bonus\_pong()}{game\_place\_bonus\_pong()}}
+{\footnotesize\ttfamily \label{game_8h_a455582e28378f9b71a1727a7c0e30801} 
+void game\+\_\+place\+\_\+bonus\+\_\+pong (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute un nouveau bonus au jeu, à une coordonnée horizontale aléatoire au centre du plateau. Utilisé dans le mode Pong pour générer des bonus aléatoires pendant la partie. 
+
+Le bonus se déplacera ensuite verticalement vers le bas ou vers le haut selon les joueurs présents dans le jeu :\+
+\begin{DoxyItemize}
+\item si il n\textquotesingle{}y a qu\textquotesingle{}un seul joueur, le bonus se déplacera vers ce joueur,
+\item sinon il se déplacera dans une direction aléatoire.
+\end{DoxyItemize}
+
+Cette fonction est appelée par l\textquotesingle{}interface régulièrement pendant la boucle de jeu après \doxylink{game_8h_a36c802f03552d2ae6e5dada4cee9e827}{game\+\_\+apply\+\_\+moves()}. 
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_a7599e32dde5a9b80dec1c811937fad80}\index{game.h@{game.h}!game\_handle\_collisions@{game\_handle\_collisions}}
+\index{game\_handle\_collisions@{game\_handle\_collisions}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_handle\_collisions()}{game\_handle\_collisions()}}
+{\footnotesize\ttfamily \label{game_8h_a7599e32dde5a9b80dec1c811937fad80} 
+void game\+\_\+handle\+\_\+collisions (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Traite les collisions des balles avec les murs, les raquettes et les briques et les collisions des bonus avec les raquettes. 
+
+Cette fonction est appelée à chaque tour de la boucle de jeu après \doxylink{game_8h_a36c802f03552d2ae6e5dada4cee9e827}{game\+\_\+apply\+\_\+moves()} pour mettre à jour l\textquotesingle{}état du jeu en fonction des différentes collisions qui peuvent se produire entre les objets du jeu. Elle supprime également les balles et les bonus qui sortent du plateau de jeu. Elle génère aussi une nouvelle balle si toutes les balles ont été perdues et que le jeu n\textquotesingle{}est pas terminé.
+
+\begin{DoxyRemark}{Remarques}
+Cette fonction doit appeler ball\+\_\+hits\+\_\+wall, ball\+\_\+hits\+\_\+paddle et ball\+\_\+hits\+\_\+brick pour gérer les différentes collisions. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & Le jeu. \\
+\hline
+\end{DoxyParams}

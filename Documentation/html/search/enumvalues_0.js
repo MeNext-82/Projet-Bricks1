@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['blue_0',['BLUE',['../game__geometry_8h.html#a1c49a0130453066c52f6c10399a4aa0fa35d6719cb4d7577c031b3d79057a1b79',1,'game_geometry.h']]],
+  ['bns_5fcolorball_1',['BNS_COLORBALL',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea332cc8b0e3246f71a102461ec277c837',1,'game_geometry.h']]],
+  ['bns_5fgravity_2',['BNS_GRAVITY',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caead5cbd269a191be820bf137a623e98fc6',1,'game_geometry.h']]],
+  ['bns_5fgrow_3',['BNS_GROW',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea16d99fe6b447f34a48c811cd5757c6a6',1,'game_geometry.h']]],
+  ['bns_5fhealth_4',['BNS_HEALTH',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea54b85ae5d6a770c239dcdb1200bbb2c0',1,'game_geometry.h']]],
+  ['bns_5fnewball_5',['BNS_NEWBALL',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea01da39fedaab8addf99c1d5cfe605afa',1,'game_geometry.h']]],
+  ['bns_5fscore100_6',['BNS_SCORE100',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea01f588cf4f7e64b24026dd5a0df999b3',1,'game_geometry.h']]],
+  ['bns_5fscore250_7',['BNS_SCORE250',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea424f6b4901cd27d99045f38345390fa5',1,'game_geometry.h']]],
+  ['bns_5fscore50_8',['BNS_SCORE50',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea3e002d776c5ff24eacea142d29695240',1,'game_geometry.h']]],
+  ['bns_5fscore500_9',['BNS_SCORE500',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea48b92fd98235bddf23cb97994f7b557b',1,'game_geometry.h']]],
+  ['bns_5fshrink_10',['BNS_SHRINK',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea7458cb79b415239a383ab6a32cd35010',1,'game_geometry.h']]],
+  ['bns_5fsize_11',['BNS_SIZE',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea48b9b93cdbd54177bb93b9cffcfcc1da',1,'game_geometry.h']]],
+  ['bns_5fslowdown_12',['BNS_SLOWDOWN',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea3e903e15d57ec4f80bb9e45d3795657f',1,'game_geometry.h']]],
+  ['bns_5fspeedup_13',['BNS_SPEEDUP',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea5c9b2d62b93d08e774b47eaac34f5498',1,'game_geometry.h']]],
+  ['bns_5fstrongball_14',['BNS_STRONGBALL',['../game__geometry_8h.html#a8f9fcedca9f2f9318215294c30504caea427a1b7f93fb08db43a2d3521cc315d1',1,'game_geometry.h']]],
+  ['brown_15',['BROWN',['../game__geometry_8h.html#a1c49a0130453066c52f6c10399a4aa0fa1fa14482e7e4dc1332ab8c9d995fe570',1,'game_geometry.h']]]
+];

@@ -1,0 +1,107 @@
+\doxysection{Référence de la structure score\+\_\+table}
+\hypertarget{structscore__table}{}\label{structscore__table}\index{score\_table@{score\_table}}
+
+
+Structure représentant un tableau de scores. Elle contient les noms des joueurs, leurs scores, la taille du tableau et l\textquotesingle{}indice du score du joueur actuel (s\textquotesingle{}il est présent).  
+
+
+
+
+{\ttfamily \+\#include $<$game\+\_\+scores.\+h$>$}
+
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+char(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structscore__table_a7367d682545a13d06a44d90f238cf1bb}{names}} )\+[64]\+
+\item 
+int(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structscore__table_a32e46b1a6b14d7ecb4e5adeb12fc93c9}{scores}} )\+[\doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a}{SC\+\_\+\+SIZE}}]\+
+\item 
+int \doxymbox{\hyperlink{structscore__table_a439227feff9d7f55384e8780cfc2eb82}{size}}
+\item 
+int \doxymbox{\hyperlink{structscore__table_ac46dd81307b498cca4749973c32fbfe0}{player\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Index du score du joueur actuel (-\/1 si non présent). \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structscore__table_a45b1e9ba5ab2a4e6d9b26818e51e0463}{permutation}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Structure représentant un tableau de scores. Elle contient les noms des joueurs, leurs scores, la taille du tableau et l\textquotesingle{}indice du score du joueur actuel (s\textquotesingle{}il est présent). 
+
+Cette structure est utilisée dans trois situations spécifiques :\+
+\begin{DoxyItemize}
+\item Quand on affiche les scores dans le menu. Dans ce cas, elle est remplie avec les scores chargés depuis le fichier de scores uniquement (il n\textquotesingle{}y a pas de score du joueur actuel à afficher dans le menu).
+\item Quand on affiche le score à la fin d\textquotesingle{}un jeu Pong. Dans ce cas, elle contient les scores chargés depuis le fichier de scores plus le score du joueur actuel.
+\item Quand on affiche le score final à la fin d\textquotesingle{}un jeu briques. Dans ce cas, elle contient les scores chargés depuis le fichier de scores plus le score du joueur actuel.
+\end{DoxyItemize}
+
+\begin{DoxyRemark}{Remarques}
+Le tableau des noms des joueurs contient des chaînes de caractères de longueur maximale 64 (y compris le caractère de fin de chaîne). Cela signifie que les noms des joueurs peuvent comporter au maximum 63 caractères. 
+\end{DoxyRemark}
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__scores_8h_source_l00068}{68}} du fichier \doxymbox{\hyperlink{game__scores_8h_source}{game\+\_\+scores.\+h}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structscore__table_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structscore__table_a7367d682545a13d06a44d90f238cf1bb}\index{score\_table@{score\_table}!names@{names}}
+\index{names@{names}!score\_table@{score\_table}}
+\doxysubsubsection{\texorpdfstring{names}{names}}
+{\footnotesize\ttfamily \label{structscore__table_a7367d682545a13d06a44d90f238cf1bb} 
+char(\texorpdfstring{$\ast$}{*} names)\+[64]\+}
+
+Pointeur vers un tableau de chaînes de caractères contenant les noms des joueurs. 
+
+Définition à la ligne \doxymbox{\hyperlink{game__scores_8h_source_l00069}{69}} du fichier \doxymbox{\hyperlink{game__scores_8h_source}{game\+\_\+scores.\+h}}.
+
+\Hypertarget{structscore__table_a32e46b1a6b14d7ecb4e5adeb12fc93c9}\index{score\_table@{score\_table}!scores@{scores}}
+\index{scores@{scores}!score\_table@{score\_table}}
+\doxysubsubsection{\texorpdfstring{scores}{scores}}
+{\footnotesize\ttfamily \label{structscore__table_a32e46b1a6b14d7ecb4e5adeb12fc93c9} 
+int(\texorpdfstring{$\ast$}{*} scores)\+[\doxymbox{\hyperlink{game__scores_8h_aed36276ae7ac961357268efdfdbc85f9ab9a57cb93122b495fecd8102ac5bd00a}{SC\+\_\+\+SIZE}}]\+}
+
+Pointeur vers un de tableau de tableaux d\textquotesingle{}entiers contenant les scores. 
+
+Définition à la ligne \doxymbox{\hyperlink{game__scores_8h_source_l00071}{71}} du fichier \doxymbox{\hyperlink{game__scores_8h_source}{game\+\_\+scores.\+h}}.
+
+\Hypertarget{structscore__table_a439227feff9d7f55384e8780cfc2eb82}\index{score\_table@{score\_table}!size@{size}}
+\index{size@{size}!score\_table@{score\_table}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \label{structscore__table_a439227feff9d7f55384e8780cfc2eb82} 
+int size}
+
+Nombre d\textquotesingle{}entrées dans le tableau de scores (taille des tableaux de noms et de scores). 
+
+Définition à la ligne \doxymbox{\hyperlink{game__scores_8h_source_l00073}{73}} du fichier \doxymbox{\hyperlink{game__scores_8h_source}{game\+\_\+scores.\+h}}.
+
+\Hypertarget{structscore__table_ac46dd81307b498cca4749973c32fbfe0}\index{score\_table@{score\_table}!player\_index@{player\_index}}
+\index{player\_index@{player\_index}!score\_table@{score\_table}}
+\doxysubsubsection{\texorpdfstring{player\_index}{player\_index}}
+{\footnotesize\ttfamily \label{structscore__table_ac46dd81307b498cca4749973c32fbfe0} 
+int player\+\_\+index}
+
+
+
+Index du score du joueur actuel (-\/1 si non présent). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__scores_8h_source_l00075}{75}} du fichier \doxymbox{\hyperlink{game__scores_8h_source}{game\+\_\+scores.\+h}}.
+
+\Hypertarget{structscore__table_a45b1e9ba5ab2a4e6d9b26818e51e0463}\index{score\_table@{score\_table}!permutation@{permutation}}
+\index{permutation@{permutation}!score\_table@{score\_table}}
+\doxysubsubsection{\texorpdfstring{permutation}{permutation}}
+{\footnotesize\ttfamily \label{structscore__table_a45b1e9ba5ab2a4e6d9b26818e51e0463} 
+int\texorpdfstring{$\ast$}{*} permutation}
+
+Pointeur vers un tableau représentant l\textquotesingle{}ordre trié des scores. 
+
+Définition à la ligne \doxymbox{\hyperlink{game__scores_8h_source_l00076}{76}} du fichier \doxymbox{\hyperlink{game__scores_8h_source}{game\+\_\+scores.\+h}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{game__scores_8h}{game\+\_\+scores.\+h}}\end{DoxyCompactItemize}

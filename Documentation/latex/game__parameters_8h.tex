@@ -1,0 +1,223 @@
+\doxysection{Référence du fichier game\+\_\+parameters.\+h}
+\hypertarget{game__parameters_8h}{}\label{game__parameters_8h}\index{game\_parameters.h@{game\_parameters.h}}
+
+
+Parameters.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_ac80a3592e72fd96b772ee47a7d8e0d0a}{DEBUG\+\_\+\+MODE}}
+\begin{DoxyCompactList}\small\item\em Flag pour activer le mode debug. Décommenter pour activer le mode debug. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_ae9f93758a369e9af97807b94a760e2c4}{WINDOW\+\_\+\+SCREENWIDTH}}~1820
+\begin{DoxyCompactList}\small\item\em Dimension horizontale de l\textquotesingle{}application en pixels (par défaut = 1820). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_a5846cdd6001b96f307708ea242eca7cd}{WINDOW\+\_\+\+SCREENHEIGHT}}~980
+\begin{DoxyCompactList}\small\item\em Dimension verticale de l\textquotesingle{}application en pixels (par défaut = 980). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_ae9ad8f7fb749a8252610502a5aa2a2c3}{GAME\+\_\+\+NB\+\_\+\+COLUMNS}}~8
+\begin{DoxyCompactList}\small\item\em Nombre de colonnes du plateau de jeu par défaut (en cellules) (par défault = 8). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_ab1b4be8e47342e81018dc557f14666ca}{GAME\+\_\+\+NB\+\_\+\+ROWS}}~18
+\begin{DoxyCompactList}\small\item\em Nombre de lignes du plateau de jeu par défaut (en cellules) (par défaut = 18). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_a6bbbd2969e9cd12b7ef9b034ecdba46e}{GAME\+\_\+\+NB\+\_\+\+BALLS}}~2
+\begin{DoxyCompactList}\small\item\em Nombre de balles par défaut dans une partie de Pong (par défaut = 2). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_a97db631b16b0253d53deb2e9e2f45b24}{GAME\+\_\+\+PLAYER\+\_\+\+MODE\+\_\+1}}~2
+\begin{DoxyCompactList}\small\item\em Mode par défaut pour le joueur 1, 0 :\+ Joueur 1 désactivé, 1 :\+ IA, 2 :\+ Humain (par défaut :\+ 2). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_ad0639cb59d3090d08f82f5c22a54f1e0}{GAME\+\_\+\+PLAYER\+\_\+\+MODE\+\_\+2}}~0
+\begin{DoxyCompactList}\small\item\em Mode par défaut pour le joueur 2, 0 :\+ Joueur 2 désactivé, 1 :\+ IA, 2 :\+ Humain (par défaut :\+ 0). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_a3f3a28aa4d8776ed3819d606a637feb9}{GAME\+\_\+\+TOP\+\_\+\+SPACE}}~0
+\begin{DoxyCompactList}\small\item\em Espace entre le haut de la fenêtre et la zone contenant les briques (par défaut :\+ 0). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_a9e019e34c3cd3faa309d65d78016cd23}{GAME\+\_\+\+BOTTOM\+\_\+\+SPACE}}~6
+\begin{DoxyCompactList}\small\item\em Espace entre le bas de la fenêtre et la zone contenant les briques (par défaut :\+ 6). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_a30f2544e556d360ee0fd5eaf50432afc}{GAME\+\_\+\+NB\+\_\+\+COLORS}}~3
+\begin{DoxyCompactList}\small\item\em Nombre de couleurs pour les briques générées aléatoirement (entre 1 et 9) (par défaut :\+ 3). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{game__parameters_8h_abb05726f13dafa638ffa9a099c07166d}{GAME\+\_\+\+BRICK\+\_\+\+HEALTH}}~2
+\begin{DoxyCompactList}\small\item\em Points de vie maximum de chaque brique générée aléatoirement (par défaut :\+ 2). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Parameters. 
+
+Default values for the games parameters. 
+
+Définition dans le fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{game__parameters_8h_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{game__parameters_8h_ac80a3592e72fd96b772ee47a7d8e0d0a}\index{game\_parameters.h@{game\_parameters.h}!DEBUG\_MODE@{DEBUG\_MODE}}
+\index{DEBUG\_MODE@{DEBUG\_MODE}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_MODE}{DEBUG\_MODE}}
+{\footnotesize\ttfamily \label{game__parameters_8h_ac80a3592e72fd96b772ee47a7d8e0d0a} 
+\+\#define DEBUG\+\_\+\+MODE}
+
+
+
+Flag pour activer le mode debug. Décommenter pour activer le mode debug. 
+
+En mode debug, l\textquotesingle{}interface n\textquotesingle{}appelle pas les fonctions qui mettent fin aux parties. Elle ne se terminent donc jamais. De plus des commandes clavier supplémentaires sont disponibles pour tester les fonctionnalités du jeu:\+
+\begin{DoxyItemize}
+\item \textquotesingle{}b\textquotesingle{} pour ajouter une balle sans pouvoir sur la raquette du joueur 1.
+\item \textquotesingle{}v\textquotesingle{} pour ajouter une balle verte sur la raquette du joueur 1.
+\item \textquotesingle{}r\textquotesingle{} pour ajouter une balle rouge sur la raquette du joueur 1.
+\item \textquotesingle{}g\textquotesingle{} active la gravité vers la bas (appelle la fonction \doxylink{game__bricks_8h_a3dd8771d4c746a6585bbcb15b02c8ef1}{game\+\_\+gravity()}).
+\item \textquotesingle{}h\textquotesingle{} active la gravité vers le haut (appelle la fonction \doxylink{game__bricks_8h_a3dd8771d4c746a6585bbcb15b02c8ef1}{game\+\_\+gravity()}). 
+\end{DoxyItemize}
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00036}{36}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_ae9f93758a369e9af97807b94a760e2c4}\index{game\_parameters.h@{game\_parameters.h}!WINDOW\_SCREENWIDTH@{WINDOW\_SCREENWIDTH}}
+\index{WINDOW\_SCREENWIDTH@{WINDOW\_SCREENWIDTH}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SCREENWIDTH}{WINDOW\_SCREENWIDTH}}
+{\footnotesize\ttfamily \label{game__parameters_8h_ae9f93758a369e9af97807b94a760e2c4} 
+\+\#define WINDOW\+\_\+\+SCREENWIDTH~1820}
+
+
+
+Dimension horizontale de l\textquotesingle{}application en pixels (par défaut = 1820). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00045}{45}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_a5846cdd6001b96f307708ea242eca7cd}\index{game\_parameters.h@{game\_parameters.h}!WINDOW\_SCREENHEIGHT@{WINDOW\_SCREENHEIGHT}}
+\index{WINDOW\_SCREENHEIGHT@{WINDOW\_SCREENHEIGHT}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_SCREENHEIGHT}{WINDOW\_SCREENHEIGHT}}
+{\footnotesize\ttfamily \label{game__parameters_8h_a5846cdd6001b96f307708ea242eca7cd} 
+\+\#define WINDOW\+\_\+\+SCREENHEIGHT~980}
+
+
+
+Dimension verticale de l\textquotesingle{}application en pixels (par défaut = 980). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00050}{50}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_ae9ad8f7fb749a8252610502a5aa2a2c3}\index{game\_parameters.h@{game\_parameters.h}!GAME\_NB\_COLUMNS@{GAME\_NB\_COLUMNS}}
+\index{GAME\_NB\_COLUMNS@{GAME\_NB\_COLUMNS}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_NB\_COLUMNS}{GAME\_NB\_COLUMNS}}
+{\footnotesize\ttfamily \label{game__parameters_8h_ae9ad8f7fb749a8252610502a5aa2a2c3} 
+\+\#define GAME\+\_\+\+NB\+\_\+\+COLUMNS~8}
+
+
+
+Nombre de colonnes du plateau de jeu par défaut (en cellules) (par défault = 8). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00060}{60}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_ab1b4be8e47342e81018dc557f14666ca}\index{game\_parameters.h@{game\_parameters.h}!GAME\_NB\_ROWS@{GAME\_NB\_ROWS}}
+\index{GAME\_NB\_ROWS@{GAME\_NB\_ROWS}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_NB\_ROWS}{GAME\_NB\_ROWS}}
+{\footnotesize\ttfamily \label{game__parameters_8h_ab1b4be8e47342e81018dc557f14666ca} 
+\+\#define GAME\+\_\+\+NB\+\_\+\+ROWS~18}
+
+
+
+Nombre de lignes du plateau de jeu par défaut (en cellules) (par défaut = 18). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00066}{66}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_a6bbbd2969e9cd12b7ef9b034ecdba46e}\index{game\_parameters.h@{game\_parameters.h}!GAME\_NB\_BALLS@{GAME\_NB\_BALLS}}
+\index{GAME\_NB\_BALLS@{GAME\_NB\_BALLS}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_NB\_BALLS}{GAME\_NB\_BALLS}}
+{\footnotesize\ttfamily \label{game__parameters_8h_a6bbbd2969e9cd12b7ef9b034ecdba46e} 
+\+\#define GAME\+\_\+\+NB\+\_\+\+BALLS~2}
+
+
+
+Nombre de balles par défaut dans une partie de Pong (par défaut = 2). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00071}{71}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_a97db631b16b0253d53deb2e9e2f45b24}\index{game\_parameters.h@{game\_parameters.h}!GAME\_PLAYER\_MODE\_1@{GAME\_PLAYER\_MODE\_1}}
+\index{GAME\_PLAYER\_MODE\_1@{GAME\_PLAYER\_MODE\_1}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_PLAYER\_MODE\_1}{GAME\_PLAYER\_MODE\_1}}
+{\footnotesize\ttfamily \label{game__parameters_8h_a97db631b16b0253d53deb2e9e2f45b24} 
+\+\#define GAME\+\_\+\+PLAYER\+\_\+\+MODE\+\_\+1~2}
+
+
+
+Mode par défaut pour le joueur 1, 0 :\+ Joueur 1 désactivé, 1 :\+ IA, 2 :\+ Humain (par défaut :\+ 2). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00077}{77}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_ad0639cb59d3090d08f82f5c22a54f1e0}\index{game\_parameters.h@{game\_parameters.h}!GAME\_PLAYER\_MODE\_2@{GAME\_PLAYER\_MODE\_2}}
+\index{GAME\_PLAYER\_MODE\_2@{GAME\_PLAYER\_MODE\_2}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_PLAYER\_MODE\_2}{GAME\_PLAYER\_MODE\_2}}
+{\footnotesize\ttfamily \label{game__parameters_8h_ad0639cb59d3090d08f82f5c22a54f1e0} 
+\+\#define GAME\+\_\+\+PLAYER\+\_\+\+MODE\+\_\+2~0}
+
+
+
+Mode par défaut pour le joueur 2, 0 :\+ Joueur 2 désactivé, 1 :\+ IA, 2 :\+ Humain (par défaut :\+ 0). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00083}{83}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_a3f3a28aa4d8776ed3819d606a637feb9}\index{game\_parameters.h@{game\_parameters.h}!GAME\_TOP\_SPACE@{GAME\_TOP\_SPACE}}
+\index{GAME\_TOP\_SPACE@{GAME\_TOP\_SPACE}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_TOP\_SPACE}{GAME\_TOP\_SPACE}}
+{\footnotesize\ttfamily \label{game__parameters_8h_a3f3a28aa4d8776ed3819d606a637feb9} 
+\+\#define GAME\+\_\+\+TOP\+\_\+\+SPACE~0}
+
+
+
+Espace entre le haut de la fenêtre et la zone contenant les briques (par défaut :\+ 0). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00089}{89}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_a9e019e34c3cd3faa309d65d78016cd23}\index{game\_parameters.h@{game\_parameters.h}!GAME\_BOTTOM\_SPACE@{GAME\_BOTTOM\_SPACE}}
+\index{GAME\_BOTTOM\_SPACE@{GAME\_BOTTOM\_SPACE}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_BOTTOM\_SPACE}{GAME\_BOTTOM\_SPACE}}
+{\footnotesize\ttfamily \label{game__parameters_8h_a9e019e34c3cd3faa309d65d78016cd23} 
+\+\#define GAME\+\_\+\+BOTTOM\+\_\+\+SPACE~6}
+
+
+
+Espace entre le bas de la fenêtre et la zone contenant les briques (par défaut :\+ 6). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00095}{95}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_a30f2544e556d360ee0fd5eaf50432afc}\index{game\_parameters.h@{game\_parameters.h}!GAME\_NB\_COLORS@{GAME\_NB\_COLORS}}
+\index{GAME\_NB\_COLORS@{GAME\_NB\_COLORS}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_NB\_COLORS}{GAME\_NB\_COLORS}}
+{\footnotesize\ttfamily \label{game__parameters_8h_a30f2544e556d360ee0fd5eaf50432afc} 
+\+\#define GAME\+\_\+\+NB\+\_\+\+COLORS~3}
+
+
+
+Nombre de couleurs pour les briques générées aléatoirement (entre 1 et 9) (par défaut :\+ 3). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00101}{101}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
+\Hypertarget{game__parameters_8h_abb05726f13dafa638ffa9a099c07166d}\index{game\_parameters.h@{game\_parameters.h}!GAME\_BRICK\_HEALTH@{GAME\_BRICK\_HEALTH}}
+\index{GAME\_BRICK\_HEALTH@{GAME\_BRICK\_HEALTH}!game\_parameters.h@{game\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_BRICK\_HEALTH}{GAME\_BRICK\_HEALTH}}
+{\footnotesize\ttfamily \label{game__parameters_8h_abb05726f13dafa638ffa9a099c07166d} 
+\+\#define GAME\+\_\+\+BRICK\+\_\+\+HEALTH~2}
+
+
+
+Points de vie maximum de chaque brique générée aléatoirement (par défaut :\+ 2). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{game__parameters_8h_source_l00107}{107}} du fichier \doxymbox{\hyperlink{game__parameters_8h_source}{game\+\_\+parameters.\+h}}.
+
